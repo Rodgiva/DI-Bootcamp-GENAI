@@ -28,4 +28,4 @@ When would using a defaultdict be useful?
 What is the purpose of the following code:*
 if __name__ == '__main__':
     pass
-- to identify where is executed the code
+- to ignore when in main file 
