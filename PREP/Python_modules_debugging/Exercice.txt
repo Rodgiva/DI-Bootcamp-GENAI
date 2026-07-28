@@ -1,0 +1,31 @@
+What is a module?
+- a module is a file that regroup many functions, propertys, etc, it can be called from other code
+
+List three ways to import a module in Python.
+- import A
+- from B import A
+- from B import A as a
+
+What is the purpose of importing?
+- to call and use the code from another module
+
+List three examples when you would use the random module.
+import random as r
+r.randint(0,100)
+r.random()
+r.choice([a,b,c,d,e])
+
+What is an ImportError?
+- this is an error when the name of the module imported is not recognized
+- example: import shlikabadumrulbu
+
+When would using an OrderedDict be useful?
+- when I want to keep the order of the element inputed
+
+When would using a defaultdict be useful?
+- when i want to opperate on a value that is not initialized
+
+What is the purpose of the following code:*
+if __name__ == '__main__':
+    pass
+- to identify where is executed the code
