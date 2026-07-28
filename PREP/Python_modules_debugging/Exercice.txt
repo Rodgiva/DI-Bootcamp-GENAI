@@ -28,4 +28,8 @@ When would using a defaultdict be useful?
 What is the purpose of the following code:*
 if __name__ == '__main__':
     pass
+<<<<<<< HEAD
 - to ignore when in main file 
+=======
+- to ignore when in main file 
+>>>>>>> 3d1608b04d7ab68393817b8ca473fbd592c86d4b
