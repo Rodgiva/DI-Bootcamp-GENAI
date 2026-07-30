@@ -2,12 +2,14 @@ import math
 
 # EXERCICE 1
 
+# --- difference ---
 def difference(a, b):
     return a - b
-
 print(difference(2,2))
 print(difference(0,2))
+print("----------------")
 
+# --- print_day ---
 def print_day(day):
     days = {
         1: "Sunday",
@@ -18,15 +20,19 @@ def print_day(day):
         6: "Friday",
         7: "Saturday"
     }
-    print(days.get(day, None))
-print_day(4)
-print_day(41)
+    return days.get(day, None)
+print(print_day(4))
+print(print_day(41))
+print("----------------")
 
+# --- last_element ---
 def last_element(lst):
     return lst[-1] if lst else None
 print(last_element([1,2,3,4]))
 print(last_element([]))
+print("----------------")
 
+# --- number_compare ---
 def number_compare(a, b):
     if a > b:
         return "First is greater"
@@ -37,11 +43,15 @@ def number_compare(a, b):
 print(number_compare(1, 1))
 print(number_compare(1, 2))
 print(number_compare(2, 1))
+print("----------------")
 
+# --- single_letter_count ---
 def single_letter_count(word, letter):
     return word.lower().count(letter.lower())
 print(single_letter_count('amazing','A'))
+print("----------------")
 
+# --- multiple_letter_count ---
 def multiple_letter_count(word):
     dict = {
         k: word.count(k) for k in word
@@ -49,7 +59,9 @@ def multiple_letter_count(word):
     return dict
 print(multiple_letter_count("hello"))
 print(multiple_letter_count("person"))
+print("----------------")
 
+# --- list_manipulation ---
 def list_manipulation(lst, command, location, value=None):
     if command == "remove":
         if location == "end":
@@ -63,29 +75,33 @@ def list_manipulation(lst, command, location, value=None):
         if location == "beginning":
             lst.insert(0, value)
             return lst
-
 print(list_manipulation([1,2,3], "remove", "end"))
 print(list_manipulation([1,2,3], "remove", "beginning"))
 print(list_manipulation([1,2,3], "add", "beginning", 20))
 print(list_manipulation([1,2,3], "add", "end", 30))
+print("----------------")
 
-def is_palindrome(str):
-    for i in range(math.floor(len(str)/2)):
-        if str[i] != str[len(str)-(i+1)]:
+# --- is_palindrome ---
+def is_palindrome(input_str):
+    clean_str = input_str.replace(" ", "")
+    for i in range(math.floor(len(clean_str)/2)):
+        if clean_str[i] != clean_str[len(clean_str)-(i+1)]:
             return False
     return True
-
 print(is_palindrome("testing"))
 print(is_palindrome("tacocat"))
 print(is_palindrome("hannah"))
 print(is_palindrome("robert"))
+print("----------------")
 
+# --- frequency ---
 def frequency(lst, search_term):
     return lst.count(search_term)
-
 print(frequency([1,2,3,4,4,4], 4))
 print(frequency([True, False, True, True], False))
+print("----------------")
 
+# --- flip_case ---
 def flip_case(str, letter):
     res = ""
     for c in str:
@@ -95,7 +111,9 @@ def flip_case(str, letter):
             res += c
     return res
 print(flip_case("Hardy har har", "h"))
+print("----------------")
 
+# --- multiply_even_numbers ---
 def multiply_even_numbers(lst):
     res = 1
     for nb in lst:
@@ -103,32 +121,30 @@ def multiply_even_numbers(lst):
             res *= nb
     return res
 print(multiply_even_numbers([2,3,4,5,6]))
+print("----------------")
 
+# --- mode ---
+input_list = [2,4,1,2,3,3,4,4,5,4,4,6,4,6,7,4]
 def mode(lst):
-    nb_h = lst[0]
-    count = 0
-    for nb in lst:
-        this_nb = lst.count(nb)
-        if this_nb > count:
-            count = this_nb
-            nb_h = nb
-    return nb_h
-print(mode([2,4,1,2,3,3,4,4,5,4,4,6,4,6,7,4]))
+    res_dict = {num: lst.count(num) for num in set(lst)}
+    return max(res_dict, key=res_dict.get)
+print(mode(input_list))
+print("----------------")
 
+# --- capitalize ---
 def capitalize(str):
-    return str.title()
+    return str.capitalize()
 print(capitalize("tim"))
 print(capitalize("matt"))
+print("----------------")
 
+# --- compact ---
 def compact(lst):
-    res = []
-    for elem in lst:
-        if elem:
-            res.append(elem)
-
-    return res
+    return [elem for elem in lst if elem]
 print(compact([0,1,2,"",[], False, {}, None, "All done"]))
+print("----------------")
 
+# --- partition ---
 def is_even(num):
     return num % 2 == 0
 
@@ -142,6 +158,7 @@ def partition(lst, callback):
             lst2.append(elem)
     return [lst1, lst2]
 print(partition([1,2,3,4], is_even))
+print("----------------")
 
 def intersection(lst1, lst2):
     return [
