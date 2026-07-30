@@ -1,27 +1,35 @@
-list = [("name", "Elie"), ("job", "Instructor")]
-dict = dict(list)
-print(dict)
+# --- 1 ---
+input_list = [("name", "Elie"), ("job", "Ininput_structor")]
+print({item[0]:item[1] for item in input_list})
+# print(dict(input_list))
+print("----------------")
 
-list1 = ["CA", "NJ", "RI"]
-list2 = ["California", "New Jersey", "Rhode Island"]
-dict = {
-    list1[i]: list2[i] for i in range(len(list1))
-}
-print(dict)
+# # --- 2 ---
+input_list1 = ["CA", "NJ", "RI"]
+input_list2 = ["California", "New Jersey", "Rhode Island"]
+print(dict(zip(input_list1, input_list2)))
+# print({ input_list1[i]: input_list2[i] for i in range(len(input_list1))})
+print("----------------")
 
-list = ["a", "e", "i", "o", "u"]
-dict = {i: 0 for i in list}
-print(dict)
+# # --- 3 ---
+input_list = ["a", "e", "i", "o", "u"]
+input_dict = {i: 0 for i in input_list}
+print(input_dict)
+print("----------------")
 
-dict = {
+# # --- 4 ---
+input_dict = {
     k + 1:chr(65 + k)
     for k in range(26)
 }
-print(dict)
+print(input_dict)
+print("----------------")
 
-str = "awesome sauce"
+# # --- 5 ---
+input_str = "awesome sauce"
 voy = "aeiou"
-dict = {
-    k: str.count(k) for k in voy
+input_dict = {
+    k: input_str.count(k) for k in voy
 }
-print(dict)
+print(input_dict)
+print("----------------")
