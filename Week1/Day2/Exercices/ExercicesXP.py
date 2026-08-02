@@ -42,7 +42,8 @@ print("--------------------------")
 
 # --- 🌟 Exercise 5: For Loop ---
 print([i for i in range(1,21)])
-print([i for i in range(1,21) if i%2==0])
+# print([i for i in range(1,21) if i%2==0])
+print([i[1] for i in enumerate(range(1,21)) if i[0]%2==0])
 print("--------------------------")
 
 # --- 🌟 Exercise 6: While Loop ---
@@ -63,7 +64,7 @@ print("--------------------------")
 inp_fruits = input("Tell me ALL your favorites fruits (separated by speces): ")
 lst_fruits = inp_fruits.split(" ")
 inp_fruit = input("Now give me a fruit: ")
-if inp_fruit in inp_fruits:
+if inp_fruit in lst_fruits:
     print("You chose one of your favorite fruits! Enjoy!")
 else:
     print("You chose a new fruit. I hope you enjoy it!")
