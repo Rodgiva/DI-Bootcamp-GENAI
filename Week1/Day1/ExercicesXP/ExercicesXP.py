@@ -4,14 +4,14 @@ for i in range(4):
 print("--------------------------")
 
 # --- Exercise 2: Some Math ---
-print((99^3)*8)
+print((99**3)*8)
 print("--------------------------")
 
 # --- Exercise 3: What is the output? ---
 print(15 < 8) #False
 print(5 < 3) #False
 print(3 == 3) #True
-# print(3 == "3") #Error
+# print(3 == "3") #False
 # print("3" > 3) #Error
 print("Hello" == "hello") #False
 print("--------------------------")
@@ -37,8 +37,8 @@ if a > b:
 print("--------------------------")
 
 # --- Exercise 7: Odd or Even ---
-inp = input("Give me a number")
-if input % 2:
+inp = int(input("Give me a number"))
+if inp % 2 == 0:
     print("even")
 else:
     print("odd")
@@ -52,7 +52,7 @@ if my_name.lower() == inp_name.lower():
 print("--------------------------")
 
 # --- Exercise 9: Tall enough to ride a roller coaster ---
-inp_height = input("What is your height? (in cm)")
+inp_height = int(input("What is your height? (in cm)"))
 if inp_height > 145:
     print("You are tall enough to ride, have fun!")
 else:
