@@ -1,14 +1,14 @@
-# # --- Challenge 1: Multiples of a Number ---
+# --- Challenge 1: Multiples of a Number ---
 
-# inp_nb = int(input("Give me a number: "))
-# inp_length = int(input("Give me a length: "))
+inp_nb = int(input("Give me a number: "))
+inp_length = int(input("Give me a length: "))
 
-# def multiples(nb, length):
-#     res = []
-#     for i in range(1,length + 1):
-#         res.append(nb*i)
-#     return res
-# print(multiples(inp_nb, inp_length))
+def multiples(nb, length):
+    res = []
+    for i in range(1,length + 1):
+        res.append(nb*i)
+    return res
+print(multiples(inp_nb, inp_length))
 
 # --- Challenge 2: Remove Consecutive Duplicate Letters ---
 inp_str = input("Give me a string: ")
