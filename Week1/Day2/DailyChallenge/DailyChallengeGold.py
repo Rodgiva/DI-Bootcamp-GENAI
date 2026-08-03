@@ -1,5 +1,4 @@
 from datetime import date, datetime
-import math
 
 def get_age(birth_date: date):
     now = date.today()
@@ -36,5 +35,5 @@ birth_date = datetime.strptime(inp_bd, "%d/%m/%Y")
 
 age = get_age(birth_date)
 cake(age)
-if is_leap_year:
+if is_leap_year(birth_date):
     cake(age)
