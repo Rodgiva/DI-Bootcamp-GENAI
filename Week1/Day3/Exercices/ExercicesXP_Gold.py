@@ -1,42 +1,42 @@
-# # --- Exercise 1: Birthday Look-up ---
-# # --- Exercise 2: Birthdays Advanced ---
-# birthdays = {}
-# birthdays["Bob"] = "1990/02/05"
-# birthdays["Henri"] = "1994/06/20"
-# birthdays["Hubert"] = "1991/04/07"
-# birthdays["Charles"] = "1993/08/15"
-# birthdays["Fred"] = "1996/04/25"
+# --- Exercise 1: Birthday Look-up ---
+# --- Exercise 2: Birthdays Advanced ---
+birthdays = {}
+birthdays["Bob"] = "1990/02/05"
+birthdays["Henri"] = "1994/06/20"
+birthdays["Hubert"] = "1991/04/07"
+birthdays["Charles"] = "1993/08/15"
+birthdays["Fred"] = "1996/04/25"
 
-# print(f"Hi and welcome! You can look up the birthdays of the people in the list!")
-# print(", ".join(birthdays.keys()))
-# inp_name = input("Give me a person's namein the list: ")
-# if inp_name in birthdays.keys():
-#     bd = birthdays[inp_name]
-#     print(f"The birthday of {inp_name} is {bd}")
-# else: 
-#     print(f"Sorry, we don’t have the birthday information for {inp_name}")
-# print("--------------------------")
+print(f"Hi and welcome! You can look up the birthdays of the people in the list!")
+print(", ".join(birthdays.keys()))
+inp_name = input("Give me a person's namein the list: ")
+if inp_name in birthdays.keys():
+    bd = birthdays[inp_name]
+    print(f"The birthday of {inp_name} is {bd}")
+else: 
+    print(f"Sorry, we don’t have the birthday information for {inp_name}")
+print("--------------------------")
 
-# # --- Exercise 3: Add Your Own Birthday ---
-# birthdays = {}
-# birthdays["Bob"] = "1990/02/05"
-# birthdays["Henri"] = "1994/06/20"
-# birthdays["Hubert"] = "1991/04/07"
-# birthdays["Charles"] = "1993/08/15"
-# birthdays["Fred"] = "1996/04/25"
+# --- Exercise 3: Add Your Own Birthday ---
+birthdays = {}
+birthdays["Bob"] = "1990/02/05"
+birthdays["Henri"] = "1994/06/20"
+birthdays["Hubert"] = "1991/04/07"
+birthdays["Charles"] = "1993/08/15"
+birthdays["Fred"] = "1996/04/25"
 
-# print(f"Hi and welcome! You can look up the birthdays of the people in the list!")
-# print(", ".join(birthdays.keys()))
+print(f"Hi and welcome! You can look up the birthdays of the people in the list!")
+print(", ".join(birthdays.keys()))
 
-# inp_name = input("Give me a person's name: ")
-# if inp_name in birthdays.keys():
-#     inp_bd = birthdays[inp_name]
-#     print(f"The birthday of {inp_name} is {inp_bd}")
-# else: 
-#     birth_date = input("Now give me his borth day: (in the format “YYYY/MM/DD”) ")
-#     birthdays[inp_name] = birth_date
+inp_name = input("Give me a person's name: ")
+if inp_name in birthdays.keys():
+    inp_bd = birthdays[inp_name]
+    print(f"The birthday of {inp_name} is {inp_bd}")
+else: 
+    birth_date = input("Now give me his borth day: (in the format “YYYY/MM/DD”) ")
+    birthdays[inp_name] = birth_date
 
-# print("--------------------------")
+print("--------------------------")
 
 # --- Exercise 4: Fruit Shop ---
 #1
