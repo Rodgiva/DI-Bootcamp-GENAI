@@ -1,15 +1,15 @@
 import sys
 
-# # --- Exercise 1: Formula ---
-# C = 50
-# H = 30
-# inp_nb_lst = input("Give me a comma-separated string of numbers: ").split(",")
-# res_lst = []
-# for D in inp_nb_lst:
-#     Q = ((2*C*int(D))/H)**0.5
-#     res_lst.append(int(Q))
-# print(res_lst)
-# print("--------------------------")
+# --- Exercise 1: Formula ---
+C = 50
+H = 30
+inp_nb_lst = input("Give me a comma-separated string of numbers: ").split(",")
+res_lst = []
+for D in inp_nb_lst:
+    Q = ((2*C*int(D))/H)**0.5
+    res_lst.append(int(Q))
+print(res_lst)
+print("--------------------------")
 
 # --- Exercise 2 : List of integers ---
 #1
