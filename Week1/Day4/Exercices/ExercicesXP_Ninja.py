@@ -76,4 +76,5 @@ alist = [54,26,93,17,77,31,44,55,20]
 insertion_sort(alist)
 print(alist)
 
-# This program will do an ascendinf sort of numbers
+# This program will do an ascending sort of numbers
+print("--------------------------")
