@@ -42,7 +42,7 @@ def display_hangman(life:int):
 def game_loop():
     hidden_word = rand_word().lower()
     guess_word = init_word(hidden_word)
-    guessed_letter = set()
+    guessed_letter = []
     win = False
     life = 6
     while life > 0 and not win:
