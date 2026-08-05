@@ -1,5 +1,3 @@
-import copy
-
 def display_grid(grid_state:list = []):
     line = "*****************"
     line_ = "*  ---|---|---  *"
@@ -28,23 +26,22 @@ def check_win(state_game:list)->bool:
                     return False
     for player in ["X", "O"]:
         if len([move for move in state_game
-                if ((move[0] == 1 and move[1] == 1) or (move[0] == 2 and move[1] == 2) or (move[0] == 3 and move[1] == 3)) and move[2] == player]) == 3:
-            print("Win diag 1")
+                if ((move[0] == 1 and move[1] == 1)
+                    or (move[0] == 2 and move[1] == 2)
+                    or (move[0] == 3 and move[1] == 3))
+                    and move[2] == player]) == 3:
             return False
     for player in ["X", "O"]:
         if len([move for move in state_game
-                if ((move[0] == 3 and move[1] == 1) or (move[0] == 2 and move[1] == 2) or (move[0] == 3 and move[1] == 1)) and move[2] == player]) == 3:
-            print("Win diag 2")
+                if ((move[0] == 1 and move[1] == 3)
+                    or (move[0] == 2 and move[1] == 2)
+                    or (move[0] == 3 and move[1] == 1))
+                    and move[2] == player]) == 3:
             return False
     return True
 
-def check_duplicate(state_game:list, coordonate:list)->bool:
-    new_state_game = copy.deepcopy(state_game)
-    for state in new_state_game:
-        state.pop()
-    if coordonate in new_state_game:
-        return True
-    return False
+def check_duplicate(state_game: list, coordonate: list) -> bool:
+    return coordonate in [state[:-1] for state in state_game]
 
 def get_valid_input(inp):
     while True:
