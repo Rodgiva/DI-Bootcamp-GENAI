@@ -1,12 +1,18 @@
 import random
 
-
 def rand_word()->str:
     wordslist = ['correction', 'childish', 'beach', 'python', 'assertive', 'interference', 'complete', 'share', 'credit card', 'rush', 'south']
     return random.choice(wordslist)
 
 def init_word(word:str)->str:
-    return "*" * len(word)
+    res = ""
+    for c in word:
+        if c.isalpha():
+            res += "*"
+        else:
+            res += " "
+    # return "*" * len(word)
+    return res
 
 def is_letter_in_word(hidden_word:str, letter:str)->bool:
     return letter in hidden_word
@@ -34,16 +40,16 @@ def display_hangman(life:int):
 # guess_word: the word we actually know
 
 def game_loop():
-    hidden_word = rand_word()
+    hidden_word = rand_word().lower()
     guess_word = init_word(hidden_word)
-    guessed_letter = []
+    guessed_letter = set()
     win = False
     life = 6
     while life > 0 and not win:
         print("\nLife:" + ("\u2764\ufe0f " * life))
         print(guess_word)
         print(f"Letter used: {",".join(guessed_letter)}\n")
-        inp_letter = input("Give me a letter: ")
+        inp_letter = input("Give me a letter: ").lower()
 
         while inp_letter in guessed_letter:
             inp_letter = input("You have already used, try another letter: ")
