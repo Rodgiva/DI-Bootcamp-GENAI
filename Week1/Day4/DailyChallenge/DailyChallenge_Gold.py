@@ -35,6 +35,7 @@ $a
 def matrix_decoder(encoded_str: str)->str:
     matrix_list = encoded_str.split("\n")
     matrix_list = [line for line in matrix_list if line]
+    print(matrix_list)
     res = ""
     for i in range(len(matrix_list[0])):
         for j in range(len(matrix_list)):
