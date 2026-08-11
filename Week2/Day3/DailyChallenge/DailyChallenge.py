@@ -13,7 +13,8 @@ class Circle():
 
     @property
     def area(self)->int:
-        return m.pi*2*self.radius
+        # return m.pi*2*self.radius
+        return m.pi * self.radius ** 2
 
     def __str__(self):
         return f"Radius: {self.radius} Diameter: {self.diameter}"
@@ -22,13 +23,13 @@ class Circle():
         return Circle(radius=(self.radius + other.radius))
 
     def __gt__(self, other):
-        return True if self.radius > other.radius else False
+        return self.radius > other.radius
 
     def __eq__(self, other):
-        return True if self.radius == other.radius else False
+        return self.radius == other.radius
 
-    def __gt__(self, other):
-        return True if self.radius < other.radius else False
+    def __lt__(self, other):
+        return self.radius < other.radius
     
 circle = Circle(radius=5)
 circle2 = Circle(radius=10)
@@ -52,9 +53,6 @@ circles = [
     circle3,
 ]
 
-for circle in circles:
-    print(circle)
-
 def sort_circle(circles:list):
     for i in range(0, len(circles)):
         for j in range(0, len(circles)):
@@ -62,7 +60,7 @@ def sort_circle(circles:list):
                 temp = circles[i]
                 circles[i] = circles[j]
                 circles[j] = temp
+
 sort_circle(circles)
-print("---")
 for circle in circles:
     print(circle)
