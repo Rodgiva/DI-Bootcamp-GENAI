@@ -1,7 +1,7 @@
 class AnagramChecker():
     def __init__(self):
         with open("words.txt", "r") as f:
-            self.words = f.read().lower()
+            self.words = f.read().lower().split("\n")
 
     def is_valid_word(self, word:str)->bool:
         return True if word in self.words else False
@@ -18,7 +18,7 @@ class AnagramChecker():
 
     def get_anagrams(self, word)->list:
         anagrams = []
-        words = self.words.split("\n")
+        words = self.words
         for w in words:
             if AnagramChecker.is_anagram(w, word) and w != word:
                 anagrams.append(w)
