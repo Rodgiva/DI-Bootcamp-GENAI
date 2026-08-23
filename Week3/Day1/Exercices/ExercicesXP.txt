@@ -1,0 +1,4 @@
+🌟 Exercise 1 — Explain Claude to a colleague
+
+1. Claude is a model of AI, especially a language model that return a text from a text/prompt. He is trained for that.
+Claude is also a llm, thats mean he use alot of datas to be more accurate. But take care because an AI can't be 100% accurate (unless using tools)
