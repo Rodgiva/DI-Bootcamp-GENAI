@@ -1,0 +1,1681 @@
+<!DOCTYPE html>
+<html lang="en" data-darkreader-mode="dynamic" data-darkreader-scheme="dark"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--user-agent" media="screen">@layer {
+html {
+    background-color: var(--darkreader-background-ffffff, #1e2122) !important;
+}
+html {
+    color-scheme: dark !important;
+}
+iframe {
+    color-scheme: dark !important;
+}
+html, body {
+    background-color: var(--darkreader-background-ffffff, #1e2122);
+}
+html, body {
+    border-color: var(--darkreader-border-4c4c4c, #908676);
+    color: var(--darkreader-text-000000, #ffffff);
+}
+a {
+    color: var(--darkreader-text-0040ff, #40b5ff);
+}
+table {
+    border-color: var(--darkreader-border-808080, #697276);
+}
+mark {
+    color: var(--darkreader-text-000000, #ffffff);
+}
+::placeholder {
+    color: var(--darkreader-text-a9a9a9, #dfd6c9);
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: var(--darkreader-background-faffbd, #505500) !important;
+    color: var(--darkreader-text-000000, #ffffff) !important;
+}
+* {
+    scrollbar-color: var(--darkreader-background-b0b0b0, #565d60) var(--darkreader-background-f1f1f1, #282c2d);
+}
+::selection {
+    background-color: var(--darkreader-background-0060d4, #0060d4) !important;
+    color: var(--darkreader-text-ffffff, #ffffff) !important;
+}
+::-moz-selection {
+    background-color: var(--darkreader-background-0060d4, #0060d4) !important;
+    color: var(--darkreader-text-ffffff, #ffffff) !important;
+}
+}</style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">c-wiz div > svg > circle, .jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, img.Wirisformula, a[data-testid="headerMediumLogo"]>svg, .d2l-navigation-link-image-container, .d2l-iframe-loading-container, div.mc-ip-hide[style*="background: rgb(255, 255, 255) !important"], [style*="color: rgb(0, 0, 1) !important;"] {
+    filter: invert(100%) hue-rotate(180deg) brightness(125%) contrast(90%) !important;
+}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}
+[data-darkreader-inline-stopcolor] {
+  stop-color: var(--darkreader-inline-stopcolor) !important;
+}
+[data-darkreader-inline-bg] {
+  background: var(--darkreader-inline-bg) !important;
+}
+[data-darkreader-inline-border-short] {
+  border: var(--darkreader-inline-border-short) !important;
+}
+[data-darkreader-inline-border-bottom-short] {
+  border-bottom: var(--darkreader-inline-border-bottom-short) !important;
+}
+[data-darkreader-inline-border-left-short] {
+  border-left: var(--darkreader-inline-border-left-short) !important;
+}
+[data-darkreader-inline-border-right-short] {
+  border-right: var(--darkreader-inline-border-right-short) !important;
+}
+[data-darkreader-inline-border-top-short] {
+  border-top: var(--darkreader-inline-border-top-short) !important;
+}
+[data-darkreader-inline-invert] {
+    filter: invert(100%) hue-rotate(180deg);
+}</style><style class="darkreader darkreader--variables" media="screen">:root {
+   --darkreader-neutral-background: var(--darkreader-background-ffffff, #1e2122);
+   --darkreader-neutral-text: var(--darkreader-text-000000, #ffffff);
+   --darkreader-selection-background: var(--darkreader-background-0060d4, #0060d4);
+   --darkreader-selection-text: var(--darkreader-text-ffffff, #ffffff);
+}</style><style class="darkreader darkreader--root-vars" media="screen"></style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NLP Day 2 Student Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link rel="stylesheet" href="NLP%20Day%202%20Student%20Guide_files/css2_F9AK.css">
+
+<style>
+/* Student follow-along: a numbered ladder of steps, each with code to copy and a checkpoint. */
+:root{
+  --ground:#F2F3F0; --surface:#FFFFFF; --surface-2:#E9EBE6;
+  --ink:#16191A; --ink-2:#434A4C; --ink-3:#6E767A;
+  --line:#D3D7D1; --line-soft:#E3E6E1;
+  --accent:#0F5F62; --accent-soft:#DDEBEA;
+  --warn:#8A4B10; --warn-soft:#F6E8D8;
+  --ok:#1F6B3A; --ok-soft:#DEEDE2;
+  --shell-bg:#1A2022; --shell-ink:#E4E8E6; --shell-dim:#8D9A99;
+  --f-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Newsreader",Georgia,serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#121516; --surface:#1A1E1F; --surface-2:#222728;
+    --ink:#EAEDEB; --ink-2:#B4BBB9; --ink-3:#848C8B;
+    --line:#2E3435; --line-soft:#262B2C;
+    --accent:#5FC3C2; --accent-soft:#17302F;
+    --warn:#D79A55; --warn-soft:#2B2217;
+    --ok:#6FC68C; --ok-soft:#16281D;
+    --shell-bg:#0D1011; --shell-ink:#DDE2E0; --shell-dim:#7C8887;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#121516; --surface:#1A1E1F; --surface-2:#222728;
+  --ink:#EAEDEB; --ink-2:#B4BBB9; --ink-3:#848C8B;
+  --line:#2E3435; --line-soft:#262B2C;
+  --accent:#5FC3C2; --accent-soft:#17302F;
+  --warn:#D79A55; --warn-soft:#2B2217;
+  --ok:#6FC68C; --ok-soft:#16281D;
+  --shell-bg:#0D1011; --shell-ink:#DDE2E0; --shell-dim:#7C8887;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--f-body); font-size:18px; line-height:1.6; -webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--f-display); text-wrap:balance; line-height:1.17;
+  letter-spacing:-.02em; margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:3px}
+.wrap{max-width:900px; margin-inline:auto; padding-inline:20px}
+
+.mast{background:var(--surface); border-bottom:1px solid var(--line)}
+.mast .wrap{padding-block:34px 26px; display:flex; flex-wrap:wrap; gap:22px;
+  align-items:flex-end; justify-content:space-between}
+.eyebrow{font-family:var(--f-mono); font-size:11px; letter-spacing:.17em;
+  text-transform:uppercase; color:var(--accent); margin-bottom:12px}
+.mast h1{font-size:clamp(29px,4.6vw,43px); font-weight:700; letter-spacing:-.03em}
+.mast .sub{font-size:18px; color:var(--ink-2); margin:10px 0 0; max-width:52ch}
+.btn{font-family:var(--f-mono); font-size:11.5px; letter-spacing:.05em; padding:8px 13px;
+  background:var(--surface-2); color:var(--ink-2); border:1px solid var(--line);
+  border-radius:2px; cursor:pointer}
+.btn:hover{border-color:var(--accent); color:var(--accent)}
+
+/* progress bar */
+.prog{position:sticky; top:env(safe-area-inset-top, 0px); z-index:30;
+  background:var(--surface); border-bottom:1px solid var(--line)}
+.prog .wrap{padding-block:10px; display:flex; align-items:center; gap:14px}
+.prog .bar{flex:1; height:8px; background:var(--surface-2); border-radius:4px; overflow:hidden}
+.prog .bar i{display:block; height:100%; width:0; background:var(--ok);
+  border-radius:4px; transition:width .2s}
+.prog .txt{font-family:var(--f-mono); font-size:11.5px; color:var(--ink-3); white-space:nowrap}
+.prog .reset{font-family:var(--f-mono); font-size:11px; color:var(--ink-3);
+  background:none; border:0; cursor:pointer; text-decoration:underline; padding:0}
+
+main{padding-block:34px 70px}
+
+/* day opener */
+.today{background:var(--accent-soft); border:1px solid var(--accent); border-radius:4px;
+  padding:22px 24px; margin-bottom:22px}
+.today .kick{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--accent); margin-bottom:9px}
+.today h2{font-size:clamp(20px,2.4vw,24px); font-weight:600; margin-bottom:11px}
+.today p{margin:0 0 13px; font-size:17.5px; color:var(--ink)}
+.today ol{margin:0 0 13px; padding-left:1.35em; font-size:16.5px; color:var(--ink-2)}
+.today li{margin-bottom:5px}
+.today .why{margin:0; padding-top:13px; border-top:1px solid var(--accent);
+  font-size:16.5px; color:var(--ink-2)}
+
+/* where today sits in the week */
+.weekmap{background:var(--surface); border:1px solid var(--line); border-radius:4px;
+  padding:22px 24px; margin-bottom:22px}
+.weekmap h2{font-size:20px; font-weight:600; margin-bottom:12px}
+.weekmap p{margin:0 0 12px; color:var(--ink-2); font-size:17px}
+.weekmap ol{margin:0 0 14px; padding-left:1.3em; color:var(--ink-2); font-size:17px}
+.weekmap li{margin-bottom:7px}
+.weekmap table{width:100%; border-collapse:collapse; margin:4px 0 0; font-size:16px}
+.weekmap td{border-top:1px solid var(--line); padding:9px 10px; color:var(--ink-2);
+  vertical-align:top}
+.weekmap td:first-child{width:92px; white-space:nowrap; font-family:var(--f-mono);
+  font-size:13px; letter-spacing:.03em; color:var(--ink-3)}
+.weekmap tr.here td{background:var(--accent-soft); color:var(--ink); font-weight:500}
+.weekmap tr.here td:first-child{color:var(--accent)}
+.weekmap .sub{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-3); margin:18px 0 8px}
+
+/* chain of holes */
+.chain{background:var(--surface); border:1px solid var(--line); border-radius:4px;
+  padding:22px 24px; margin-bottom:22px}
+.chain h2{font-size:20px; font-weight:600; margin-bottom:10px}
+.chain p{margin:0 0 14px; color:var(--ink-2); font-size:17px}
+.chain table{width:100%; border-collapse:collapse; margin:6px 0 0; font-size:16px}
+.chain td{border-top:1px solid var(--line); padding:9px 10px; color:var(--ink-2);
+  vertical-align:top}
+.chain td.beat{width:122px; font-weight:600; color:var(--ink); font-size:15px}
+.chain td.stepno{width:52px; white-space:nowrap; font-family:var(--f-mono);
+  font-size:13px; color:var(--ink-3)}
+.chain tr.beatstart td{border-top:1px solid var(--accent)}
+.chain .one{margin:16px 0 0; padding-top:14px; border-top:1px solid var(--accent);
+  font-size:16.5px; color:var(--ink-2)}
+
+/* where we are (per step) */
+.where{margin:0 0 14px; padding:10px 14px; background:var(--accent-soft);
+  border-left:3px solid var(--accent); border-radius:3px;
+  font-size:16px; color:var(--ink-2)}
+.where b{color:var(--accent); font-weight:600}
+
+/* understand check */
+.grasp{margin:22px 0 0; border:1px solid var(--accent); border-radius:3px;
+  background:var(--surface); overflow:hidden}
+.grasp .hd{background:var(--accent-soft); padding:7px 13px; font-family:var(--f-mono);
+  font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent)}
+.grasp .intro-l{padding:11px 15px 0; margin:0; font-size:15.5px; color:var(--ink-3)}
+.grasp ol{margin:0; padding:11px 16px 13px 32px; font-size:16.5px; color:var(--ink-2)}
+.grasp li{margin-bottom:11px; line-height:1.5}
+.grasp li:last-child{margin-bottom:0}
+.grasp details{margin-top:6px}
+.grasp summary{cursor:pointer; font-family:var(--f-mono); font-size:11px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--accent)}
+.grasp details p{margin:7px 0 0; font-size:16px; color:var(--ink-2); max-width:62ch}
+
+/* running analogy */
+.lib{margin:18px 0 0; padding:13px 16px 13px 15px; border-left:3px solid var(--ink-3);
+  background:var(--surface-2); border-radius:0 2px 2px 0; max-width:66ch}
+.lib .lbl{font-family:var(--f-mono); font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--ink-3); display:block; margin-bottom:5px}
+.lib p{margin:0; font-size:16.5px; color:var(--ink-2); font-style:italic}
+.lib p+p{margin-top:8px}
+.lib b{font-style:normal}
+
+/* intro panel */
+.intro{background:var(--surface); border:1px solid var(--line); border-radius:4px;
+  padding:22px 24px; margin-bottom:34px}
+.intro h2{font-size:21px; font-weight:600; margin-bottom:10px}
+.intro p{margin:0 0 12px; color:var(--ink-2); font-size:17px}
+.intro p:last-child{margin-bottom:0}
+.intro ul{margin:0 0 12px; padding-left:1.2em; color:var(--ink-2); font-size:17px}
+.intro li{margin-bottom:5px}
+
+/* steps */
+.step{border-top:1px solid var(--line); padding-block:30px 8px}
+.shead{display:flex; align-items:flex-start; gap:14px}
+.tick{flex:0 0 auto; width:26px; height:26px; margin-top:4px; border-radius:50%;
+  border:2px solid var(--line); background:var(--surface); cursor:pointer;
+  display:grid; place-items:center; padding:0; transition:.12s}
+.tick:hover{border-color:var(--ok)}
+.tick svg{width:14px; height:14px; opacity:0; stroke:var(--surface); stroke-width:3;
+  fill:none; stroke-linecap:round; stroke-linejoin:round}
+.step.done .tick{background:var(--ok); border-color:var(--ok)}
+.step.done .tick svg{opacity:1}
+.sn{font-family:var(--f-mono); font-size:12px; color:var(--accent);
+  letter-spacing:.1em; display:block; margin-bottom:5px}
+.step h2{font-size:clamp(21px,2.6vw,27px); font-weight:600}
+.step.done h2{color:var(--ink-3)}
+.step p{margin:13px 0 0; max-width:64ch; color:var(--ink-2)}
+.step p.lead{color:var(--ink); font-size:19px}
+.step ul,.step ol{margin:13px 0 0; padding-left:1.25em; max-width:64ch; color:var(--ink-2)}
+.step li{margin-bottom:6px}
+.step h3{font-size:18px; font-weight:600; margin:26px 0 0; color:var(--ink)}
+.body{padding-left:40px}
+@media (max-width:620px){ .body{padding-left:0} }
+
+/* code */
+.codewrap{margin:18px 0 0; border:1px solid var(--line); border-radius:3px; overflow:hidden}
+.codebar{display:flex; align-items:center; justify-content:space-between; gap:12px;
+  background:var(--surface-2); padding:7px 12px; border-bottom:1px solid var(--line)}
+.codebar .t{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink-3)}
+.copy{font-family:var(--f-mono); font-size:10.5px; padding:4px 10px; cursor:pointer;
+  background:var(--surface); color:var(--ink-2); border:1px solid var(--line); border-radius:2px}
+.copy:hover{border-color:var(--accent); color:var(--accent)}
+pre{margin:0; background:var(--shell-bg); color:var(--shell-ink); padding:14px 16px;
+  overflow-x:auto; font-family:var(--f-mono); font-size:13.5px; line-height:1.64}
+pre .c{color:var(--shell-dim)}
+pre code{background:none; padding:0; color:inherit; font-size:inherit}
+code{font-family:var(--f-mono); font-size:.85em; background:var(--surface-2);
+  padding:1.5px 5px; border-radius:2px; color:var(--ink)}
+
+/* line-by-line code walkthrough */
+.walk{margin:18px 0 0; border:1px solid var(--line); border-radius:3px;
+  background:var(--surface); overflow:hidden}
+.walk .hd{background:var(--surface-2); padding:7px 13px; font-family:var(--f-mono);
+  font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3);
+  border-bottom:1px solid var(--line)}
+.walk ol{margin:0; padding:12px 16px 12px 32px; font-size:16px; color:var(--ink-2)}
+.walk li{margin-bottom:7px; line-height:1.5}
+.walk li:last-child{margin-bottom:0}
+.walk li code{font-size:.84em}
+
+/* checkpoint */
+.check{margin:16px 0 0; border:1px solid var(--ok); border-radius:3px; overflow:hidden}
+.check .hd{background:var(--ok-soft); padding:7px 13px; font-family:var(--f-mono);
+  font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ok)}
+.check pre{background:var(--surface); color:var(--ink-2); font-size:12.5px;
+  border-top:1px solid var(--ok-soft)}
+.check .note{padding:10px 13px; font-size:15.5px; color:var(--ink-2);
+  border-top:1px solid var(--line-soft); background:var(--surface)}
+
+/* warn */
+.warn{margin:18px 0 0; padding:13px 16px; border-left:3px solid var(--warn);
+  background:var(--warn-soft); border-radius:0 2px 2px 0; max-width:66ch}
+.warn .lbl{font-family:var(--f-mono); font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--warn); display:block; margin-bottom:5px}
+.warn p{margin:0; font-size:16.5px; color:var(--ink-2)}
+.warn p+p{margin-top:8px}
+
+/* plain-words box */
+.words{margin:18px 0 0; padding:13px 16px; border-left:3px solid var(--accent);
+  background:var(--accent-soft); border-radius:0 2px 2px 0; max-width:66ch}
+.words .lbl{font-family:var(--f-mono); font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--accent); display:block; margin-bottom:5px}
+.words p{margin:0; font-size:17px; color:var(--ink)}
+
+/* tables */
+.tw{overflow-x:auto; margin:18px 0 0; border:1px solid var(--line);
+  border-radius:3px; background:var(--surface)}
+table{border-collapse:collapse; width:100%; font-size:14.5px; min-width:430px}
+th,td{text-align:left; padding:9px 12px; border-bottom:1px solid var(--line-soft);
+  vertical-align:top; line-height:1.45}
+th{font-family:var(--f-mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ink-3); font-weight:500; background:var(--surface-2); white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.m{font-family:var(--f-mono); font-size:12.5px}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:26px 60px; font-size:15px; color:var(--ink-3)}
+
+@media (max-width:620px){ body{font-size:17px} .step p.lead{font-size:18px} }
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+
+
+<meta name="darkreader" content="c10a37fa630940dca7252a4bd0b08619"><style class="darkreader darkreader--override" media="screen">c-wiz div {
+    --action-items-action-item-background-color: var(--darkreader-neutral-background) !important;
+}
+.jfk-bubble.gtx-bubble {
+    background-color: white !important;
+}
+.vimvixen-hint {
+    background-color: var(--darkreader-background-ffd76e, #825e00) !important;
+    border-color: var(--darkreader-background-c59d00, #c69e00) !important;
+    color: var(--darkreader-text-302505, #ffffff) !important;
+}
+#vimvixen-console-frame {
+    color-scheme: light !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+#edge-translate-panel-body,
+.MuiTypography-body1,
+.nfe-quote-text {
+    color: var(--darkreader-neutral-text) !important;
+}
+gr-main-header {
+    background-color: var(--darkreader-background-add8e6, #225b6e) !important;
+}
+.tou-z65h9k,
+.tou-mignzq,
+.tou-1b6i2ox,
+.tou-lnqlqk {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.tou-75mvi {
+    background-color: var(--darkreader-background-cfecf5, #134959) !important;
+}
+.tou-ta9e87,
+.tou-1w3fhi0,
+.tou-1b8t2us,
+.tou-py7lfi,
+.tou-1lpmd9d,
+.tou-1frrtv8,
+.tou-17ezmgn {
+    background-color: var(--darkreader-background-f5f5f5, #262829) !important;
+}
+.tou-uknfeu {
+    background-color: var(--darkreader-background-faedda, #54370b) !important;
+}
+.tou-6i3zyv {
+    background-color: var(--darkreader-background-85c3d8, #2d748c) !important;
+}
+div.mermaid-viewer-control-panel .btn {
+    background-color: var(--darkreader-neutral-background);
+    fill: var(--darkreader-neutral-text);
+}
+svg g rect.er {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.entityBox {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.attributeBoxOdd {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.attributeBoxEven {
+    fill: var(--darkreader-selection-background);
+    fill-opacity: 0.8 !important;
+}
+svg rect.er.relationshipLabelBox {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g g.nodes rect,
+svg g g.nodes polygon {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.task {
+    fill: var(--darkreader-selection-background) !important;
+}
+svg line.messageLine0,
+svg line.messageLine1 {
+    stroke: var(--darkreader-neutral-text) !important;
+}
+div.mermaid .actor {
+    fill: var(--darkreader-neutral-background) !important;
+}
+mitid-authenticators-code-app > .code-app-container {
+    background-color: white !important;
+    padding-top: 1rem;
+}
+iframe#unpaywall[src$="unpaywall.html"] {
+    color-scheme: light !important;
+}
+select {
+    --darkreader-bg--form-control-background-color: rgba(22, 22, 22, 0) !important;
+}
+body#tumblr {
+    --darkreader-bg--secondary-accent: 31, 32, 34 !important;
+    --darkreader-bg--white: 23, 23, 23 !important;
+    --darkreader-text--black: 228, 224, 218 !important;
+}
+:host {
+    --d2l-border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+    --d2l-button-icon-background-color-hover: var(--darkreader-bg--d2l-color-gypsum) !important;
+    --d2l-color-ferrite: var(--darkreader-neutral-text) !important;
+    --d2l-color-sylvite: var(--darkreader-bg--d2l-color-sylvite) !important;
+    --d2l-dropdown-background-color: var(--darkreader-neutral-background) !important;
+    --d2l-dropdown-border-color: var(--darkreader-border--d2l-color-mica) !important;
+    --d2l-input-backgroud-color: var(--darkreader-neutral-background) !important;
+    --d2l-menu-border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+    --d2l-tooltip-background-color: var(--darkreader-neutral-background) !important;
+    --d2l-tooltip-border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+:host([_floating]) .d2l-floating-buttons-container {
+    background-color: var(--darkreader-neutral-background) !important;
+    border-top-color: var(--darkreader-border--d2l-color-mica) !important;
+    opacity: 0.88 !important;
+}
+d2l-card {
+    background: var(--darkreader-neutral-background) !important;
+    border-color: var(--darkreader-border--d2l-color-gypsum) !important;
+}
+d2l-dropdown-content > div,
+d2l-menu-item {
+    background-color: var(--darkreader-neutral-background) !important;
+    border-radius: 10px !important;
+}
+d2l-empty-state-simple {
+    border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+.d2l-button-filter > ul > li > a.vui-button {
+    border-color: var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-label-text:has(.d2l-button-subtle-content):hover,
+.d2l-label-text:has(.d2l-button-subtle-content):focus,
+.d2l-label-text:has(.d2l-button-subtle-content):active {
+    background-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+.d2l-navigation-centerer {
+    color: inherit !important;
+}
+.d2l-tabs-layout {
+    border-color: var(--darkreader-border--d2l-color-gypsum) !important;
+}
+.d2l-input,
+.d2l-calendar-date,
+.d2l-htmleditor-container {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.d2l-collapsible-panel {
+    border: 1px solid var(--darkreader-border--d2l-color-mica) !important;
+    border-radius: 0.4rem !important;
+}
+.d2l-collapsible-panel-divider {
+    border-bottom: 1px solid var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-w2d-flex {
+    border-bottom: 2px solid var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-collapsible-panel scrolled,
+.d2l-collapsible-panel-header,
+.d2l-w2d-collection-fixed {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.d2l-loading-spinner-bg {
+    fill: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+.d2l-loading-spinner-bg-stroke {
+    stroke: var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-loading-spinner-wrapper svg path,
+.d2l-loading-spinner-wrapper svg circle {
+    fill: var(--darkreader-neutral-background) !important;
+}
+.d2l-twopanelselector-side.d2l-twopanelselector-side-sep {
+    background: var(--darkreader-bg--d2l-color-mica) !important;
+}
+.d2l-le-TreeAccordionItem-anchor::before {
+    background: var(--darkreader-bg--d2l-color-corundum) !important;
+}
+table[class|="moz-header"] {
+    background: none;
+}
+*[style*="color: rgba(0,0,0,"]:not([style*="color: rgba(0,0,0,0)"]),
+*[style*="color: rgba(0, 0, 0,"]:not([style*="color: rgba(0, 0, 0, 0)"]),
+*[style*="color:#000"]:not(.cell-input > span),
+*[style*="color:black"]:not(.cell-input > span),
+*[style*="color:#282828"]:not(.cell-input > span),
+*[style*="color:#444"]:not(.cell-input > span),
+*[style*="color: #222222"]:not(.cell-input > span) {
+    color: var(--darkreader-neutral-text) !important;
+}
+*[style*="background:#fff"],
+*[style*="background-color:#fff"],
+*[style*="background: #fff"],
+*[style*="background: rgb(255, 255, 255)"] {
+    background: var(--darkreader-neutral-background) !important;
+}
+*[bgcolor="#F5F5F5"],
+*[style*="background-color: #F5F5F5"] {
+    background: var(--darkreader-background-f5f5f5, #262829) !important;
+}
+*[style*="background: #e6e6e6"] {
+    background: var(--darkreader-background-e6e6e6, #303336) !important;
+}
+body[style*="background: rgb(255, 255, 255) !important"] *:not(a),
+.body[style*="background-color: rgb(254, 254, 254) !important"] *:not(a) {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+div[style*="www.gstatic.com/android/"] {
+    background: none !important;
+}
+*[style*="background:#f9f9f9"] {
+    background: var(--darkreader-background-f9f9f9, #222627) !important;
+}
+body.mediawiki.skin-vector #mw-page-base {
+    background-image: none !important;
+}
+.overflow-hidden .spinning-bg,
+.overflow-hidden .solid-bg {
+    background: transparent !important;
+}
+*[style*="color: rgb(0,0,0) !imoprtant"][style*="--darkreader-inline-color"],
+*[style*="color: rgb(0, 0, 0) !important"][style*="--darkreader-inline-color"] {
+    -webkit-text-fill-color: var(--darkreader-inline-color) !important;
+}
+embed[type="application/pdf"] { filter: invert(100%) contrast(90%); }</style></head><body><header class="mast">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">GenAI Bootcamp · Week 8 · Day 2</div>
+      <h1>Day 2 — Follow Along</h1>
+      <p class="sub">Search that understands what you meant. Every cell to copy, what you should see, and the errors worth knowing about.</p>
+    </div>
+    <div><button class="btn" id="theme">Theme</button></div>
+  </div>
+</header>
+
+<nav class="prog" aria-label="Progress">
+  <div class="wrap">
+    <span class="bar"><i style="width: 0%;"></i></span>
+    <span class="txt">0 of 17 done</span>
+    <button class="reset">reset</button>
+  </div>
+</nav>
+
+<main class="wrap" data-key="nlp-day2-student">
+
+<div class="today">
+  <div class="kick">Week 8 · Day 2 of 4</div>
+  <h2>Search that understands what you meant</h2>
+  <p>Yesterday's search engine scored <b>0.000</b> on a reworded question. Today you fix it in
+  two lines — and then build everything that has to exist around that fix before it is a system
+  anyone could use.</p>
+  <p><b>By the end of today you can:</b></p>
+  <ol>
+    <li>Turn a sentence into one vector that stands for its <b>meaning</b>, not its words.</li>
+    <li>Say where that loses to yesterday's method, and <b>build hybrid search</b> — the two halves of Day 1 and Day 2, merged.</li>
+    <li>Measure what exact search costs, then make it faster with <b>IVF</b> and <b>HNSW</b> and measure what the speed cost you.</li>
+    <li>Search ten thousand documents with a real index (<b>FAISS</b>), and say what it cost.</li>
+    <li>Store text, labels and filters together in a vector database (<b>Chroma</b>).</li>
+    <li>Build <b>RAG</b>: search first, then let a language model answer from what you found.</li>
+    <li>Reorder the results with a <b>reranker</b> and watch the answer change.</li>
+  </ol>
+  <p class="why"><b>Why it matters.</b> RAG is the standard way to make a language model answer
+  from <em>your</em> documents instead of its memory. Everything you build today is the
+  pipeline that sits behind almost every AI product that cites a source.</p>
+</div>
+
+<div class="weekmap">
+    <h2>Where today sits in the week</h2>
+<p><b>The one idea:</b> yesterday the numbers came from <b>counting words</b>. Today they come from a <b>model that has already read billions of words</b>, so two pieces of text about the same thing get similar numbers even when they share none of the same words. That change is about two lines of code. The rest of the day is everything that has to exist around it before it is a system anyone could use.</p>
+    <p>Three jobs in a line:</p>
+    <ol>
+      <li><b>Make the numbers mean something.</b> A sentence goes in, one vector comes out, and it stands for the <em>meaning</em> rather than the spelling.</li>
+      <li><b>Store and search them at scale.</b> Ten documents is a <code>for</code> loop; ten thousand needs an index. FAISS for speed, Chroma for keeping text, labels and filters together.</li>
+      <li><b>Use them.</b> RAG — search first, then let a language model answer <em>from what you found</em>. Then reranking, which reorders the results and changes the answer.</li>
+    </ol>
+    <p><b>What today is not.</b> The documents are still <b>short</b> — single sentences and small paragraphs. A lot of today works partly because of that, and tomorrow is what happens when it stops being true.</p>
+    <p>There is also still <b>no real evaluation</b>: you judge answers by eye. Day 4 turns that into a measurement.</p>
+    <p><b>And the thing to notice:</b> today is where the two halves finally join. Yesterday's word matching and today's meaning matching get combined into <b>hybrid search</b>. Neither half wins on its own — that is why both days exist.</p>
+    <p class="sub">The week at a glance</p>
+    <table>
+      <tbody>
+        <tr><td>Day 1</td><td>Text → numbers. Matching <b>words</b>. Why that breaks.</td></tr>
+        <tr class="here"><td>Day 2 — today</td><td>Matching <b>meaning</b> — embeddings, vector databases, and joining the two halves.</td></tr>
+        <tr><td>Day 3</td><td><b>RAG that survives real documents</b> — chunking, the prompt nobody wrote, and why answers go wrong.</td></tr>
+        <tr><td>Day 4</td><td><b>Evaluation</b> — how you know any of it works.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+<div class="chain">
+  <h2>The thread running through today</h2>
+  <p>Today is not twelve separate exercises. It is <b>one fix, and then everything that
+  fix breaks</b>. Each step opens a hole; the next step fills it. If you ever lose track
+  of why you are running a cell, come back to this table.</p>
+  <table>
+    <tbody>
+      <tr class="beatstart"><td class="beat">The fix</td><td class="stepno">4</td><td>Yesterday's search scored <b>0.000</b> on a reworded question. Two lines fix it.</td></tr>
+      <tr><td class="beat"></td><td class="stepno">5</td><td>…but now an exact invoice number fails. The fix broke something else.</td></tr>
+      <tr><td class="beat"></td><td class="stepno">6</td><td>So keep both methods and merge them → <b>hybrid search</b>.</td></tr>
+      <tr class="beatstart"><td class="beat">Make it real</td><td class="stepno">7</td><td>Ten reviews proves nothing. Scale up to <b>10,000</b> articles.</td></tr>
+      <tr><td class="beat"></td><td class="stepno">8</td><td>Brute force still works — but measure it. About <b>1.2 s per question</b> at a million documents.</td></tr>
+      <tr><td class="beat"></td><td class="stepno">9</td><td>So use a proper index (<b>FAISS</b>). Faster, same answers.</td></tr>
+      <tr><td class="beat"></td><td class="stepno">10</td><td>Still reads everything. Stop looking at everything — and measure what that costs you.</td></tr>
+      <tr class="beatstart"><td class="beat">Make it usable</td><td class="stepno">11</td><td>The index holds <em>only numbers</em>. No text, no topics, no filtering.</td></tr>
+      <tr><td class="beat"></td><td class="stepno">12</td><td>So use a database that holds text + labels + vectors together (<b>Chroma</b>).</td></tr>
+      <tr class="beatstart"><td class="beat">Make it answer</td><td class="stepno">13</td><td>We can find documents — but nobody wants documents. Ask the model cold and it makes things up.</td></tr>
+      <tr><td class="beat"></td><td class="stepno">14</td><td>So find first, then let the model answer <b>from what you found</b>. That is <b>RAG</b>.</td></tr>
+      <tr><td class="beat"></td><td class="stepno">15</td><td>RAG is only as good as what you retrieved. Reorder the top 20 and the answer changes.</td></tr>
+    </tbody>
+  </table>
+  <p class="one"><b>In one sentence:</b> yesterday's search broke on a reworded question;
+  today we fix that in two lines — and then spend the rest of the session on
+  everything that fix breaks.</p>
+</div>
+
+  <div class="intro">
+  <h2>Before you start</h2>
+  <p>Same as yesterday: copy each cell, paste into Colab, <b>Shift + Enter</b>. Check the green Checkpoint before moving on.</p>
+  <p><b>Today downloads about 1.2 GB of AI models.</b> Start Step 1 as soon as you sit down and let it run while we talk — don't wait for the lesson to reach it.</p>
+</div>
+
+<!-- 1 -->
+<section class="step" id="s1">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 1</span><h2>Install — do this first, it's the slow one</h2></div></div>
+  <div class="body">
+    <p class="lead">The slow one, so it goes first. The runtime restart afterwards is <b>not optional</b> — without it Python keeps the old versions in memory and later steps fail for reasons that look nothing like the real cause.</p>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Run now, then restart the runtime</span><button class="copy">Copy</button></div>
+<pre><code>!pip install -q sentence-transformers faiss-cpu chromadb transformers pyarrow scikit-learn</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+      <div class="note">The cell finishes and the <code>[*]</code> on the left turns into a number. Then restart the runtime, as below.</div>
+    </div>
+    <div class="warn"><span class="lbl">Then do this — it is not optional</span>
+      <p>When the cell finishes, go to <b>Runtime → Restart session</b>. Colab loaded older versions of some of these when it started, and until you restart, your imports will pick up the wrong ones.</p>
+      <p>You do <b>not</b> need to run Step 1 again after restarting.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="step" id="s2">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 2</span><h2>Imports</h2></div></div>
+  <div class="body">
+    <p class="lead">One import per job. The Mac-only line lets this same notebook run on a laptop as well as in Colab.</p>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Imports</span><button class="copy">Copy</button></div>
+<pre><code>import os, platform, time
+import numpy as np
+import pandas as pd
+
+if platform.system() == "Darwin":          <span class="c"># Mac only; Colab ignores this</span>
+    os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
+
+import nltk, string
+from nltk.tokenize import word_tokenize
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
+
+for r in ["punkt", "punkt_tab", "stopwords", "wordnet"]:
+    nltk.download(r, quiet=True)
+
+from sentence_transformers import SentenceTransformer, CrossEncoder
+import faiss
+
+print("Setup complete!")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>Setup complete!</pre>
+      <div class="note">An error here almost always means you skipped the restart in Step 1. Restart, then run this again.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="step" id="s3">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 3</span><h2>Yesterday, in one cell</h2></div></div>
+  <div class="body">
+    <p class="lead">Yesterday's corpus, cleaning, TF-IDF and the wall we hit, in one cell. Run it and leave the zeros on screen — today's fix has to beat them.</p>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Rebuild yesterday's search engine</span><button class="copy">Copy</button></div>
+<pre><code>REVIEWS = [
+    "At McDonald's the food was ok and the service was bad.",
+    "I wouldn't recommend this Japanese restaurant to anyone.",
+    "I loved this restaurant when I traveled to Thailand last summer.",
+    "The menu at Loving Hut has a wide variety of vegan options.",
+    "The staff was friendly and helpful at Google's employee cafeteria.",
+    "The ambiance at Bella Italia is amazing, and the pasta dishes are delicious.",
+    "I had a terrible experience at Pizza Hut. The pizza was burnt and the service was slow.",
+    "The sushi at Sushi Express is always fresh and the prices are reasonable.",
+    "The steakhouse on Main Street has a cozy atmosphere and excellent steaks.",
+    "The dessert selection at Sweet Treats is amazing and the prices are fair.",
+]
+PARAPHRASE = "somewhere with good raw fish that is not expensive"
+
+stop_words = set(stopwords.words('english'))
+lemmatizer = WordNetLemmatizer()
+
+def preprocess_text(text):
+    tokens = word_tokenize(text.lower())
+    tokens = [t for t in tokens if t not in string.punctuation and t not in stop_words]
+    return ' '.join(lemmatizer.lemmatize(t) for t in tokens)
+
+clean_reviews = [preprocess_text(r) for r in REVIEWS]
+tfidf = TfidfVectorizer().fit(clean_reviews)
+doc_vectors = tfidf.transform(clean_reviews)
+
+def keyword_search(q):
+    return cosine_similarity(tfidf.transform([preprocess_text(q)]), doc_vectors)[0]
+
+kw = keyword_search(PARAPHRASE)
+print(f"Yesterday's best score on '{PARAPHRASE}': {kw.max():.3f}")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>Yesterday's best score on 'somewhere with good raw fish that is not expensive': 0.000</pre></div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="step" id="s4">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 4</span><h2>The fix — two lines</h2></div></div>
+  <div class="body">
+    <p class="where"><b>Where we are.</b> Yesterday’s search scored 0.000 on a reworded question. Nothing is fixed yet. This step fixes it — in two lines.</p>
+    <p class="lead">Yesterday we counted words. Now we make one number for the whole sentence, based on what it's <em>about</em> — which is why the paraphrase that scored 0.000 yesterday now works. <b>How:</b> we hand the sentence to a model that has already read billions of sentences, and keep the 384 numbers it hands back.</p>
+    <div class="lib"><span class="lbl">The library — start here</span>
+      <p><b>For the next two hours we are building a library.</b> Not the books — the system that finds things in them. Every step today is one more thing that library needs.</p><p>Right now you have hired a librarian who has <b>read every book in the building</b> and remembers a one-sentence summary of each. Ask for <em>the book about a whale and obsession</em> and she walks straight to it. She never needed your words. She needed your meaning.</p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Meaning vectors</span><button class="copy">Copy</button></div>
+<pre><code>embedder = SentenceTransformer('all-MiniLM-L6-v2')
+review_vectors = embedder.encode(REVIEWS, normalize_embeddings=True)
+
+print(f"review_vectors: {review_vectors.shape}   &lt;- 10 reviews, 384 numbers each")
+
+q = embedder.encode([PARAPHRASE], normalize_embeddings=True)
+meaning = (review_vectors @ q.T).ravel()
+
+print(f"\nQUESTION: '{PARAPHRASE}'\n")
+print(f"{'YESTERDAY':&gt;10} {'TODAY':&gt;7}   review")
+for i in np.argsort(meaning)[::-1][:5]:
+    print(f"{kw[i]:&gt;10.3f} {meaning[i]:&gt;7.3f}   [{i}] {REVIEWS[i][:52]}")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>review_vectors: (10, 384)   &lt;- 10 reviews, 384 numbers each
+
+ YESTERDAY   TODAY   review
+     0.000   0.425   [7] The sushi at Sushi Express is always fresh
+     0.000   0.332   [9] The dessert selection at Sweet Treats is am
+     0.000   0.329   [1] I wouldn't recommend this Japanese restaura</pre>
+      <div class="note">Review 7 is now first — on a question that contains <b>none of its words</b>. The model has never seen our reviews; somebody else trained it on billions of sentences and we're borrowing the result.</div>
+    </div>
+    <div class="warn"><span class="lbl">0.425 is not "worse" than yesterday's 0.829</span>
+      <p>These scores aren't on the same scale, and a short question against a short document rarely scores high. <b>What matters is the order, not the size of the number</b> — because the only thing you ever do with these scores is sort them.</p>
+    </div>
+    <div class="words"><span class="lbl">In plain words</span>
+      <p>An <b>embedding</b> is a list of numbers that stands for the meaning of a piece of text. Similar meanings get similar numbers — which is why "raw fish" can find "sushi".</p>
+    </div>
+  
+    <div class="words"><span class="lbl">Where the model came from</span>
+      <p><code>all-MiniLM-L6-v2</code> is downloaded from the <b>Hugging Face Hub</b> — a public
+      library of models and datasets that anybody can publish to and anybody can download from.
+      Almost every model you meet for the rest of this course arrives the same way: a name, a
+      slash, and a download on first use.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="step" id="s5">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 5</span><h2>Where the new method loses</h2></div></div>
+  <div class="body">
+    <p class="where"><b>Where we are.</b> Meaning search works. We have not checked what it broke. This step finds it: exact codes.</p>
+    <p class="lead">Straight after the win, break it. Looking up one exact invoice number is the case where yesterday's crude word-matching beats today's clever model.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p>Now ask that same librarian for <b>ISBN 978-0-141-39200-6</b>. She is lost. Her summary of that book says “a novel about whaling” — and so does her summary of the one beside it.</p><p><b>The number was never in the summary.</b> That is not bad memory. That is what a summary <em>is</em>.</p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Meaning vs keywords on an exact lookup</span><button class="copy">Copy</button></div>
+<pre><code>TICKETS = [
+    "Invoice INV-2024-8871 was paid in full on March 3rd.",
+    "Invoice INV-2024-8817 is overdue by 45 days and has been sent to collections.",
+    "Invoice INV-2024-1788 was cancelled at the customer's request.",
+    "Invoice INV-2023-8817 was refunded after a duplicate charge.",
+    "The customer called to ask about an unpaid invoice from last spring.",
+]
+LOOKUP = "INV-2024-8817"
+
+tv = embedder.encode(TICKETS, normalize_embeddings=True)
+dense = (tv @ embedder.encode([LOOKUP], normalize_embeddings=True).T).ravel()
+
+tt = TfidfVectorizer().fit(TICKETS)
+kws = cosine_similarity(tt.transform([LOOKUP]), tt.transform(TICKETS))[0]
+
+print(f"LOOKING FOR: {LOOKUP}\n")
+print("MEANING says:")
+for i in np.argsort(dense)[::-1][:3]:
+    print(f"   {dense[i]:.3f}  {TICKETS[i][:58]}")
+print("\nKEYWORDS say:")
+for i in np.argsort(kws)[::-1][:3]:
+    print(f"   {kws[i]:.3f}  {TICKETS[i][:58]}")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>LOOKING FOR: INV-2024-8817
+
+MEANING says:
+   0.515  Invoice INV-2024-8871 was paid in full on March 3rd.    &lt;- WRONG one
+   0.492  Invoice INV-2024-8817 is overdue by 45 days...          &lt;- right one, 2nd
+
+KEYWORDS say:
+   0.339  Invoice INV-2024-8817 is overdue by 45 days...          &lt;- right one, 1st</pre>
+      <div class="note"><b>Yesterday's method wins.</b> To a model that reads meaning, both invoice numbers are just "an invoice number" — and the digits are the whole question.</div>
+    </div>
+    <div class="words"><span class="lbl">Two words you'll hear a lot</span>
+      <p><b>Sparse</b> = yesterday's method (one slot per word, nearly all zeros). <b>Dense</b> = today's (384 slots, all filled). Production systems run <b>both</b> and merge the results — that's called <b>hybrid search</b>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="step" id="s6">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 6</span><h2>Keep both — hybrid search</h2></div></div>
+  <div class="body">
+    <p class="where"><b>Where we are.</b> Meaning search works; exact codes are broken. This step fixes exact codes without giving up meaning.</p>
+    <p class="lead">Step 5 left you with two rankings that disagree. Neither is right on its own, so you keep both and merge them. <b>This is the thing Day 1 promised you would build</b> — the moment the two halves of search finally join.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p>So you keep the librarian <b>and</b> the old card index. She is useless with numbers; the index is useless with ideas. Ask both, and trust whatever they both put near the top.</p><p>Neither one got promoted. You just stopped relying on either one alone.</p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Reciprocal rank fusion — merge by position, not by score</span><button class="copy">Copy</button></div>
+<pre><code>def rank_of(scores):
+    """Position of every document in a ranking: 1 = best."""
+    order = np.argsort(scores)[::-1]
+    ranks = np.empty(len(scores), dtype=int)
+    ranks[order] = np.arange(1, len(scores) + 1)
+    return ranks
+
+K = 60   # the standard constant; it damps the weight of low positions
+rrf = 1 / (K + rank_of(dense)) + 1 / (K + rank_of(kws))
+
+print(f"{'MEANING':&gt;8} {'KEYWORD':&gt;8} {'HYBRID':&gt;7}   document")
+print("=" * 88)
+for i in np.argsort(rrf)[::-1]:
+    print(f"{rank_of(dense)[i]:&gt;8} {rank_of(kws)[i]:&gt;8} {rank_of(rrf)[i]:&gt;7}   {TICKETS[i][:58]}")
+
+print(f"\n-&gt; Hybrid top hit: {TICKETS[int(np.argmax(rrf))]}")</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><code>rank_of(scores)</code> — turns a list of scores into <b>positions</b>: 1 for the best document, 2 for the next, and so on. The two lines with <code>order</code> are just a way of inverting a sort.</li>
+        <li><code>K = 60</code> — the standard constant from the original paper. It stops the top position from dominating everything: with <code>K=60</code>, rank 1 scores 1/61 and rank 2 scores 1/62, which are close together. A smaller <code>K</code> makes first place count for much more.</li>
+        <li><code>1/(K + rank) + 1/(K + rank)</code> — add up what each method thinks. <b>A document only wins if both methods like it, or one of them loves it.</b></li>
+        <li>the loop — prints all five tickets with all three rankings side by side, so you can see what moved.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>&nbsp;MEANING  KEYWORD  HYBRID   document
+========================================================================================
+       2        1       1   Invoice INV-2024-8817 is overdue by 45 days and has been s
+       1        4       2   Invoice INV-2024-8871 was paid in full on March 3rd.
+       3        2       3   Invoice INV-2023-8817 was refunded after a duplicate charge
+       4        3       4   Invoice INV-2024-1788 was cancelled at the customer's reque
+       5        5       5   The customer called to ask about an unpaid invoice from las
+
+-&gt; Hybrid top hit: Invoice INV-2024-8817 is overdue by 45 days and has been sent to collections.</pre>
+      <div class="note"><b>The right invoice is now rank 1.</b> Meaning-search had it second; keyword-search had it first but with a tiny raw score. Neither was trustworthy alone, and merging by <em>position</em> fixed it.</div>
+    </div>
+    <div class="words"><span class="lbl">Why merge positions instead of scores</span>
+      <p>The two scores are not on the same scale and never will be. Meaning-similarity runs roughly 0.3–0.9 for almost anything; TF-IDF similarity is near zero most of the time and spikes when a rare word matches. <b>Adding them together would let whichever method happens to produce bigger numbers win every time.</b></p>
+      <p>Positions have no such problem. "Second place" means the same thing in both lists. That is the whole trick, and it is why this three-line function is what ships: <b>Elasticsearch, Azure AI Search and OpenSearch all implement reciprocal rank fusion</b>. How far ahead hybrid finishes depends entirely on the data and the questions — which is why you measure it on your own search task rather than trusting a number from someone else's.</p>
+        <div class="grasp"><div class="hd">Check you understood</div>
+      <p class="intro-l">End of the first beat — meaning, and its limit. Answer these before Step 7.</p>
+      <ol>
+        <li>Yesterday’s search scored 0.000 and today’s scored 0.425. Why is 0.425 not a worse result?
+          <details><summary>Show the answer</summary><p>The two numbers are not on the same scale, so comparing their sizes is meaningless. What changed is the <b>order</b>: the right review went from unfindable to first. A score is only ever used to sort — never read it as a grade.</p></details></li>
+        <li>The model has never seen our ten reviews. So how can it know that <em>raw fish</em> and <em>sushi</em> belong together?
+          <details><summary>Show the answer</summary><p>It does not know anything about our reviews. Somebody else trained it on billions of sentences in which those words kept appearing in similar company, and it compressed that into 384 numbers per sentence. We are borrowing a result, not computing one.</p></details></li>
+        <li>Looking up <code>INV-2024-8817</code>, the meaning model returned <code>INV-2024-8871</code> first. Explain the failure in one sentence.
+          <details><summary>Show the answer</summary><p>An embedding is a <em>summary</em> of what text is about, and both strings summarise to ‘an invoice number’ — but the digits were the entire question. You cannot look something up by its summary.</p></details></li>
+        <li>Hybrid search merges <b>positions</b>, not scores. Why not just add the two scores together?
+          <details><summary>Show the answer</summary><p>Because they live on different scales. Meaning-similarity sits around 0.3–0.9 for almost anything; TF-IDF is near zero most of the time and spikes on a rare match. Adding them lets whichever method happens to produce bigger numbers win every time. ‘Second place’ means the same thing in both lists.</p></details></li>
+      </ol>
+    </div>
+</div>
+  </div>
+</section>
+<section class="step" id="s7">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 7</span><h2>Scale up to 10,000 documents</h2></div></div>
+  <div class="body">
+    <p class="where"><b>Where we are.</b> Search works on ten sentences — which proves nothing. This step moves to 10,000 real articles.</p>
+    <p class="lead">Ten sentences can't show you a real problem. Ten thousand news articles can — and they make the cost arguments in Steps 8 and 10 real rather than theoretical.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p>Everything works with ten books on a desk. <b>You cannot learn anything about a library from a desk.</b></p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Load and encode — the slow step, done once</span><button class="copy">Copy</button></div>
+<pre><code>AG_NEWS = ("https://huggingface.co/datasets/fancyzhx/ag_news/"
+           "resolve/main/data/train-00000-of-00001.parquet")
+TOPICS = {0: "World", 1: "Sports", 2: "Business", 3: "Sci/Tech"}
+
+news = pd.read_parquet(AG_NEWS).head(10_000).copy()
+news["topic"] = news["label"].map(TOPICS)
+news = news.reset_index(drop=True)
+news["id"] = news.index
+
+start = time.time()
+news_vectors = embedder.encode(news["text"].tolist(), normalize_embeddings=True,
+                               batch_size=256, show_progress_bar=True).astype('float32')
+print(f"\nEncoded {len(news):,} articles in {time.time()-start:.1f} seconds")
+print(f"news_vectors: {news_vectors.shape}")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>Encoded 10,000 articles in ~13 seconds
+news_vectors: (10000, 384)</pre>
+      <div class="note">A progress bar will appear. Your time will differ — anything under a couple of minutes is fine.</div>
+    </div>
+    <div class="words"><span class="lbl">The rule to remember</span>
+      <p><b>Documents are encoded once. Questions are encoded one at a time, forever after.</b> That difference is the whole economics of a search system.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="step" id="s8">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 8</span><h2>What exact search costs</h2></div></div>
+  <div class="body">
+    <p class="where"><b>Where we are.</b> 10,000 documents, and search still works. We just don’t know what it costs. This step measures it.</p>
+    <p class="lead">You now have 10,000 vectors and a question. The obvious way to search is to compare the question against every single article — that is <b>exact k-nearest-neighbour search</b>, and it is what we have been doing all along without naming it. Before improving it, measure it.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p>Your method so far is: pick up every book, one at a time, decide, put it down. Fine for a shelf.</p><p>So time one shelf, multiply by the number of shelves in the building — and <b>that number is why the rest of today exists</b>.</p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Time it, then do the arithmetic for real corpus sizes</span><button class="copy">Copy</button></div>
+<pre><code>def knn_search(question, k=5):
+    """Exact search: compare the question against every article."""
+    q = embedder.encode([question], normalize_embeddings=True).astype('float32')
+    scores = (news_vectors @ q.T).ravel()
+    top = np.argsort(scores)[::-1][:k]
+    return [(int(i), float(scores[i])) for i in top]
+
+QUESTION = "How many medals did Michael Phelps win at the Athens Olympics?"
+q_vec = embedder.encode([QUESTION], normalize_embeddings=True).astype('float32')
+
+runs = 20
+start = time.time()
+for _ in range(runs):
+    _ = news_vectors @ q_vec.T
+per_query_ms = (time.time() - start) / runs * 1000
+
+print(f"{'documents':&gt;14}  {'time per question':&gt;18}  {'memory for the vectors':&gt;24}")
+print("=" * 62)
+for n in [len(news), 1_000_000, 10_000_000, 100_000_000]:
+    ms = per_query_ms * n / len(news)
+    gb = n * 384 * 4 / 1e9
+    measured = "   &lt;- measured" if n == len(news) else ""
+    shown = f"{ms:,.1f} ms" if ms &lt; 1000 else f"{ms/1000:,.1f} s"
+    ram = f"{gb*1000:,.0f} MB" if gb &lt; 1 else f"{gb:,.1f} GB"
+    print(f"{n:&gt;14,}  {shown:&gt;18}  {ram:&gt;24}{measured}")
+
+print("\nAnd the answers are exact — it looked at every article:")
+for i, sc in knn_search(QUESTION, k=3):
+    print(f"   {sc:.3f}  {news.text[i][:88]}")</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><code>news_vectors @ q.T</code> — one matrix multiply compares the question against all 10,000 articles at once. Because the vectors are normalised, this <em>is</em> cosine similarity.</li>
+        <li><code>runs = 20</code> and the loop — time it twenty times and average, because a single timing on a shared machine is noise.</li>
+        <li>the <code>for n in [...]</code> loop — <b>no new measurement happens here.</b> It takes the one measured time and scales it linearly, because exact search really is linear: twice the documents, twice the work.</li>
+        <li><code>n * 384 * 4 / 1e9</code> — memory. 384 numbers per vector, 4 bytes per number (<code>float32</code>).</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>&nbsp;    documents   time per question    memory for the vectors
+==============================================================
+        10,000             11.6 ms                     15 MB   &lt;- measured
+     1,000,000               1.2 s                    1.5 GB
+    10,000,000              11.6 s                   15.4 GB
+   100,000,000             115.7 s                  153.6 GB
+
+And the answers are exact — it looked at every article:
+   0.808  Phelps to Forgo Final Race of Olympics ATHENS, Greece - Michael Phelps is done
+   0.801  Swimming: Phelps Wins Eighth Medal at Athens Games  ATHENS (Reuters) - American
+   0.800  Phelps wins fourth gold at Athens Olympics ATHENS, Aug. 19 (Xinhuanet) -- Phelps</pre>
+      <div class="note">Read the middle column downwards. <b>11.6 milliseconds is fine. 1.2 seconds per question is not a search box</b> — nobody waits that long for results, and that is only a million documents. At ten million you are at 11 seconds and 15 GB of RAM. <b>Your timings will differ from these; the shape of the table will not.</b></div>
+    </div>
+    <div class="words"><span class="lbl">Keep this number</span>
+      <p>This is your <b>answer key</b>. Everything from Step 9 onwards is faster than this, and the only interesting question about any of it is <em>what did the speed cost in accuracy</em>. You cannot answer that without a correct, slow baseline to compare against.</p>
+      <p><b>You will see a different number in Step 10</b> — the exact FAISS index measures <b>3.583 ms</b> where this plain NumPy version takes <b>11.6 ms</b>. Same answers, same documents: FAISS is just better optimised than one line of NumPy. Step 10 compares against the 3.583.</p>
+    </div>
+  </div>
+</section>
+<section class="step" id="s9">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 9</span><h2>Put the vectors in a real index</h2></div></div>
+  <div class="body">
+    <p class="where"><b>Where we are.</b> Brute force works, but the cost grows in a straight line. This step replaces it with a real index.</p>
+    <p class="lead">Comparing against every document works, but the cost grows in a straight line. FAISS is a library built for exactly that job.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p>You still check every book — but now on a conveyor belt instead of carrying them by hand. Same books, same answer, a fraction of the time.</p><p><b>Nothing clever has happened yet.</b> The job is just being done properly.</p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">FAISS</span><button class="copy">Copy</button></div>
+<pre><code>QUESTION = "How many medals did Michael Phelps win at the Athens Olympics?"
+
+index = faiss.IndexIDMap(faiss.IndexFlatIP(384))
+index.add_with_ids(news_vectors, news["id"].to_numpy().astype('int64'))
+print(f"Index built: {index.ntotal:,} vectors\n")
+
+def faiss_search(question, k=5):
+    q = embedder.encode([question], normalize_embeddings=True).astype('float32')
+    scores, ids = index.search(q, k)
+    return list(zip(ids[0].tolist(), scores[0].tolist()))
+
+for i, s in faiss_search(QUESTION, k=3):
+    print(f"   {s:.3f}  [{i}] {news.text[i][:72]}")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>Index built: 10,000 vectors
+
+   0.808  [5308] Phelps to Forgo Final Race of Olympics ATHENS, Greece...
+   0.801  [5811] Swimming: Phelps Wins Eighth Medal at Athens Games...
+   0.800  [4506] Phelps wins fourth gold at Athens Olympics ATHENS...</pre>
+      <div class="note">Same answers as doing it by hand — and faster, though this cell does not measure that. <b>Step 10 measures it:</b> 3.583 ms here against 11.6 ms for the plain NumPy version. Remember these three results — the order they're in causes a problem in Step 15.</div>
+    </div>
+    <div class="warn"><span class="lbl">Three things that will catch you</span>
+      <p><b>1.</b> FAISS wants <code>float32</code>. <b>2.</b> The index size must be <b>384</b> — that's what this model outputs. <b>3.</b> <code>faiss.normalize_L2(x)</code> changes <code>x</code> and returns <b>nothing</b>; writing <code>x = faiss.normalize_L2(x)</code> destroys your vectors.</p>
+    </div>
+  
+    <div class="words"><span class="lbl">This index is still exact</span>
+      <p>It compares your question against <b>every</b> vector, so it is correct every time — just
+      organised and faster than doing it by hand. <b>Step 10 is where you stop looking at
+      everything</b>, and where you find out what that costs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="step" id="s10">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 10</span><h2>Stop looking at everything — and measure what that costs</h2></div></div>
+  <div class="body">
+    <p class="where"><b>Where we are.</b> The index is faster, but still reads every vector. This step skips most of them — and measures what you lose.</p>
+    <p class="lead">Exact search reads all 10,000 vectors for every question. <b>Approximate search deliberately skips most of them</b>, and accepts that it might miss the best document. That trade is the entire field of vector search — and it is only a good trade if you measure what you lost.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p>Now you stop visiting every aisle and go only to the <b>three sections most likely to hold it</b>. Nearly always right — and occasionally the book was shelved oddly and you walk straight past it.</p><p>And the only reason you know how often that happens is that <b>you already did it the slow way once</b>. That is all recall is measuring: your shortcut against your own exhaustive search.</p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">IVF — group the vectors into clusters, read only a few</span><button class="copy">Copy</button></div>
+<pre><code>PROBE_QUESTIONS = [          # measure on several questions, not one
+    "How many gold medals did Michael Phelps win at the Athens Olympics?",
+    "oil prices and the economy", "new Microsoft software release",
+    "election results in Europe", "stock market falls",
+    "space telescope discovery", "Apple computer sales",
+    "football transfer news", "hurricane damage in Florida",
+    "peace talks in the Middle East", "internet security flaw", "airline bankruptcy",
+]
+probe_vectors = embedder.encode(PROBE_QUESTIONS, normalize_embeddings=True).astype('float32')
+
+def timed_search(idx, k=10, runs=20):
+    """Average milliseconds per question, and the ids each question got back."""
+    start = time.time()
+    for _ in range(runs):
+        _, ids = idx.search(probe_vectors, k)
+    ms = (time.time() - start) / runs / len(PROBE_QUESTIONS) * 1000
+    return ms, ids
+
+flat = faiss.IndexFlatIP(384)
+flat.add(news_vectors)
+exact_ms, exact_ids = timed_search(flat)      # the answer key
+
+NLIST = 200
+ivf = faiss.IndexIVFFlat(faiss.IndexFlatIP(384), 384, NLIST, faiss.METRIC_INNER_PRODUCT)
+ivf.train(news_vectors)                       # the clustering step — only IVF needs this
+ivf.add(news_vectors)
+
+print(f"{'nprobe':&gt;7}  {'clusters read':&gt;14}  {'ms per question':&gt;16}  {'recall@10':&gt;10}")
+print("=" * 56)
+for nprobe in [1, 2, 5, 10, 25, NLIST]:
+    ivf.nprobe = nprobe
+    ms, ids = timed_search(ivf)
+    recall = np.mean([len(set(ids[j]) &amp; set(exact_ids[j])) / 10
+                      for j in range(len(PROBE_QUESTIONS))])
+    tail = "   &lt;- this IS exact search" if nprobe == NLIST else ""
+    print(f"{nprobe:&gt;7}  {nprobe/NLIST:&gt;13.1%}  {ms:&gt;16.3f}  {recall:&gt;10.2f}{tail}")
+
+print(f"\nexact search: {exact_ms:.3f} ms per question, recall 1.00 by definition")</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><code>PROBE_QUESTIONS</code> — twelve questions, not one. A single question can get lucky; an average over twelve cannot.</li>
+        <li><code>flat</code> and <code>exact_ids</code> — build the <b>exact</b> index first and keep its answers. Everything else is scored against these.</li>
+        <li><code>IndexIVFFlat(..., NLIST, ...)</code> — IVF sorts the 10,000 vectors into 200 clusters. A question then only has to be compared against the vectors in the nearest few clusters.</li>
+        <li><code>ivf.train(news_vectors)</code> — works out where the 200 clusters are. <b>Only IVF needs a training step</b>, and it needs it before you add anything.</li>
+        <li><code>ivf.nprobe</code> — how many clusters to actually read. This is the dial: 1 is fastest and blindest, 200 reads everything.</li>
+        <li><code>recall</code> — of the 10 results <b>exact search</b> returned, how many did the fast index also return? <code>set(ids) &amp; set(exact_ids)</code> is the overlap.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>&nbsp;nprobe   clusters read   ms per question   recall@10
+========================================================
+      1           0.5%             0.018        0.70
+      2           1.0%             0.023        0.83
+      5           2.5%             0.041        0.95
+     10           5.0%             0.057        0.98
+     25          12.5%             0.154        1.00
+    200         100.0%             1.761        1.00   &lt;- this IS exact search
+
+exact search: 3.583 ms per question, recall 1.00 by definition</pre>
+      <div class="note">Read the last two columns together. At <code>nprobe=1</code> you are <b>200× faster and missing 3 of every 10 results exact search found</b>. At <code>nprobe=25</code> you read an eighth of the data and lose nothing measurable. <b>That is the whole trade, in one table.</b></div>
+    </div>
+    <div class="warn"><span class="lbl">What recall here does and does not tell you</span>
+      <p>Recall@10 measures <b>agreement with exact search</b> — nothing more. It is not a
+      measure of whether the results are any good. If exact search ranks the wrong article first,
+      an approximate index that reproduces that ranking perfectly scores recall 1.00 and is just
+      as wrong, just faster.</p>
+      <p>So this table answers one question only: <em>how much did the shortcut change the
+      answers?</em> Whether those answers were right in the first place is a different measurement
+      — and that is Day 4.</p>
+    </div>
+    <p class="lead" style="margin-top:24px">IVF is the easy one to explain. The one you will actually meet works the opposite way: it divides the space into <em>nothing at all</em>. Instead, every vector keeps a short list of its nearest neighbours — and you find things by walking from one to the next.</p>
+    <div class="words"><span class="lbl">How HNSW actually searches</span>
+      <p>Give every vector a contacts list: <b>the 32 others closest to it</b>. No drawers, no regions, no training step — just 10,000 vectors, each knowing 32 neighbours.</p>
+      <p>To search, start anywhere and repeat one move: <b>“of my 32 neighbours, which is closest to the question? Go there.”</b> Stop when no neighbour is closer than where you are standing. Each hop takes a big bite out of the remaining distance, so you arrive in about <b>a dozen hops instead of 10,000 comparisons</b>. You never look at the data as a whole — you just keep stepping towards the question.</p>
+    </div>
+    <div class="words"><span class="lbl">And the H is for Hierarchical — the actual trick</span>
+      <p>The graph is built in layers. The <b>top</b> layer holds very few vectors with very <em>long</em> links, so two or three hops cross the whole space. Each layer down holds more vectors with shorter links. The <b>bottom</b> layer holds everything, with short local links.</p>
+      <p>You start at the top, travel far fast, drop a layer, refine, drop again, and do the fine detail at the bottom. <b>It is how you reach a street address in another country:</b> fly to the nearest big airport, take a train to the nearest town, walk the last few streets. Three zoom levels, each one closer — and nobody ever consults a map of every address.</p>
+      <p>The full name is <b>Hierarchical Navigable Small World</b>. “Small world” is the six-degrees-of-separation idea: you can reach a stranger by repeatedly asking “who do you know who is closer to this person?” — because the network was built so a handful of hops reaches anyone.</p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">HNSW — a graph instead of clusters. This is what vector databases run.</span><button class="copy">Copy</button></div>
+<pre><code>hnsw = faiss.IndexHNSWFlat(384, 32, faiss.METRIC_INNER_PRODUCT)  # 32 = links per vector
+start = time.time()
+hnsw.add(news_vectors)
+build_time = time.time() - start
+
+print(f"{'efSearch':&gt;9}  {'ms per question':&gt;16}  {'recall@10':&gt;10}")
+print("=" * 40)
+for ef in [16, 32, 64]:
+    hnsw.hnsw.efSearch = ef                  # how widely to walk the graph
+    ms, ids = timed_search(hnsw)
+    recall = np.mean([len(set(ids[j]) &amp; set(exact_ids[j])) / 10
+                      for j in range(len(PROBE_QUESTIONS))])
+    print(f"{ef:&gt;9}  {ms:&gt;16.3f}  {recall:&gt;10.2f}")
+
+print(f"\nBuilt in {build_time:.1f}s. Uses more memory than IVF — it stores the graph too.")</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><code>IndexHNSWFlat(384, 32, ...)</code> — <b>32 is the size of each vector’s contacts list.</b> More links mean better paths through the graph and more memory, and it is fixed when the index is built — unlike <code>efSearch</code>, you cannot change it afterwards. Note there is <b>no training step</b>: IVF had to work out where its clusters were; HNSW just starts linking.</li>
+        <li><code>hnsw.efSearch</code> — how many candidate paths to keep open while walking. <b>Not one path — a handful.</b> Walking greedily can strand you somewhere no neighbour is closer but which is not actually the best vector, just the bottom of a small dip. Keeping 16 candidates alive lets you back out of that dead end. <b>This is HNSW’s <code>nprobe</code></b>: the same “how thorough am I being” dial, which is why the two tables have the same shape.</li>
+        <li><code>timed_search(hnsw)</code> — the same timing and the same recall check as IVF, so the two tables are directly comparable.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>&nbsp;efSearch   ms per question   recall@10
+========================================
+       16             0.070        1.00
+       32             0.091        1.00
+       64             0.144        1.00
+
+Built in 2.1s. Uses more memory than IVF — it stores the graph too.</pre>
+      <div class="note">Against exact search at <b>3.583 ms</b>, that is roughly <b>fifty times faster at full recall</b> on this corpus. <b>HNSW is the default index inside Chroma, Pinecone, Weaviate and Qdrant</b> — so this is what you will be running in production whether or not you ever type its name.</div>
+    </div>
+    <div class="warn"><span class="lbl">The dial does nothing here — and that is the point</span>
+      <p>Recall is already <b>1.00 at the cheapest setting</b>, so turning <code>efSearch</code> up just costs time and buys nothing. Reasonable question: why does the parameter exist?</p>
+      <p>Because <b>10,000 vectors is far too small to make HNSW struggle.</b> The graph is so well connected at this size that the laziest possible walk already finds everything. At ten million vectors that column moves plenty.</p>
+      <p>So the two tables do different jobs. <b>The IVF table showed you the trade; this one shows you the destination</b> — and it only looks this good because our corpus is small. Do not read 1.00 as a promise. Read it as the reason you measure.</p>
+    </div>
+    <div class="words"><span class="lbl">What HNSW costs</span>
+      <p>It is not free. The graph itself has to be stored, so it uses <b>more memory than IVF</b>, and building it gets slow as the corpus grows — 2.1 seconds here is nothing, but at ten million vectors it is a real job. Deleting vectors is awkward too, which is why many systems rebuild instead of deleting.</p>
+      <p>That is the bargain: <b>the best speed-to-recall curve in the business, paid for in memory and build time.</b> For a search workload that is the right side of the trade, which is exactly why every vector database reached for it.</p>
+    </div>
+    <div class="words"><span class="lbl">The rule to write down</span>
+      <p><b>Build the exact index first and keep it as your answer key. Speed is bought with recall. If you did not measure recall, you do not know what you bought.</b></p>
+      <p>And the sizing advice that saves people from infrastructure they do not need: <b>under about a hundred thousand vectors, just use exact search.</b> No tuning, no missed documents, no surprises. Most projects never exceed that.</p>
+    </div>
+  </div>
+</section>
+<!-- 11 -->
+<section class="step" id="s11">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 11</span><h2>What the index cannot do</h2></div></div>
+  <div class="body">
+    <p class="where"><b>Where we are.</b> Search is fast and accurate. But the index stores nothing but numbers. This step shows what that makes impossible.</p>
+    <p class="lead">The index is fast now. But ask it a question any real application needs to answer — <em>"articles about apple, but only Business ones"</em> — and you find out what you gave up when you stored nothing but numbers.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p>The catalogue hands you <b>shelf numbers</b>. Not books — numbers. And you cannot ask it for “books about apples, Penguin editions only”, because it never recorded publishers.</p><p>It only ever stored positions.</p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Everything FAISS returns, and the filter that does not work</span><button class="copy">Copy</button></div>
+<pre><code>scores, ids = index.search(q_vec, 5)
+print("Everything FAISS returns:")
+print(f"   ids    = {ids[0].tolist()}")
+print(f"   scores = {[round(float(x), 3) for x in scores[0]]}")
+print("\n-&gt; No text. No topic. Those live in `news`, and we join them by hand.\n")
+
+print("QUESTION WE CANNOT ASK: 'articles about apple, but only Business ones'")
+print("=" * 78)
+apple = faiss_search("apple", k=5)
+kept = 0
+for i, sc in apple:
+    topic = news.topic[i]
+    mark = "keep" if topic == "Business" else "drop"
+    kept += topic == "Business"
+    print(f"   [{mark}] {topic:9} {sc:.3f}  {news.text[i][:60]}")
+print(f"\n-&gt; Asked for 5, kept {kept}.")</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><code>index.search(q_vec, 5)</code> — returns two arrays and nothing else: the ids and the scores. <b>That is genuinely all a FAISS index contains.</b></li>
+        <li><code>news.topic[i]</code> — to find out what an article is about, you have to go back to the dataframe. If the notebook restarts and the dataframe is gone, your index is a pile of anonymous numbers.</li>
+        <li>the <code>keep</code>/<code>drop</code> loop — searches first, then throws away anything that is not Business. This is the obvious thing to try, and it is what fails.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>Everything FAISS returns:
+   ids    = [5308, 5811, 4506, 4096, 6687]
+   scores = [0.808, 0.801, 0.8, 0.793, 0.791]
+
+-&gt; No text. No topic. Those live in `news`, and we join them by hand.
+
+QUESTION WE CANNOT ASK: 'articles about apple, but only Business ones'
+==============================================================================
+   [drop] Sci/Tech  0.605  Rival Targets Apple's ITunes Music Customers
+   [drop] Sci/Tech  0.602  iPod is the only clear winner? While Apple is
+   [drop] Sci/Tech  0.564  Apple G5 chips 'in short supply'
+   [drop] Sci/Tech  0.528  Apple in iTunes.co.uk cybersquatting row
+   [drop] Sci/Tech  0.527  Satisfied Customers Jefferson Graham writes
+
+-&gt; Asked for 5, kept 0.</pre>
+      <div class="note"><b>Asked for five, kept zero.</b> Not one Business article survived — and there are plenty in the corpus. You never gave them a chance: the search picked its five favourites knowing nothing about topics, and only then did you apply the filter.</div>
+    </div>
+    <div class="words"><span class="lbl">Filtering afterwards is not filtering</span>
+      <p>Think of a library search that returns the ten most relevant books and <em>then</em> you check which are in English. If all ten happen to be in German, you get nothing — even though the library has a thousand relevant English books on the shelf.</p>
+      <p><b>The filter has to happen inside the search</b>, which means the search has to know about the topic labels. FAISS never will; storing metadata is not its job. That is what the next step is for.</p>
+    </div>
+  </div>
+</section>
+<section class="step" id="s12">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 12</span><h2>Store the text and the labels too</h2></div></div>
+  <div class="body">
+    <p class="where"><b>Where we are.</b> The index cannot hold text, labels or filters. This step uses a database that can.</p>
+    <p class="lead">FAISS gives back ID numbers and scores. No text, no topic, and no filtering — “articles about apple, but only Business ones” is not a question it can answer. That is the difference between an index and a database.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p>So you get a real catalogue: <b>title, subject tags and shelf location on the same card</b>. Now “about apples, Business section only” is a question you can actually ask.</p>
+    </div>
+    <div class="warn"><span class="lbl">This one takes a few minutes</span>
+      <p>Chroma encodes all 10,000 documents <b>again</b> — it uses its own embedding function rather than the vectors you made in Step 7, and it is not batched the same way. Start the cell and keep listening; nothing is stuck.</p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">ChromaDB — a vector database</span><button class="copy">Copy</button></div>
+<pre><code>import chromadb
+from chromadb.utils import embedding_functions
+
+client = chromadb.Client()
+try:
+    client.delete_collection("news-collection")     <span class="c"># so re-running is safe</span>
+except Exception:
+    pass
+
+collection = client.create_collection(
+    name="news-collection",
+    embedding_function=embedding_functions.SentenceTransformerEmbeddingFunction(
+        model_name="all-MiniLM-L6-v2"),
+    metadata={"hnsw:space": "cosine"},
+)
+
+for s in range(0, len(news), 4000):                 <span class="c"># add in batches - there is a limit</span>
+    part = news.iloc[s:s+4000]
+    collection.add(ids=[str(i) for i in part["id"]],
+                   documents=part["text"].tolist(),
+                   metadatas=[{"topic": t} for t in part["topic"]])
+
+def show(res, title):
+    print(title)
+    for d, m, dist in zip(res["documents"][0], res["metadatas"][0], res["distances"][0]):
+        print(f"   dist={dist:.3f}  [{m['topic']:8}] {d[:60]}")
+    print()
+
+show(collection.query(query_texts=["apple"], n_results=3), "'apple', no filter:")
+show(collection.query(query_texts=["apple"], n_results=3,
+                      where={"topic": "Business"}), "'apple', Business only:")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>'apple', no filter:
+   dist=0.395  [Sci/Tech] Rival Targets Apple's ITunes Music Customers...
+   dist=0.398  [Sci/Tech] iPod is the only clear winner?...
+
+'apple', Business only:
+   dist=0.508  [Business] Dutch Firm Beats Apple to Punch...
+   dist=0.529  [Business] Site Is Mac Daddy of Apple Deals...</pre>
+      <div class="note">Asked for Business, got Business. <b>The filter ran inside the search</b> — not afterwards on a list that was already chosen.</div>
+    </div>
+    <div class="warn"><span class="lbl">Three Chroma quirks</span>
+      <p><b>Distances, not scores</b> — smaller is closer, the opposite of everything else today. <b>Everything comes back wrapped in an extra list</b> because Chroma answers several questions at once; <code>result["documents"][0]</code> is your answer. <b>IDs must be strings.</b></p>
+    </div>
+    <div class="words"><span class="lbl">Library, database, or plugin — three products, used carelessly</span>
+      <p>Job adverts use these words interchangeably. They are not the same thing.</p>
+    </div>
+    <div class="tw">
+      <table>
+        <thead><tr><th></th><th>What it is</th><th>Holds</th><th>Use it when</th></tr></thead>
+        <tbody>
+          <tr><td class="m">Library</td><td>code you import: FAISS, hnswlib, Annoy, ScaNN</td><td>vectors and ids, in memory</td><td>you own the storage and want the fastest possible index</td></tr>
+          <tr><td class="m">Vector database</td><td>a service: Chroma, Pinecone, Weaviate, Qdrant, Milvus</td><td>vectors <b>+ documents + metadata</b>, on disk, filterable, updatable</td><td>you are building an application</td></tr>
+          <tr><td class="m">Plugin</td><td>vector search bolted onto a database you already run: pgvector, Elasticsearch, Redis, MongoDB Atlas</td><td>whatever that database already holds, plus vectors</td><td>your data is already there and you don't want a second system</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="words"><span class="lbl">The row people skip</span>
+      <p><b>The plugin row is usually the right answer, and it is the one nobody considers.</b> If your documents are already in Postgres, <code>pgvector</code> gives you vector search, SQL filters and joins in a single query — with the backups, permissions and monitoring you already have. Standing up a separate vector database means a second system to secure, back up and keep in sync.</p>
+      <p>We use Chroma today because it runs inside the notebook with no server to start.</p>
+        <div class="grasp"><div class="hd">Check you understood</div>
+      <p class="intro-l">End of the second beat — making it work at real volume. These four are the engineering half of the day.</p>
+      <ol>
+        <li>Step 8 measured one number and printed a table up to 100 million documents. What exactly was measured, and what was arithmetic?
+          <details><summary>Show the answer</summary><p>Only the 10,000-document row was measured. Every other row is that one timing multiplied up, because exact search is linear — twice the documents, twice the work. It is a sound estimate of the <em>shape</em> of the problem, not a prediction of real latency on real hardware.</p></details></li>
+        <li><code>nprobe=1</code> gave recall 0.70. Say precisely what that 0.70 means.
+          <details><summary>Show the answer</summary><p>Of the ten results exact search returned, the fast index returned seven of the same ones. It is <b>agreement with brute force</b> — not a measure of whether any of them answer the question. An index that copies a bad ranking perfectly still scores 1.00.</p></details></li>
+        <li>Why is the exact search run first and kept, before any approximate index is built?
+          <details><summary>Show the answer</summary><p>It is the answer key. Every approximate index is faster than exact search, so speed alone proves nothing — the only interesting question is what the speed cost you, and you cannot answer that without the correct, slow result to compare against.</p></details></li>
+        <li>FAISS gave back ID numbers and scores. Name two things a real application needs that those cannot provide.
+          <details><summary>Show the answer</summary><p>The text itself, and the ability to filter — ‘articles about apple, but only Business ones’ is not a question an index of bare numbers can answer. That gap is the whole reason Chroma exists.</p></details></li>
+      </ol>
+    </div>
+</div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="step" id="s13">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 13</span><h2>Ask a language model — with nothing to go on</h2></div></div>
+  <div class="body">
+    <p class="where"><b>Where we are.</b> We can find documents. Nobody wanted documents — they asked a question. This step shows what the model does with nothing.</p>
+    <p class="lead">We can find documents. Nobody wanted documents — they asked a question. The confident wrong answer you get here is the thing RAG exists to fix.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p>You have built a magnificent library — and your reader wanted an <em>answer</em>, not a shelf number.</p><p>So you ask a confident student who has not opened the book. They answer immediately, fluently, and wrongly — because <b>nothing in the situation ever asked them to be sure</b>.</p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">No documents</span><button class="copy">Copy</button></div>
+<pre><code>from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+
+MODEL_ID = "Qwen/Qwen2.5-0.5B-Instruct"
+tok = AutoTokenizer.from_pretrained(MODEL_ID)
+lm = AutoModelForCausalLM.from_pretrained(MODEL_ID)
+generator = pipeline("text-generation", model=lm, tokenizer=tok)
+
+def ask(messages, max_new_tokens=60):
+    prompt = tok.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    out = generator(prompt, max_new_tokens=max_new_tokens,
+                    do_sample=False, return_full_text=False)
+    return out[0]["generated_text"].strip()
+
+print(f"QUESTION: {QUESTION}\n")
+print("ANSWER, with no documents:")
+print("  ", ask([{"role": "user", "content": QUESTION}]))</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>ANSWER, with no documents:
+   Michael Phelps won 24 gold medals at the 2008 Summer Olympics in
+   Athens, Greece. He also won 15 silver and 10 bronze medals...</pre>
+      <div class="note">Your wording may differ. <b>What won't differ is that it's wrong</b> — and delivered with total confidence. Athens was 2004, not 2008. He won 6 gold and 2 bronze there: 8 medals, not 49.</div>
+    </div>
+    <div class="warn"><span class="lbl">This is the problem the whole week is about</span>
+      <p>Fluent. Confident. Wrong. And <b>nothing in the output admits it.</b> This cell is the slowest one today — it downloads about a gigabyte.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="step" id="s14">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 14</span><h2>Now give it our documents — this is RAG</h2></div></div>
+  <div class="body">
+    <p class="where"><b>Where we are.</b> Asked cold, the model makes things up. This step gives it what you found first. That is RAG.</p>
+    <p class="lead">Search first. Paste what you found into the prompt. Let the model answer from that. That is RAG, and it is three lines.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p><b>Open-book exam.</b> Same student, but you hand them the three relevant pages first.</p><p>That is the whole idea. You did not make it smarter. You gave it something to read.</p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Retrieve → Augment → Generate</span><button class="copy">Copy</button></div>
+<pre><code>def answer_from(ids):
+    context = "\n".join(f"- {news.text[i]}" for i in ids)
+    return ask([
+        {"role": "system", "content": "Answer only from the context. Be brief."},
+        {"role": "user", "content": f"Context:\n{context}\n\nQuestion: {QUESTION}"},
+    ])
+
+hits = faiss_search(QUESTION, k=3)
+print("CONTEXT - what the search found:")
+for i, s in hits:
+    print(f"   {s:.3f}  {news.text[i][:78]}")
+
+print(f"\nANSWER, from our documents: {answer_from([i for i, _ in hits])}")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>CONTEXT - what the search found:
+   0.808  Phelps to Forgo Final Race of Olympics ATHENS, Greece...
+   0.801  Swimming: Phelps Wins Eighth Medal at Athens Games...
+   0.800  Phelps wins fourth gold at Athens Olympics ATHENS...
+
+ANSWER, from our documents: fourth gold</pre>
+      <div class="note">Better — and <b>still not right</b>. But now you can see <em>why</em>, because the articles it used are printed above it. That visibility is the entire point of RAG.</div>
+    </div>
+    <div class="words"><span class="lbl">RAG, in one line</span>
+      <p><b>R</b>etrieve the right documents, <b>A</b>ugment the prompt with them, <b>G</b>enerate the answer. The retrieval is the part that decides whether the answer is any good.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 15 -->
+<section class="step" id="s15">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 15</span><h2>Fix the order, and the answer changes</h2></div></div>
+  <div class="body">
+    <p class="where"><b>Where we are.</b> RAG works, but it is only as good as the order of what you retrieved. This step reorders it.</p>
+    <p class="lead">The search found the right articles; the model read the top of the list, and the top was a mid-tournament report. Retrieval wasn't bad — the order was.</p>
+    <div class="lib"><span class="lbl">The library — and where it breaks</span>
+      <p>You handed over twenty pages and they answered from whichever was on top — which was a mid-tournament report, so the answer was wrong. The search was fine. <b>The order was wrong.</b> So a second, slower reader skims all twenty properly and puts the best one first.</p><p><b>Now the part where the analogy breaks, and it matters.</b> A librarian understands the books. The model understands nothing. It has no beliefs about what is in there — it has a compressed summary, and it is very good at spotting when two summaries look alike. <b>Everything that worked today worked because of that, and everything that failed today failed because of that.</b></p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Reranking</span><button class="copy">Copy</button></div>
+<pre><code>reranker = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2")
+
+candidates = faiss_search(QUESTION, k=20)                      <span class="c"># stage 1: fast, broad</span>
+pairs = [(QUESTION, news.text[i]) for i, _ in candidates]
+rerank_scores = reranker.predict(pairs)                        <span class="c"># stage 2: slow, accurate</span>
+
+before = [i for i, _ in candidates][:3]
+after  = [candidates[j][0] for j in np.argsort(rerank_scores)[::-1]][:3]
+
+print(f"Top 3 straight from the search : {answer_from(before)}")
+print(f"Top 3 after reranking          : {answer_from(after)}")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>Top 3 straight from the search : fourth gold
+Top 3 after reranking          : six</pre>
+      <div class="note"><b>Same model. Same articles. Same three-document budget. Different order, different answer.</b></div>
+    </div>
+    <div class="warn"><span class="lbl">And "six" is still not right</span>
+      <p>He won <b>eight</b> medals at Athens — six of them gold. The articles we retrieved are about golds, so the answer is about golds.</p>
+      <p>Retrieval improved the answer twice and still didn't reach the truth. <b>The only reason we know is that we printed the sources next to it.</b> Always do that.</p>
+    </div>
+    <div class="words"><span class="lbl">Two words you will meet constantly</span>
+      <p>A <b>bi-encoder</b> is what you have used all day: it reads the question <em>on its own</em>, reads each document <em>on its own</em>, and compares the two sets of numbers. Fast, because every document was encoded once in advance — but it never sees the question and the document together.</p>
+      <p>A <b>cross-encoder</b> reads the question and one document <em>at the same time</em> and scores that pair. Far more accurate, and far slower: nothing can be done in advance, so it has to run once per document. That is why you search with a bi-encoder to get 20 candidates, then rerank just those 20 with a cross-encoder.</p>
+    </div>
+    <div class="words"><span class="lbl">You don't have to host the model yourself</span>
+      <p>You just ran a cross-encoder on your own machine. Every retrieval platform also sells this as an endpoint, so you send text and get scores back:</p>
+      <p><b>Pinecone</b> — <code>pc.inference.rerank(model="bge-reranker-v2-m3", ...)</code>. <b>Cohere Rerank</b>, <b>Voyage</b> and <b>Jina</b> are the same idea from different providers. <code>bge-reranker-v2-m3</code> is a cross-encoder doing exactly what you just ran locally.</p>
+      <p>Two things that bite people the first time. The embedding model used with these outputs <b>384</b> numbers, so the index has to be created with <code>dimension=384</code>. And after you <b>upsert</b> — the word vector databases use for "insert, or update if this id already exists" — <b>wait until the vector count is above zero before querying</b>, because indexing is not instant.</p>
+    </div>
+    <div class="words"><span class="lbl">Try it yourself: the apple problem</span>
+      <p>A good test of all this: ask <em>"Tell me about Apple's products"</em> over a pile of documents about both the fruit and the company.</p>
+      <p>You now know exactly why that example is hard. To a bi-encoder — the embedding model from Step 4 — a document about the fruit and one about the company are both "apple, a thing, described", and the fruit can easily outrank the company. <b>A cross-encoder reads your question and the document together, which is what pulls them apart.</b></p>
+        <div class="grasp"><div class="hd">Check you understood</div>
+      <p class="intro-l">End of the day. The first question is the one to take into every project after this.</p>
+      <ol>
+        <li><b>Retrieval quality, evidence quality and answer quality are three different things.</b> Give an example of each failing on its own.
+          <details><summary>Show the answer</summary><p>Retrieval fails: the right article was never returned. Evidence fails: the article came back but does not actually contain the fact. Answer fails: the evidence was there and correct, and the model still read it wrong or ignored it. A RAG system can break at any of the three, and each is checked separately — that is Day 4.</p></details></li>
+        <li>The model answered the Phelps question wrongly with no documents and acceptably with them. Does giving a model documents make it correct?
+          <details><summary>Show the answer</summary><p>No. It gives it something to be correct <em>from</em>. If the retrieved documents are irrelevant, incomplete or contradict each other, the answer is still wrong — just wrong with citations, which is harder to spot.</p></details></li>
+        <li>The reranker changed the answer without changing the search. What did it actually change, and what can it never fix?
+          <details><summary>Show the answer</summary><p>It reordered the candidates you already had, so the model read a better article first. It can never supply evidence that was not retrieved — if the right article is not in the top 20, no amount of reordering will find it.</p></details></li>
+        <li>Why is a cross-encoder too slow to use as your search, but fine for reordering twenty results?
+          <details><summary>Show the answer</summary><p>It reads the question and the document <em>together</em>, so it has to run once per document — impossible across 10,000. The bi-encoder encodes every document once, in advance, and only the question at query time. So the cheap model narrows 10,000 to 20 and the expensive one sorts those 20.</p></details></li>
+      </ol>
+    </div>
+</div>
+  </div>
+</section>
+
+<!-- 16 -->
+<section class="step" id="s16">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 16</span><h2>Check you can explain these</h2></div></div>
+  <div class="body">
+    <p class="lead">No code. These are the terms you'll be expected to use correctly tomorrow and in the hackathon.</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Word</th><th>What it means</th></tr></thead>
+        <tbody>
+          <tr><td class="m">bi-encoder</td><td>encodes question and document separately, then compares — fast, used for search</td></tr>
+          <tr><td class="m">cross-encoder</td><td>reads question and document together and scores the pair — slow, used for reranking</td></tr>
+          <tr><td class="m">k-nearest-neighbour</td><td>comparing the question against every document and keeping the closest k</td></tr>
+          <tr><td class="m">hybrid search</td><td>running word matching and meaning matching together and merging the two rankings</td></tr>
+          <tr><td class="m">reciprocal rank fusion</td><td>the standard way to merge them — by position, not by score</td></tr>
+          <tr><td class="m">recall@10</td><td>of the 10 results exact search returned, how many a fast index also returned — agreement, not relevance</td></tr>
+          <tr><td class="m">IVF / HNSW</td><td>two ways of searching without looking at every vector — clusters, and a graph</td></tr>
+          <tr><td class="m">embedding</td><td>a list of numbers standing for the meaning of a piece of text</td></tr>
+          <tr><td class="m">dense / sparse</td><td>dense = today's 384 filled numbers · sparse = yesterday's mostly-zeros</td></tr>
+          <tr><td class="m">index</td><td>a structure that finds the closest vectors quickly (FAISS)</td></tr>
+          <tr><td class="m">vector database</td><td>an index that also stores the text and its labels, and can filter (Chroma)</td></tr>
+          <tr><td class="m">metadata</td><td>everything you know about a document that isn't its text — topic, date, author</td></tr>
+          <tr><td class="m">RAG</td><td>retrieve documents, put them in the prompt, let the model answer from them</td></tr>
+          <tr><td class="m">reranking</td><td>reordering a shortlist with a slower, more accurate model</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="words"><span class="lbl">The one rule that breaks most projects</span>
+      <p><b>The same model must encode both sides.</b> If your documents were encoded with one model and your questions with another, the numbers aren't comparable and nothing will work — quietly.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 17 -->
+<section class="step" id="s17">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">IF IT BREAKS</span><h2>Errors you might actually see</h2></div></div>
+  <div class="body">
+    <p class="lead">The errors this notebook actually produces. Most are version or restart problems, not mistakes in your code.</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th>What you see</th><th>What to do</th></tr></thead>
+        <tbody>
+          <tr><td class="m">ImportError / ModuleNotFoundError after Step 1</td><td>You skipped the restart. <b>Runtime → Restart session</b>, then run from Step 2.</td></tr>
+          <tr><td class="m">AssertionError about dimension, or <br>d == self.d</td><td>Your index wasn't built with <b>384</b>, or your vectors aren't <code>float32</code>.</td></tr>
+          <tr><td class="m">Chroma: batch size exceeded</td><td>Add documents in slices, as Step 12 does. The limit is about 5,400 at a time.</td></tr>
+          <tr><td class="m">Collection already exists</td><td>That's what the <code>try / delete_collection</code> lines are for — make sure you copied them.</td></tr>
+          <tr><td class="m">Step 13 is taking forever</td><td>It's downloading about 1&nbsp;GB. Leave it. If it fails, run the cell again — it resumes.</td></tr>
+          <tr><td class="m">Your model's wording differs from a checkpoint</td><td>Expected. Judge it by whether it's right, not whether it matches.</td></tr>
+          <tr><td class="m">Everything is broken</td><td><b>Runtime → Restart session</b>, then run every cell from Step 2 down, in order.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer><div class="wrap">
+  Day 2 of 4 · Next session: the same pipeline pointed at real documents — 200 pages of technical documentation — where it fails again, for a completely different reason.
+</div></footer>
+<script>
+(function(){
+  var KEY = ((document.querySelector('main') && document.querySelector('main').getAttribute('data-key')) || 'studentboard') + '-progress';
+  var steps = [].slice.call(document.querySelectorAll('.step'));
+  var fill = document.querySelector('.prog .bar i');
+  var txt  = document.querySelector('.prog .txt');
+
+  var done = {};
+  try { done = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { done = {}; }
+
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(done)); } catch (e) {} }
+
+  function paint(){
+    var n = 0;
+    steps.forEach(function(s){
+      var on = !!done[s.id];
+      s.classList.toggle('done', on);
+      s.querySelector('.tick').setAttribute('aria-pressed', on ? 'true' : 'false');
+      if (on) n++;
+    });
+    fill.style.width = (steps.length ? (n / steps.length) * 100 : 0) + '%';
+    txt.textContent = n + ' of ' + steps.length + ' done';
+  }
+
+  steps.forEach(function(s){
+    var b = s.querySelector('.tick');
+    b.innerHTML = '<svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"/></svg>';
+    b.setAttribute('aria-label', 'Mark this step done');
+    b.addEventListener('click', function(){
+      done[s.id] = !done[s.id];
+      if (!done[s.id]) delete done[s.id];
+      save(); paint();
+    });
+  });
+
+  var reset = document.querySelector('.prog .reset');
+  if (reset) reset.addEventListener('click', function(){ done = {}; save(); paint(); });
+
+  paint();
+
+  // copy buttons
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click', function(){
+      var pre = b.closest('.codewrap').querySelector('pre');
+      var ok = function(){ b.textContent = 'Copied'; setTimeout(function(){ b.textContent = 'Copy'; }, 1400); };
+      var pick = function(){
+        var r = document.createRange(); r.selectNodeContents(pre);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        b.textContent = 'Select + copy'; setTimeout(function(){ b.textContent = 'Copy'; }, 2000);
+      };
+      try { navigator.clipboard.writeText(pre.innerText).then(ok, pick); } catch (e) { pick(); }
+    });
+  });
+
+  // theme
+  var root = document.documentElement, tb = document.getElementById('theme');
+  try { var sv = localStorage.getItem(KEY + '-theme'); if (sv) root.setAttribute('data-theme', sv); } catch (e) {}
+  tb.addEventListener('click', function(){
+    var cur = root.getAttribute('data-theme');
+    var dark = cur ? cur === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var next = dark ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem(KEY + '-theme', next); } catch (e) {}
+  });
+})();
+</script>
+
+
+</body></html>

@@ -1,0 +1,70 @@
+=== cell 0 (exec_count=None) type=markdown ===
+SRC: # Exercises XP: Vector Databases and RAG | Use this guided notebook and fill each TODO before running cells.
+
+=== cell 1 (exec_count=None) type=markdown ===
+SRC: ## What you'll learn | - Vector search strategies (KNN, ANN) and evaluation. | - Vector database utility (similarity search, RAG). | - Differences between vector DBs, libraries, and plugins. | - Best practice
+
+=== cell 2 (exec_count=None) type=markdown ===
+SRC: ## What you'll build | A functional RAG pipeline with FAISS and ChromaDB, plus QA over retrieved context using a Hugging Face model.
+
+=== cell 3 (exec_count=None) type=markdown ===
+SRC: ## 0. Setup | Run the install cell once. If your platform needs system deps (e.g., libomp for FAISS), follow instructions in comments.
+
+=== cell 4 (exec_count=1) type=code ===
+SRC: # %pip uninstall -y pydantic-core pydantic | # %pip install -U "pydantic<2" | # %pip install -U "faiss-cpu>=1.8.0" "chromadb==0.3.21" | # %pip install -U "numpy<2" sentence-transformers transformers
+
+=== cell 5 (exec_count=2) type=code ===
+SRC: # %pip uninstall -y pydantic pydantic-core numpy pyarrow datasets | # %pip install -U "numpy>=2" pyarrow datasets pydantic | # %pip install -U faiss-cpu chromadb sentence-transformers transformers
+
+=== cell 6 (exec_count=3) type=code ===
+SRC: # %pip install -U tf-keras
+
+=== cell 7 (exec_count=4) type=code ===
+SRC: import os | import json | from pathlib import Path | import numpy as np | import pandas as pd | import faiss | from sentence_transformers import SentenceTransformer, InputExample | import chromadb | from chromadb.con
+OUT: c:\Users\avigd\Desktop\GENAI\.venv2\Lib\site-packages\tqdm\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+
+OUT: WARNING:tensorflow:From c:\Users\avigd\Desktop\GENAI\.venv2\Lib\site-packages\tf_keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+
+ERROR: ImportError: cannot import name 'BucketNotFoundError' from 'huggingface_hub.errors' (c:\Users\avigd\Desktop\GENAI\.venv2\Lib\site-packages\huggingface_hub\errors.py)
+
+=== cell 8 (exec_count=None) type=markdown ===
+SRC: ## 🌟 Exercise 1 · Data loading and preparation
+
+=== cell 9 (exec_count=None) type=code ===
+SRC: data_path = 'labelled_newscatcher_dataset.csv' | pdf = pd.read_csv(data_path, sep=';') | if 'id' not in pdf.columns: |     pdf['id'] = range(len(pdf)) | display(pdf.head()) | pdf_subset = pdf.head(1000) | pdf_sub
+
+=== cell 10 (exec_count=None) type=markdown ===
+SRC: ## 🌟 Exercise 2 · Vectorization with Sentence Transformers
+
+=== cell 11 (exec_count=None) type=code ===
+SRC: def example_create_fn(idx: int, text: str) -> InputExample: |     return InputExample(guid=str(idx), texts=[text], label=0.0) |  | faiss_train_examples = [example_create_fn(idx, title) for idx, title in enu
+
+=== cell 12 (exec_count=None) type=code ===
+SRC: model = SentenceTransformer('all-MiniLM-L6-v2') | titles_list = pdf_subset['title'].tolist() | faiss_title_embedding = model.encode(titles_list, convert_to_numpy=True, show_progress_bar=True) | len(faiss_ti
+
+=== cell 13 (exec_count=None) type=markdown ===
+SRC: ## 🌟 Exercise 3 · FAISS indexing and search
+
+=== cell 14 (exec_count=None) type=code ===
+SRC: pdf_to_index = pdf_subset | id_index = pdf_to_index['id'].to_numpy().astype(np.int64) | content_encoded_normalized = faiss_title_embedding.astype('float32') | faiss.normalize_L2(content_encoded_normalized) | 
+
+=== cell 15 (exec_count=None) type=code ===
+SRC: def search_content(query: str, pdf_to_index: pd.DataFrame, k: int = 3): |     query_vector = model.encode([query], convert_to_numpy=True) |     faiss.normalize_L2(query_vector) |     sims, ids = index_conte
+
+=== cell 16 (exec_count=None) type=markdown ===
+SRC: ## 🌟 Exercise 4 · ChromaDB collection and querying
+
+=== cell 17 (exec_count=None) type=code ===
+SRC: chroma_client = chromadb.Client(Settings(anonymized_telemetry=False)) | collection_name = 'my_news' | if any(c.name == collection_name for c in chroma_client.list_collections()): |     chroma_client.delete_
+
+=== cell 18 (exec_count=None) type=markdown ===
+SRC: ## 🌟 Exercise 5 · Question answering with a Hugging Face model
+
+=== cell 19 (exec_count=None) type=code ===
+SRC: # %pip install -U "transformers<5"
+
+=== cell 20 (exec_count=None) type=code ===
+SRC: model_id = 'google/flan-t5-small'  # lightweight, better than tiny GPT-2 for QA | # To-Do: create the text2text-generation pipeline | pipe = pipeline('text2text-generation', model=model_id) |  | question = "W
+

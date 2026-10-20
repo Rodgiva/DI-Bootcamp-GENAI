@@ -1,0 +1,45 @@
+--- cell 2 markdown ---
+## What you'll build
+A functional RAG pipeline with FAISS and ChromaDB, plus QA over retrieved context using a Hugging Face model.
+
+--- cell 4 code ---
+# %pip uninstall -y pydantic-core pydantic
+# %pip install -U "pydantic<2"
+# %pip install -U "faiss-cpu>=1.8.0" "chromadb==0.3.21"
+# %pip install -U "numpy<2" sentence-transformers transformers
+
+--- cell 5 code ---
+%pip uninstall -y pydantic pydantic-core numpy pyarrow datasets
+%pip install -U "numpy>=2" pyarrow datasets pydantic
+%pip install -U faiss-cpu chromadb sentence-transformers transformers
+
+--- cell 6 code ---
+import os
+import json
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import faiss
+from sentence_transformers import SentenceTransformer, InputExample
+import chromadb
+from chromadb.config import Settings
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+from IPython.display import display
+os.makedirs('cache', exist_ok=True)
+
+
+--- cell 15 markdown ---
+## 🌟 Exercise 4 · ChromaDB collection and querying
+
+--- cell 16 code ---
+chroma_client = chromadb.Client(Settings(anonymized_telemetry=False))
+collection_name = 'my_news'
+if any(c.name == collection_name for c in chroma_client.list_collections()):
+    chroma_client.delete_collection(name=collection_name)
+# To-Do: create the collection and add documents
+collection = chroma_client.create_collection(...)
+collection.add(...)
+results = collection.query(...)
+print(json.dumps(results, indent=2))
+
+

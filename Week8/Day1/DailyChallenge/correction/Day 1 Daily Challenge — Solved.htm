@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en" data-darkreader-mode="dynamic" data-darkreader-scheme="dark"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--user-agent" media="screen">@layer {
+html {
+    background-color: var(--darkreader-background-ffffff, #1e2122) !important;
+}
+html {
+    color-scheme: dark !important;
+}
+iframe {
+    color-scheme: dark !important;
+}
+html, body {
+    background-color: var(--darkreader-background-ffffff, #1e2122);
+}
+html, body {
+    border-color: var(--darkreader-border-4c4c4c, #908676);
+    color: var(--darkreader-text-000000, #ffffff);
+}
+a {
+    color: var(--darkreader-text-0040ff, #40b5ff);
+}
+table {
+    border-color: var(--darkreader-border-808080, #697276);
+}
+mark {
+    color: var(--darkreader-text-000000, #ffffff);
+}
+::placeholder {
+    color: var(--darkreader-text-a9a9a9, #dfd6c9);
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: var(--darkreader-background-faffbd, #505500) !important;
+    color: var(--darkreader-text-000000, #ffffff) !important;
+}
+* {
+    scrollbar-color: var(--darkreader-background-b0b0b0, #565d60) var(--darkreader-background-f1f1f1, #282c2d);
+}
+::selection {
+    background-color: var(--darkreader-background-0060d4, #0060d4) !important;
+    color: var(--darkreader-text-ffffff, #ffffff) !important;
+}
+::-moz-selection {
+    background-color: var(--darkreader-background-0060d4, #0060d4) !important;
+    color: var(--darkreader-text-ffffff, #ffffff) !important;
+}
+}</style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">c-wiz div > svg > circle, .jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, img.Wirisformula, a[data-testid="headerMediumLogo"]>svg, .d2l-navigation-link-image-container, .d2l-iframe-loading-container, div.mc-ip-hide[style*="background: rgb(255, 255, 255) !important"], [style*="color: rgb(0, 0, 1) !important;"] {
+    filter: invert(100%) hue-rotate(180deg) brightness(125%) contrast(90%) !important;
+}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}
+[data-darkreader-inline-stopcolor] {
+  stop-color: var(--darkreader-inline-stopcolor) !important;
+}
+[data-darkreader-inline-bg] {
+  background: var(--darkreader-inline-bg) !important;
+}
+[data-darkreader-inline-border-short] {
+  border: var(--darkreader-inline-border-short) !important;
+}
+[data-darkreader-inline-border-bottom-short] {
+  border-bottom: var(--darkreader-inline-border-bottom-short) !important;
+}
+[data-darkreader-inline-border-left-short] {
+  border-left: var(--darkreader-inline-border-left-short) !important;
+}
+[data-darkreader-inline-border-right-short] {
+  border-right: var(--darkreader-inline-border-right-short) !important;
+}
+[data-darkreader-inline-border-top-short] {
+  border-top: var(--darkreader-inline-border-top-short) !important;
+}
+[data-darkreader-inline-invert] {
+    filter: invert(100%) hue-rotate(180deg);
+}</style><style class="darkreader darkreader--variables" media="screen">:root {
+   --darkreader-neutral-background: var(--darkreader-background-ffffff, #1e2122);
+   --darkreader-neutral-text: var(--darkreader-text-000000, #ffffff);
+   --darkreader-selection-background: var(--darkreader-background-0060d4, #0060d4);
+   --darkreader-selection-text: var(--darkreader-text-ffffff, #ffffff);
+}</style><style class="darkreader darkreader--root-vars" media="screen"></style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Day 1 Daily Challenge — Solved</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link rel="stylesheet" href="Day%201%20Daily%20Challenge%20%E2%80%94%20Solved_files/css2_ORss.css">
+
+<style>
+/* Student follow-along: a numbered ladder of steps, each with code to copy and a checkpoint. */
+:root{
+  --ground:#F2F3F0; --surface:#FFFFFF; --surface-2:#E9EBE6;
+  --ink:#16191A; --ink-2:#434A4C; --ink-3:#6E767A;
+  --line:#D3D7D1; --line-soft:#E3E6E1;
+  --accent:#0F5F62; --accent-soft:#DDEBEA;
+  --warn:#8A4B10; --warn-soft:#F6E8D8;
+  --ok:#1F6B3A; --ok-soft:#DEEDE2;
+  --shell-bg:#1A2022; --shell-ink:#E4E8E6; --shell-dim:#8D9A99;
+  --f-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Newsreader",Georgia,serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#121516; --surface:#1A1E1F; --surface-2:#222728;
+    --ink:#EAEDEB; --ink-2:#B4BBB9; --ink-3:#848C8B;
+    --line:#2E3435; --line-soft:#262B2C;
+    --accent:#5FC3C2; --accent-soft:#17302F;
+    --warn:#D79A55; --warn-soft:#2B2217;
+    --ok:#6FC68C; --ok-soft:#16281D;
+    --shell-bg:#0D1011; --shell-ink:#DDE2E0; --shell-dim:#7C8887;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#121516; --surface:#1A1E1F; --surface-2:#222728;
+  --ink:#EAEDEB; --ink-2:#B4BBB9; --ink-3:#848C8B;
+  --line:#2E3435; --line-soft:#262B2C;
+  --accent:#5FC3C2; --accent-soft:#17302F;
+  --warn:#D79A55; --warn-soft:#2B2217;
+  --ok:#6FC68C; --ok-soft:#16281D;
+  --shell-bg:#0D1011; --shell-ink:#DDE2E0; --shell-dim:#7C8887;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--f-body); font-size:18px; line-height:1.6; -webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--f-display); text-wrap:balance; line-height:1.17;
+  letter-spacing:-.02em; margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:3px}
+.wrap{max-width:900px; margin-inline:auto; padding-inline:20px}
+
+.mast{background:var(--surface); border-bottom:1px solid var(--line)}
+.mast .wrap{padding-block:34px 26px; display:flex; flex-wrap:wrap; gap:22px;
+  align-items:flex-end; justify-content:space-between}
+.eyebrow{font-family:var(--f-mono); font-size:11px; letter-spacing:.17em;
+  text-transform:uppercase; color:var(--accent); margin-bottom:12px}
+.mast h1{font-size:clamp(29px,4.6vw,43px); font-weight:700; letter-spacing:-.03em}
+.mast .sub{font-size:18px; color:var(--ink-2); margin:10px 0 0; max-width:52ch}
+.btn{font-family:var(--f-mono); font-size:11.5px; letter-spacing:.05em; padding:8px 13px;
+  background:var(--surface-2); color:var(--ink-2); border:1px solid var(--line);
+  border-radius:2px; cursor:pointer}
+.btn:hover{border-color:var(--accent); color:var(--accent)}
+
+/* progress bar */
+.prog{position:sticky; top:env(safe-area-inset-top, 0px); z-index:30;
+  background:var(--surface); border-bottom:1px solid var(--line)}
+.prog .wrap{padding-block:10px; display:flex; align-items:center; gap:14px}
+.prog .bar{flex:1; height:8px; background:var(--surface-2); border-radius:4px; overflow:hidden}
+.prog .bar i{display:block; height:100%; width:0; background:var(--ok);
+  border-radius:4px; transition:width .2s}
+.prog .txt{font-family:var(--f-mono); font-size:11.5px; color:var(--ink-3); white-space:nowrap}
+.prog .reset{font-family:var(--f-mono); font-size:11px; color:var(--ink-3);
+  background:none; border:0; cursor:pointer; text-decoration:underline; padding:0}
+
+main{padding-block:34px 70px}
+
+/* day opener */
+.today{background:var(--accent-soft); border:1px solid var(--accent); border-radius:4px;
+  padding:22px 24px; margin-bottom:22px}
+.today .kick{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--accent); margin-bottom:9px}
+.today h2{font-size:clamp(20px,2.4vw,24px); font-weight:600; margin-bottom:11px}
+.today p{margin:0 0 13px; font-size:17.5px; color:var(--ink)}
+.today ol{margin:0 0 13px; padding-left:1.35em; font-size:16.5px; color:var(--ink-2)}
+.today li{margin-bottom:5px}
+.today .why{margin:0; padding-top:13px; border-top:1px solid var(--accent);
+  font-size:16.5px; color:var(--ink-2)}
+
+/* where today sits in the week */
+.weekmap{background:var(--surface); border:1px solid var(--line); border-radius:4px;
+  padding:22px 24px; margin-bottom:22px}
+.weekmap h2{font-size:20px; font-weight:600; margin-bottom:12px}
+.weekmap p{margin:0 0 12px; color:var(--ink-2); font-size:17px}
+.weekmap ol{margin:0 0 14px; padding-left:1.3em; color:var(--ink-2); font-size:17px}
+.weekmap li{margin-bottom:7px}
+.weekmap table{width:100%; border-collapse:collapse; margin:4px 0 0; font-size:16px}
+.weekmap td{border-top:1px solid var(--line); padding:9px 10px; color:var(--ink-2);
+  vertical-align:top}
+.weekmap td:first-child{width:92px; white-space:nowrap; font-family:var(--f-mono);
+  font-size:13px; letter-spacing:.03em; color:var(--ink-3)}
+.weekmap tr.here td{background:var(--accent-soft); color:var(--ink); font-weight:500}
+.weekmap tr.here td:first-child{color:var(--accent)}
+.weekmap .sub{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-3); margin:18px 0 8px}
+
+/* understand check */
+.grasp{margin:22px 0 0; border:1px solid var(--accent); border-radius:3px;
+  background:var(--surface); overflow:hidden}
+.grasp .hd{background:var(--accent-soft); padding:7px 13px; font-family:var(--f-mono);
+  font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent)}
+.grasp .intro-l{padding:11px 15px 0; margin:0; font-size:15.5px; color:var(--ink-3)}
+.grasp ol{margin:0; padding:11px 16px 13px 32px; font-size:16.5px; color:var(--ink-2)}
+.grasp li{margin-bottom:11px; line-height:1.5}
+.grasp li:last-child{margin-bottom:0}
+.grasp details{margin-top:6px}
+.grasp summary{cursor:pointer; font-family:var(--f-mono); font-size:11px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--accent)}
+.grasp details p{margin:7px 0 0; font-size:16px; color:var(--ink-2); max-width:62ch}
+
+/* intro panel */
+.intro{background:var(--surface); border:1px solid var(--line); border-radius:4px;
+  padding:22px 24px; margin-bottom:34px}
+.intro h2{font-size:21px; font-weight:600; margin-bottom:10px}
+.intro p{margin:0 0 12px; color:var(--ink-2); font-size:17px}
+.intro p:last-child{margin-bottom:0}
+.intro ul{margin:0 0 12px; padding-left:1.2em; color:var(--ink-2); font-size:17px}
+.intro li{margin-bottom:5px}
+
+/* steps */
+.step{border-top:1px solid var(--line); padding-block:30px 8px}
+.shead{display:flex; align-items:flex-start; gap:14px}
+.tick{flex:0 0 auto; width:26px; height:26px; margin-top:4px; border-radius:50%;
+  border:2px solid var(--line); background:var(--surface); cursor:pointer;
+  display:grid; place-items:center; padding:0; transition:.12s}
+.tick:hover{border-color:var(--ok)}
+.tick svg{width:14px; height:14px; opacity:0; stroke:var(--surface); stroke-width:3;
+  fill:none; stroke-linecap:round; stroke-linejoin:round}
+.step.done .tick{background:var(--ok); border-color:var(--ok)}
+.step.done .tick svg{opacity:1}
+.sn{font-family:var(--f-mono); font-size:12px; color:var(--accent);
+  letter-spacing:.1em; display:block; margin-bottom:5px}
+.step h2{font-size:clamp(21px,2.6vw,27px); font-weight:600}
+.step.done h2{color:var(--ink-3)}
+.step p{margin:13px 0 0; max-width:64ch; color:var(--ink-2)}
+.step p.lead{color:var(--ink); font-size:19px}
+.step ul,.step ol{margin:13px 0 0; padding-left:1.25em; max-width:64ch; color:var(--ink-2)}
+.step li{margin-bottom:6px}
+.step h3{font-size:18px; font-weight:600; margin:26px 0 0; color:var(--ink)}
+.body{padding-left:40px}
+@media (max-width:620px){ .body{padding-left:0} }
+
+/* code */
+.codewrap{margin:18px 0 0; border:1px solid var(--line); border-radius:3px; overflow:hidden}
+.codebar{display:flex; align-items:center; justify-content:space-between; gap:12px;
+  background:var(--surface-2); padding:7px 12px; border-bottom:1px solid var(--line)}
+.codebar .t{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink-3)}
+.copy{font-family:var(--f-mono); font-size:10.5px; padding:4px 10px; cursor:pointer;
+  background:var(--surface); color:var(--ink-2); border:1px solid var(--line); border-radius:2px}
+.copy:hover{border-color:var(--accent); color:var(--accent)}
+pre{margin:0; background:var(--shell-bg); color:var(--shell-ink); padding:14px 16px;
+  overflow-x:auto; font-family:var(--f-mono); font-size:13.5px; line-height:1.64}
+pre .c{color:var(--shell-dim)}
+pre code{background:none; padding:0; color:inherit; font-size:inherit}
+code{font-family:var(--f-mono); font-size:.85em; background:var(--surface-2);
+  padding:1.5px 5px; border-radius:2px; color:var(--ink)}
+
+/* line-by-line code walkthrough */
+.walk{margin:18px 0 0; border:1px solid var(--line); border-radius:3px;
+  background:var(--surface); overflow:hidden}
+.walk .hd{background:var(--surface-2); padding:7px 13px; font-family:var(--f-mono);
+  font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3);
+  border-bottom:1px solid var(--line)}
+.walk ol{margin:0; padding:12px 16px 12px 32px; font-size:16px; color:var(--ink-2)}
+.walk li{margin-bottom:7px; line-height:1.5}
+.walk li:last-child{margin-bottom:0}
+.walk li code{font-size:.84em}
+
+/* checkpoint */
+.check{margin:16px 0 0; border:1px solid var(--ok); border-radius:3px; overflow:hidden}
+.check .hd{background:var(--ok-soft); padding:7px 13px; font-family:var(--f-mono);
+  font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ok)}
+.check pre{background:var(--surface); color:var(--ink-2); font-size:12.5px;
+  border-top:1px solid var(--ok-soft)}
+.check .note{padding:10px 13px; font-size:15.5px; color:var(--ink-2);
+  border-top:1px solid var(--line-soft); background:var(--surface)}
+
+/* warn */
+.warn{margin:18px 0 0; padding:13px 16px; border-left:3px solid var(--warn);
+  background:var(--warn-soft); border-radius:0 2px 2px 0; max-width:66ch}
+.warn .lbl{font-family:var(--f-mono); font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--warn); display:block; margin-bottom:5px}
+.warn p{margin:0; font-size:16.5px; color:var(--ink-2)}
+.warn p+p{margin-top:8px}
+
+/* plain-words box */
+.words{margin:18px 0 0; padding:13px 16px; border-left:3px solid var(--accent);
+  background:var(--accent-soft); border-radius:0 2px 2px 0; max-width:66ch}
+.words .lbl{font-family:var(--f-mono); font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--accent); display:block; margin-bottom:5px}
+.words p{margin:0; font-size:17px; color:var(--ink)}
+
+/* tables */
+.tw{overflow-x:auto; margin:18px 0 0; border:1px solid var(--line);
+  border-radius:3px; background:var(--surface)}
+table{border-collapse:collapse; width:100%; font-size:14.5px; min-width:430px}
+th,td{text-align:left; padding:9px 12px; border-bottom:1px solid var(--line-soft);
+  vertical-align:top; line-height:1.45}
+th{font-family:var(--f-mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ink-3); font-weight:500; background:var(--surface-2); white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.m{font-family:var(--f-mono); font-size:12.5px}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:26px 60px; font-size:15px; color:var(--ink-3)}
+
+@media (max-width:620px){ body{font-size:17px} .step p.lead{font-size:18px} }
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+
+
+
+<style>
+/* the task as the platform words it */
+.task{margin:0 0 4px; padding:14px 17px; border:1px solid var(--accent);
+  border-left-width:4px; border-radius:3px; background:var(--accent-soft)}
+.task .lbl{font-family:var(--f-mono); font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--accent); display:block; margin-bottom:6px}
+.task p{margin:0; font-size:17px; color:var(--ink)}
+.task p+p{margin-top:8px}
+.task ol,.task ul{margin:8px 0 0; padding-left:1.25em; font-size:16.5px; color:var(--ink)}
+.task li{margin-bottom:4px}
+/* why it matters */
+.why2{margin:18px 0 0; padding:13px 16px; border-left:3px solid var(--ink-3);
+  background:var(--surface-2); border-radius:0 2px 2px 0; max-width:66ch}
+.why2 .lbl{font-family:var(--f-mono); font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--ink-3); display:block; margin-bottom:5px}
+.why2 p{margin:0; font-size:16.5px; color:var(--ink-2)}
+.why2 p+p{margin-top:8px}
+.part{margin:46px 0 0; padding:18px 22px; background:var(--ink); border-radius:4px}
+.part .k{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--accent); display:block; margin-bottom:6px}
+.part h2{color:var(--ground); font-size:23px; font-weight:600; margin:0}
+.part p{margin:9px 0 0; color:var(--line); font-size:16.5px}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+
+<meta name="darkreader" content="5fc1474fba5842fd85427d20c485c76a"><style class="darkreader darkreader--override" media="screen">c-wiz div {
+    --action-items-action-item-background-color: var(--darkreader-neutral-background) !important;
+}
+.jfk-bubble.gtx-bubble {
+    background-color: white !important;
+}
+.vimvixen-hint {
+    background-color: var(--darkreader-background-ffd76e, #825e00) !important;
+    border-color: var(--darkreader-background-c59d00, #c69e00) !important;
+    color: var(--darkreader-text-302505, #ffffff) !important;
+}
+#vimvixen-console-frame {
+    color-scheme: light !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+#edge-translate-panel-body,
+.MuiTypography-body1,
+.nfe-quote-text {
+    color: var(--darkreader-neutral-text) !important;
+}
+gr-main-header {
+    background-color: var(--darkreader-background-add8e6, #225b6e) !important;
+}
+.tou-z65h9k,
+.tou-mignzq,
+.tou-1b6i2ox,
+.tou-lnqlqk {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.tou-75mvi {
+    background-color: var(--darkreader-background-cfecf5, #134959) !important;
+}
+.tou-ta9e87,
+.tou-1w3fhi0,
+.tou-1b8t2us,
+.tou-py7lfi,
+.tou-1lpmd9d,
+.tou-1frrtv8,
+.tou-17ezmgn {
+    background-color: var(--darkreader-background-f5f5f5, #262829) !important;
+}
+.tou-uknfeu {
+    background-color: var(--darkreader-background-faedda, #54370b) !important;
+}
+.tou-6i3zyv {
+    background-color: var(--darkreader-background-85c3d8, #2d748c) !important;
+}
+div.mermaid-viewer-control-panel .btn {
+    background-color: var(--darkreader-neutral-background);
+    fill: var(--darkreader-neutral-text);
+}
+svg g rect.er {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.entityBox {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.attributeBoxOdd {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.attributeBoxEven {
+    fill: var(--darkreader-selection-background);
+    fill-opacity: 0.8 !important;
+}
+svg rect.er.relationshipLabelBox {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g g.nodes rect,
+svg g g.nodes polygon {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.task {
+    fill: var(--darkreader-selection-background) !important;
+}
+svg line.messageLine0,
+svg line.messageLine1 {
+    stroke: var(--darkreader-neutral-text) !important;
+}
+div.mermaid .actor {
+    fill: var(--darkreader-neutral-background) !important;
+}
+mitid-authenticators-code-app > .code-app-container {
+    background-color: white !important;
+    padding-top: 1rem;
+}
+iframe#unpaywall[src$="unpaywall.html"] {
+    color-scheme: light !important;
+}
+select {
+    --darkreader-bg--form-control-background-color: rgba(22, 22, 22, 0) !important;
+}
+body#tumblr {
+    --darkreader-bg--secondary-accent: 31, 32, 34 !important;
+    --darkreader-bg--white: 23, 23, 23 !important;
+    --darkreader-text--black: 228, 224, 218 !important;
+}
+:host {
+    --d2l-border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+    --d2l-button-icon-background-color-hover: var(--darkreader-bg--d2l-color-gypsum) !important;
+    --d2l-color-ferrite: var(--darkreader-neutral-text) !important;
+    --d2l-color-sylvite: var(--darkreader-bg--d2l-color-sylvite) !important;
+    --d2l-dropdown-background-color: var(--darkreader-neutral-background) !important;
+    --d2l-dropdown-border-color: var(--darkreader-border--d2l-color-mica) !important;
+    --d2l-input-backgroud-color: var(--darkreader-neutral-background) !important;
+    --d2l-menu-border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+    --d2l-tooltip-background-color: var(--darkreader-neutral-background) !important;
+    --d2l-tooltip-border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+:host([_floating]) .d2l-floating-buttons-container {
+    background-color: var(--darkreader-neutral-background) !important;
+    border-top-color: var(--darkreader-border--d2l-color-mica) !important;
+    opacity: 0.88 !important;
+}
+d2l-card {
+    background: var(--darkreader-neutral-background) !important;
+    border-color: var(--darkreader-border--d2l-color-gypsum) !important;
+}
+d2l-dropdown-content > div,
+d2l-menu-item {
+    background-color: var(--darkreader-neutral-background) !important;
+    border-radius: 10px !important;
+}
+d2l-empty-state-simple {
+    border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+.d2l-button-filter > ul > li > a.vui-button {
+    border-color: var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-label-text:has(.d2l-button-subtle-content):hover,
+.d2l-label-text:has(.d2l-button-subtle-content):focus,
+.d2l-label-text:has(.d2l-button-subtle-content):active {
+    background-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+.d2l-navigation-centerer {
+    color: inherit !important;
+}
+.d2l-tabs-layout {
+    border-color: var(--darkreader-border--d2l-color-gypsum) !important;
+}
+.d2l-input,
+.d2l-calendar-date,
+.d2l-htmleditor-container {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.d2l-collapsible-panel {
+    border: 1px solid var(--darkreader-border--d2l-color-mica) !important;
+    border-radius: 0.4rem !important;
+}
+.d2l-collapsible-panel-divider {
+    border-bottom: 1px solid var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-w2d-flex {
+    border-bottom: 2px solid var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-collapsible-panel scrolled,
+.d2l-collapsible-panel-header,
+.d2l-w2d-collection-fixed {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.d2l-loading-spinner-bg {
+    fill: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+.d2l-loading-spinner-bg-stroke {
+    stroke: var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-loading-spinner-wrapper svg path,
+.d2l-loading-spinner-wrapper svg circle {
+    fill: var(--darkreader-neutral-background) !important;
+}
+.d2l-twopanelselector-side.d2l-twopanelselector-side-sep {
+    background: var(--darkreader-bg--d2l-color-mica) !important;
+}
+.d2l-le-TreeAccordionItem-anchor::before {
+    background: var(--darkreader-bg--d2l-color-corundum) !important;
+}
+table[class|="moz-header"] {
+    background: none;
+}
+*[style*="color: rgba(0,0,0,"]:not([style*="color: rgba(0,0,0,0)"]),
+*[style*="color: rgba(0, 0, 0,"]:not([style*="color: rgba(0, 0, 0, 0)"]),
+*[style*="color:#000"]:not(.cell-input > span),
+*[style*="color:black"]:not(.cell-input > span),
+*[style*="color:#282828"]:not(.cell-input > span),
+*[style*="color:#444"]:not(.cell-input > span),
+*[style*="color: #222222"]:not(.cell-input > span) {
+    color: var(--darkreader-neutral-text) !important;
+}
+*[style*="background:#fff"],
+*[style*="background-color:#fff"],
+*[style*="background: #fff"],
+*[style*="background: rgb(255, 255, 255)"] {
+    background: var(--darkreader-neutral-background) !important;
+}
+*[bgcolor="#F5F5F5"],
+*[style*="background-color: #F5F5F5"] {
+    background: var(--darkreader-background-f5f5f5, #262829) !important;
+}
+*[style*="background: #e6e6e6"] {
+    background: var(--darkreader-background-e6e6e6, #303336) !important;
+}
+body[style*="background: rgb(255, 255, 255) !important"] *:not(a),
+.body[style*="background-color: rgb(254, 254, 254) !important"] *:not(a) {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+div[style*="www.gstatic.com/android/"] {
+    background: none !important;
+}
+*[style*="background:#f9f9f9"] {
+    background: var(--darkreader-background-f9f9f9, #222627) !important;
+}
+body.mediawiki.skin-vector #mw-page-base {
+    background-image: none !important;
+}
+.overflow-hidden .spinning-bg,
+.overflow-hidden .solid-bg {
+    background: transparent !important;
+}
+*[style*="color: rgb(0,0,0) !imoprtant"][style*="--darkreader-inline-color"],
+*[style*="color: rgb(0, 0, 0) !important"][style*="--darkreader-inline-color"] {
+    -webkit-text-fill-color: var(--darkreader-inline-color) !important;
+}
+embed[type="application/pdf"] { filter: invert(100%) contrast(90%); }</style></head><body><header class="mast">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">GenAI Bootcamp · Week 8 · Day 1 · Daily Challenge</div>
+      <h1>Text Analysis of Books — Solved</h1>
+      <p class="sub">Every task from the challenge, with working code, the output you should get, and an explanation of what it means — including the three places the expected answer is an error.</p>
+    </div>
+    <div><button class="btn" id="theme">Theme</button></div>
+  </div>
+</header>
+
+<nav class="prog" aria-label="Progress">
+  <div class="wrap">
+    <span class="bar"><i style="width: 0%;"></i></span>
+    <span class="txt">0 of 18 done</span>
+    <button class="reset">reset</button>
+  </div>
+</nav>
+
+<main class="wrap" data-key="nlp-day1-challenge">
+
+<div class="today">
+  <div class="kick">Daily Challenge · 15 XP</div>
+  <h2>Text Analysis of books using word cloud</h2>
+  <p>Three Lewis Carroll books, downloaded from Project Gutenberg, taken from raw text all the way
+  to a chart that says what each book is actually about.</p>
+  <p><b>What you will practise:</b></p>
+  <ol>
+    <li>Text preprocessing — cleaning, tokenizing, stopwords, stemming, lemmatizing.</li>
+    <li>Text analysis — POS tags, named entities, word clouds.</li>
+    <li>The <b>Bag of Words</b> method, and why its answers disappoint.</li>
+    <li><b>TF-IDF</b>, and why it fixes them.</li>
+  </ol>
+  <p class="why"><b>How to use this page.</b> Try each task yourself first, then open this. The code
+  works, but the code is the smaller half — four tasks ask for a <em>written</em> answer, and
+  those are where the marks are.</p>
+</div>
+
+<div class="weekmap">
+  <h2>Read this before you start</h2>
+  <p>This challenge has a shape that is easy to miss. The first nine tasks build a cleaning
+  pipeline. The next five count words with it — and the counting gives you a disappointing
+  answer. The last two fix the disappointment.</p>
+  <p><b>Three tasks are designed to produce a result that looks broken, and is not:</b> the part-of-speech
+  tags come back visibly wrong, the entity lists come back completely empty, and the most frequent
+  words come back as things you already knew. <b>Do not hide any of them.</b> Explaining why each
+  one happened is the difference between a notebook that ran and a student who understood it.</p>
+  <p class="sub">The three books</p>
+  <table>
+    <tbody>
+      <tr><td>Book 0</td><td><em>Alice’s Adventures in Wonderland</em> — gutenberg.org/cache/epub/11/pg11.txt</td></tr>
+      <tr><td>Book 1</td><td><em>Through the Looking-Glass</em> — gutenberg.org/cache/epub/12/pg12.txt</td></tr>
+      <tr><td>Book 2</td><td><em>A Tangled Tale</em> — gutenberg.org/cache/epub/29042/pg29042.txt</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="intro">
+  <h2>Before you start</h2>
+  <p>Work in Colab, or in a virtual environment on your own machine as the challenge asks. Run Task 0
+  first — it installs everything, including the spaCy model that the library does <b>not</b> ship with.</p>
+  <p><b>Your numbers will differ slightly from the ones shown here</b>, depending on library versions
+  and whether you fixed the boilerplate problem in Task 2. The shape of every result should match.</p>
+</div>
+<div class="part"><span class="k">Part A · Tasks 1–9</span><h2>Text preprocessing</h2><p>Turn three raw books from Project Gutenberg into clean lists of words. Every later step depends on getting this right.</p></div>
+
+<section class="step" id="t0">
+  <div class="shead"><button class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></button><div>
+    <span class="sn">TASK 0</span><h2>Setup — install and download everything first</h2></div></div>
+  <div class="body">
+    <div class="task"><span class="lbl">What the challenge asks</span><p>The challenge says: <b>create a virtual environment for the NLP course and always work in it.</b> In Colab you get a fresh machine each session instead, so run this cell first every time.</p></div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Run this first, every session</span><button class="copy">Copy</button></div>
+<pre><code>%pip install --quiet requests nltk spacy wordcloud scikit-learn matplotlib seaborn --upgrade
+!python -m spacy download en_core_web_sm --quiet
+
+import re, requests
+from collections import Counter
+import matplotlib.pyplot as plt
+import seaborn as sns
+import nltk
+from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer
+from nltk import pos_tag, word_tokenize, ne_chunk
+from wordcloud import WordCloud
+from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
+import spacy
+
+for pkg in ['punkt', 'punkt_tab', 'stopwords', 'averaged_perceptron_tagger',
+            'averaged_perceptron_tagger_eng', 'maxent_ne_chunker',
+            'maxent_ne_chunker_tab', 'words', 'wordnet', 'omw-1.4']:
+    nltk.download(pkg, quiet=True)
+
+nlp = spacy.load('en_core_web_sm')
+stop_words = set(stopwords.words('english'))
+stemmer = PorterStemmer()
+print('Setup complete — stopwords loaded:', len(stop_words))</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><code>%pip install</code> — the libraries. <code>--quiet</code> just hides the wall of output.</li>
+        <li><code>python -m spacy download en_core_web_sm</code> — <b>spaCy installs the library but not the model.</b> Skipping this line is the single commonest way this notebook fails, with an error that says the model cannot be found.</li>
+        <li>the <code>nltk.download</code> loop — NLTK ships almost no data. Each name is a separate dataset: the tokenizer, the stopword list, the part-of-speech tagger, the entity chunker.</li>
+        <li><code>stop_words</code> and <code>stemmer</code> — built once here so every later cell can reuse them.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">What you should see</div>
+<pre>Setup complete — stopwords loaded: 198</pre>
+    </div>
+    <div class="warn"><span class="lbl">If a later cell says a model is missing</span><p>Run the <code>spacy download</code> line again and then <b>restart the runtime</b> (Runtime → Restart session). spaCy caches what it found at import time, so installing a model without restarting often does not take effect.</p></div>
+    <div class="why2"><span class="lbl">Why this step exists</span><p>Nothing here is NLP yet. It is the part that breaks a submission at 11pm, so it goes first and it gets its own cell — if a later cell fails, you re-run that cell, not this one.</p></div>
+  </div>
+</section>
+
+<section class="step" id="t1">
+  <div class="shead"><button class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></button><div>
+    <span class="sn">TASK 1</span><h2>Write <code>load_texts()</code></h2></div></div>
+  <div class="body">
+    <div class="task"><span class="lbl">What the challenge asks</span><p>Using <code>requests</code> to access the contents online, create a function <code>load_texts()</code>. It should receive a list of URLs, load them, clean non-words using regular expressions, and append the cleaned text to the corpus that will be returned.</p></div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Download and clean the three books</span><button class="copy">Copy</button></div>
+<pre><code>URLS = [
+    "https://www.gutenberg.org/cache/epub/11/pg11.txt",      # Alice's Adventures in Wonderland
+    "https://www.gutenberg.org/cache/epub/12/pg12.txt",      # Through the Looking-Glass
+    "https://www.gutenberg.org/cache/epub/29042/pg29042.txt" # A Tangled Tale
+]
+
+def clean_bounds(text):
+    """Cut off Gutenberg's licence header and footer."""
+    start_idx = text.find('*** START')
+    end_idx   = text.find('*** END')
+    if start_idx != -1 and end_idx != -1:
+        text = text[start_idx:end_idx]
+    return text
+
+def normalize(text):
+    text = clean_bounds(text)
+    text = re.sub(r'[^A-Za-z\s]', ' ', text)   # keep letters and spaces, nothing else
+    text = re.sub(r'\s+', ' ', text).strip()   # squeeze runs of whitespace into one space
+    return text
+
+def load_texts(urls):
+    corpus = []
+    for url in urls:
+        resp = requests.get(url, timeout=30)
+        resp.raise_for_status()
+        corpus.append(normalize(resp.text))
+    return corpus
+
+texts = load_texts(URLS)
+print([len(t) for t in texts])</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><code>resp.raise_for_status()</code> — turns a silent failure into a loud one. Without it, a 404 page becomes a “book” and you analyse an error message for the rest of the notebook.</li>
+        <li><code>re.sub(r'[^A-Za-z\s]', ' ', text)</code> — the <code>^</code> inside the brackets means <em>not</em>. So: anything that is not a letter or whitespace becomes a space. Digits, punctuation, apostrophes, chapter numbers, all gone.</li>
+        <li><code>re.sub(r'\s+', ' ', text)</code> — the step above leaves long runs of spaces behind. This collapses each run to a single space.</li>
+        <li><code>corpus.append(...)</code> — one cleaned string per book, returned as a list. The challenge asks for exactly this shape, and every later step assumes it.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">What you should see</div>
+<pre>[135578, 152673, 144271]</pre>
+    </div>
+    <div class="warn"><span class="lbl">What the apostrophe rule costs you</span><p><code>Alice's</code> becomes <code>alice s</code> — the apostrophe is not a letter, so it is replaced by a space and the word splits in two. You end up with thousands of stray one-letter tokens.</p><p>They disappear in Task 4 by luck rather than design: NLTK's stopword list happens to contain <code>s</code>, <code>t</code>, <code>d</code>, <code>ll</code>, <code>m</code>, <code>re</code> and <code>ve</code>. Worth knowing <em>why</em> they vanished, because with a different stopword list they would not.</p></div>
+    <div class="why2"><span class="lbl">Why this step exists</span><p>Everything downstream — tokens, stems, word clouds, TF-IDF — is computed from these three strings. Cleaning is not housekeeping; it is the step that decides what your analysis is even able to see.</p></div>
+  </div>
+</section>
+
+<section class="step" id="t2">
+  <div class="shead"><button class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></button><div>
+    <span class="sn">TASK 2</span><h2>Print the first 200 characters — and spot what should not be there</h2></div></div>
+  <div class="body">
+    <div class="task"><span class="lbl">What the challenge asks</span><p>Print the first 200 characters of each text.</p><p><em>Are there parts of the text that are not relevant to the analysis? If so, you need to remove them.</em></p><p><b>Hint:</b> use slicing to start and stop the text where you need, ignoring the authorial credits at the beginning and end, by looking for <code>’ START’</code> and <code>’ END’</code>.</p></div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Look at what you actually downloaded</span><button class="copy">Copy</button></div>
+<pre><code>for idx, txt in enumerate(texts):
+    print(f'Book {idx} | chars: {len(txt)}')
+    print(txt[:200])
+    print('-' * 60)</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><code>enumerate</code> — gives you the position and the item together, so you can label each book.</li>
+        <li><code>txt[:200]</code> — the first 200 characters. <b>This is the whole task:</b> look at your data before trusting it.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">What you should see</div>
+<pre>Book 0 | chars: 135578
+START OF THE PROJECT GUTENBERG EBOOK ALICE S ADVENTURES IN WONDERLAND Illustration Alice s Adventures
+------------------------------------------------------------
+Book 1 | chars: 152673
+START OF THE PROJECT GUTENBERG EBOOK THROUGH THE LOOKING GLASS Illustration THROUGH THE LOOKING GLASS
+------------------------------------------------------------
+Book 2 | chars: 144271
+START OF THE PROJECT GUTENBERG EBOOK A TANGLED TALE Produced by Chris Curnow Carla Foust Lindy Walsh
+------------------------------------------------------------</pre>
+    </div>
+    <div class="warn"><span class="lbl">Your slicing is not finished — look at the output again</span><p><code>text.find('*** START')</code> lands on the <em>beginning</em> of the marker line, so the marker itself survives. That is why every book opens with <code>START OF THE PROJECT GUTENBERG EBOOK</code>.</p><p>The words <code>project</code>, <code>gutenberg</code> and <code>ebook</code> are now in all three books — which is exactly the pattern TF-IDF is built to ignore, so it survives to the end of the notebook unnoticed. <b>Cut from the end of that line instead:</b></p></div>
+    <div class="words"><span class="lbl">The fix — one line</span><p>In <code>clean_bounds</code>, move the start past the marker line before slicing:</p><p><code>start_idx = text.find('\n', text.find('*** START'))</code></p><p>Now the slice begins on the line <em>after</em> the marker. Re-run Task 2 and the boilerplate is gone. Book 2 also carries a transcriber's note; mention it in your analysis even if you leave it in.</p></div>
+    <div class="why2"><span class="lbl">Why this step exists</span><p>The question in the task is the point of the task. A Gutenberg file is not just a book — it is a book wrapped in a licence, a transcriber's note and a list of credits. Those words are text, so every method you use will happily count them.</p></div>
+  </div>
+</section>
+
+<section class="step" id="t3">
+  <div class="shead"><button class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></button><div>
+    <span class="sn">TASK 3</span><h2>Tokenize and print the first 150 tokens</h2></div></div>
+  <div class="body">
+    <div class="task"><span class="lbl">What the challenge asks</span><p>Tokenize the text and print the first 150 tokens of each book.</p></div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Split each book into words</span><button class="copy">Copy</button></div>
+<pre><code>tokenized = [word_tokenize(t.lower()) for t in texts]
+
+for i, tokens in enumerate(tokenized):
+    print(f'Book {i} | first 150 tokens')
+    print(tokens[:150])
+    print('-' * 40)</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><code>word_tokenize</code> — NLTK's tokenizer. On text this clean it is close to <code>.split()</code>, because Task 1 already removed every punctuation mark it would otherwise have handled.</li>
+        <li><code>.lower()</code> — so <code>The</code> and <code>the</code> count as the same word. <b>Remember this line.</b> It is the reason Task 9 returns nothing.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">What you should see</div>
+<pre>Book 0 | first 150 tokens
+['start', 'of', 'the', 'project', 'gutenberg', 'ebook', 'alice', 's',
+ 'adventures', 'in', 'wonderland', 'illustration', 'alice', 's', ...
+ 'chapter', 'i', 'down', 'the', 'rabbit', 'hole', 'alice', 'was',
+ 'beginning', 'to', 'get', 'very', 'tired', 'of', 'sitting', ...]</pre>
+    </div>
+    <div class="why2"><span class="lbl">Why this step exists</span><p>A computer cannot count words in a string — only in a list. This is the line that turns one long piece of text into something countable, and every method after it operates on lists of tokens, never on the text.</p></div>
+  </div>
+</section>
+
+<section class="step" id="t4">
+  <div class="shead"><button class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></button><div>
+    <span class="sn">TASK 4</span><h2>Remove stopwords, and check that they are gone</h2></div></div>
+  <div class="body">
+    <div class="task"><span class="lbl">What the challenge asks</span><p>Remove stopwords using NLTK. Check that they were removed using <code>count()</code> and looking for some of the stop words like <code>i</code>, <code>me</code>, <code>my</code>, <code>myself</code>, <code>we</code>, <code>our</code>, <code>ours</code>, <code>ourselves</code>.</p></div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Drop the filler words</span><button class="copy">Copy</button></div>
+<pre><code>filtered_tokens = []
+for tokens in tokenized:
+    keep = [tok for tok in tokens if tok.isalpha() and tok not in stop_words]
+    filtered_tokens.append(keep)
+
+check_words = ['i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves']
+for i, tokens in enumerate(filtered_tokens):
+    counts = {w: tokens.count(w) for w in check_words}
+    print(f'Book {i} stopword counts:', counts)
+
+print('\nBook 0:', len(tokenized[0]), 'tokens -&gt;', len(filtered_tokens[0]), 'after filtering')</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><code>tok.isalpha()</code> — keeps only tokens made entirely of letters. Belt and braces after Task 1.</li>
+        <li><code>tok not in stop_words</code> — the whole of stopword removal, in one condition. <code>stop_words</code> is a <code>set</code>, which is why this is fast on hundreds of thousands of tokens.</li>
+        <li><code>tokens.count(w)</code> — counts how many times <code>w</code> is left in the list. The challenge asks for this as proof.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">What you should see</div>
+<pre>Book 0 stopword counts: {'i': 0, 'me': 0, 'my': 0, 'myself': 0, 'we': 0, 'our': 0, 'ours': 0, 'ourselves': 0}
+Book 1 stopword counts: {'i': 0, 'me': 0, 'my': 0, 'myself': 0, 'we': 0, 'our': 0, 'ours': 0, 'ourselves': 0}
+Book 2 stopword counts: {'i': 0, 'me': 0, 'my': 0, 'myself': 0, 'we': 0, 'our': 0, 'ours': 0, 'ourselves': 0}
+
+Book 0: 29465 tokens -&gt; 12106 after filtering</pre>
+    </div>
+    <div class="warn"><span class="lbl">What that check does and does not prove</span><p>All zeros looks like success, and it is — but it is a weak test. You filtered <em>with</em> that list and then asked whether the list is gone. It could only ever return zero.</p><p>It catches one real bug: forgetting <code>.lower()</code> in Task 3. Then <code>I</code> and <code>Me</code> survive, the counts stay zero anyway, and the check passes while the data is wrong. <b>The honest check is the token count</b> — 29,465 down to 12,106 tells you something actually happened.</p></div>
+    <div class="words"><span class="lbl">One thing stopword lists quietly destroy</span><p><code>not</code>, <code>no</code> and <code>never</code> are all stopwords. In a search engine or a sentiment model, deleting them turns a phrase into its opposite. For word-frequency work like today it is harmless. <b>Stopword removal is a decision about the task, not a fixed rule.</b></p></div>
+    <div class="why2"><span class="lbl">Why this step exists</span><p>Roughly <b>half of all English text is stopwords</b>. Dropping them cuts the data in half and removes words that appear in every document and therefore distinguish nothing.</p></div>
+  </div>
+</section>
+
+<section class="step" id="t5">
+  <div class="shead"><button class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></button><div>
+    <span class="sn">TASK 5</span><h2>Stem the tokens with <code>PorterStemmer()</code></h2></div></div>
+  <div class="body">
+    <div class="task"><span class="lbl">What the challenge asks</span><p>Using <code>PorterStemmer()</code>, print the first 50 stemmed tokens.</p></div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Chop every word back to a stem</span><button class="copy">Copy</button></div>
+<pre><code>stemmed_tokens = [[stemmer.stem(t) for t in tokens] for tokens in filtered_tokens]
+
+for i, stems in enumerate(stemmed_tokens):
+    print(f'Book {i} | first 50 stems:', stems[:50])</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li>the nested list comprehension — the inner loop stems one book, the outer loop runs it over all three.</li>
+        <li><code>stemmer.stem(t)</code> — applies the Porter algorithm: a fixed list of suffix-chopping rules, applied in order. <b>No dictionary is involved anywhere.</b></li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">What you should see</div>
+<pre>Book 0 | first 50 stems: ['start', 'project', 'gutenberg', 'ebook', 'alic', 'adventur',
+ 'wonderland', 'illustr', 'alic', 'adventur', 'wonderland', 'lewi', 'carrol', 'millennium',
+ 'fulcrum', 'edit', 'content', 'chapter', 'rabbit', 'hole', 'chapter', 'ii', 'pool', 'tear', ...]</pre>
+    </div>
+    <div class="words"><span class="lbl">Read the output and notice it is not English</span><p><code>alice</code> → <code>alic</code>. <code>carroll</code> → <code>carrol</code>. <code>adventures</code> → <code>adventur</code>. <code>edition</code> → <code>edit</code> — which collides with the completely unrelated verb <em>to edit</em>.</p><p>This is normal and it is the price of the method. Stemming is fast and needs no dictionary, and the output is for your code to compare, <b>never for a human to read</b>. If it ends up on a chart axis, use lemmas instead.</p></div>
+    <div class="why2"><span class="lbl">Why this step exists</span><p>Books say <em>run</em>, <em>runs</em>, <em>running</em> and mean the same thing. Counting them as three different words splits the evidence three ways. Stemming forces them together so the count reflects the idea rather than the grammar.</p></div>
+  </div>
+</section>
+
+<section class="step" id="t6">
+  <div class="shead"><button class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></button><div>
+    <span class="sn">TASK 6</span><h2>Lemmatize with spaCy</h2></div></div>
+  <div class="body">
+    <div class="task"><span class="lbl">What the challenge asks</span><p>Use the spaCy pre-trained model <code>en_core_web_sm</code> to load and print the first 50 lemmatized tokens.</p><p><b>Hint:</b> in spaCy the lemmatized token can be accessed as an attribute.</p></div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Reduce every word to its dictionary form</span><button class="copy">Copy</button></div>
+<pre><code>lemmatized_tokens = []
+for text in texts:                      # note: the ORIGINAL text, not the token list
+    doc = nlp(text)
+    lemmas = [tok.lemma_.lower() for tok in doc
+              if tok.is_alpha and tok.text.lower() not in stop_words]
+    lemmatized_tokens.append(lemmas)
+
+for i, lemmas in enumerate(lemmatized_tokens):
+    print(f'Book {i} | first 50 lemmas:', lemmas[:50])</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><code>nlp(text)</code> — runs the whole spaCy pipeline: tokenizing, part-of-speech tagging, then lemmatizing. <b>It needs the running text</b>, not a list of tokens, because it decides each lemma from the word's role in the sentence.</li>
+        <li><code>tok.lemma_</code> — the attribute the hint points at. The trailing underscore is a spaCy convention meaning <em>give me the readable string</em>; <code>tok.lemma</code> without it returns an integer hash.</li>
+        <li><code>tok.is_alpha</code> and the stopword test — the same filtering as Task 4, applied here because this path starts from the raw text again.</li>
+        <li>this cell is <b>slow</b> — a minute or two for three books. It is running a trained neural model over every sentence, not looking words up in a table.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">What you should see</div>
+<pre>Book 0 | first 50 lemmas: ['start', 'project', 'gutenberg', 'ebook', 'alice', 'adventures',
+ 'wonderland', 'illustration', 'alice', 'adventures', 'wonderland', 'lewis', 'carroll',
+ 'millennium', 'fulcrum', 'edition', 'content', 'chapter', 'rabbit', 'hole', ...]</pre>
+    </div>
+    <div class="why2"><span class="lbl">Why this step exists</span><p>Same goal as stemming — collapse variants of one word — but done with a dictionary and the sentence's grammar instead of scissors. The output is real English, so it can go on a chart, in a word cloud, or in front of a client.</p></div>
+  </div>
+</section>
+
+<section class="step" id="t7">
+  <div class="shead"><button class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></button><div>
+    <span class="sn">TASK 7</span><h2>Explain the difference between stems and lemmas</h2></div></div>
+  <div class="body">
+    <div class="task"><span class="lbl">What the challenge asks</span><p>Analyse the difference between the stemmed and lemmatized tokens. What is different and why?</p></div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Put them side by side</span><button class="copy">Copy</button></div>
+<pre><code>pairs = list(zip(stemmed_tokens[0][:30], lemmatized_tokens[0][:30]))
+for stem, lem in pairs:
+    print(f'stem={stem:&gt;15} | lemma={lem}')</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><code>zip</code> — walks both lists together so you compare position by position.</li>
+        <li><code>{stem:&gt;15}</code> — right-aligns in a 15-character column, so the differences line up and jump out.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">What you should see</div>
+<pre>stem=           alic | lemma=alice
+stem=       adventur | lemma=adventures
+stem=         illustr | lemma=illustration
+stem=           lewi | lemma=lewis
+stem=         carrol | lemma=carroll
+stem=           edit | lemma=edition
+stem=           tear | lemma=tears</pre>
+    </div>
+    <div class="warn"><span class="lbl">Look closely — the lemmas are not perfect either</span><p><code>adventures</code> and <code>tears</code> came back <em>unchanged</em>. In an ordinary sentence spaCy turns <code>tears</code> into <code>tear</code>. Here it does not.</p><p>Because of Task 1. Stripping punctuation and the title case left spaCy reading <code>ALICE S ADVENTURES IN WONDERLAND</code>, where it tags <code>ADVENTURES</code> as a <b>proper noun</b> — a name — and spaCy deliberately leaves names alone. Feed it a real sentence and <code>tears</code> → <code>tear</code> as expected.</p><p><b>The lesson is worth more than the task:</b> lemmatization is only as good as the grammar you leave it to read. Aggressive cleaning destroys the signal the lemmatizer depends on.</p></div>
+    <div class="words"><span class="lbl">The answer, in three sentences</span><p><b>Stemming chops, lemmatizing looks up.</b> Porter applies fixed suffix rules with no knowledge of English, so it produces <code>alic</code> and <code>adventur</code> — fast, crude, and not words.</p><p><b>Lemmatizing uses a dictionary plus the word's job in the sentence.</b> spaCy first decides that <code>tears</code> is a noun, then returns the noun's dictionary form. The output is always a real word.</p><p><b>So: stems for machines, lemmas for humans.</b> Use stemming when only your code reads the output and speed matters; use lemmatization when a person will see it, or when a later step needs real words.</p></div>
+    <div class="why2"><span class="lbl">Why this step exists</span><p>This is the only task today with no code to get right and a written answer to get right instead. It is also the one most students answer with a definition instead of an observation.</p></div>
+  </div>
+</section>
+
+<section class="step" id="t8">
+  <div class="shead"><button class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></button><div>
+    <span class="sn">TASK 8</span><h2>POS tag each text</h2></div></div>
+  <div class="body">
+    <div class="task"><span class="lbl">What the challenge asks</span><p>Using NLTK, identify POS tags of each text.</p></div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Label every word with its grammatical role</span><button class="copy">Copy</button></div>
+<pre><code>for i, tokens in enumerate(filtered_tokens):
+    tagged = pos_tag(tokens[:120])      # 120 is plenty to look at
+    print(f'Book {i} POS (first 120):')
+    print(tagged)
+    print('-' * 40)</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><code>pos_tag</code> — returns a list of <code>(word, tag)</code> pairs. The tags are the <b>Penn Treebank</b> set: <code>NN</code> noun, <code>NNS</code> plural noun, <code>NNP</code> proper noun, <code>JJ</code> adjective, <code>VB</code> verb, <code>VBG</code> verb-ing, <code>RB</code> adverb, <code>IN</code> preposition, <code>MD</code> modal.</li>
+        <li><code>tokens[:120]</code> — tagging hundreds of thousands of tokens three times over is slow and tells you nothing extra. A slice is the right call here.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">What you should see</div>
+<pre>Book 0 POS (first 120):
+[('start', 'NN'), ('project', 'NN'), ('gutenberg', 'NN'), ('alice', 'NN'),
+ ('adventures', 'NNS'), ('wonderland', 'VBP'), ('lewis', 'JJ'), ('carroll', 'NN'),
+ ('rabbit', 'NN'), ('hole', 'JJ'), ('alice', 'NN'), ('beginning', 'VBG'),
+ ('get', 'VB'), ('tired', 'JJ'), ('sitting', 'VBG'), ('sister', 'JJ'), ...]</pre>
+    </div>
+    <div class="warn"><span class="lbl">The tags are visibly wrong, and you should say so</span><p><code>wonderland</code> tagged <code>VBP</code> (a verb). <code>lewis</code> tagged <code>JJ</code> (an adjective). <code>hole</code> and <code>sister</code> tagged <code>JJ</code>. These are not close calls — they are nonsense.</p><p><b>It is your Task 4 doing the damage.</b> A tagger works out a word's role from the words around it. You handed it <code>start project gutenberg ebook alice adventures wonderland</code> — stopwords stripped, so no articles, no prepositions, no sentence structure, no capital letters. The grammar it needs is exactly what you deleted.</p><p><b>Tag the text first, filter afterwards.</b> Writing that observation up is worth more marks than the tag list itself.</p></div>
+    <div class="why2"><span class="lbl">Why this step exists</span><p>A tagger is the step that lets you ask grammatical questions of text — all the adjectives Carroll uses about the Queen, every verb in a chapter. It is also what a lemmatizer needs underneath: you cannot pick the right dictionary form until you know the word's job.</p></div>
+  </div>
+</section>
+
+<section class="step" id="t9">
+  <div class="shead"><button class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></button><div>
+    <span class="sn">TASK 9</span><h2>Identify the named entities — and explain the empty result</h2></div></div>
+  <div class="body">
+    <div class="task"><span class="lbl">What the challenge asks</span><p>Using NLTK, identify all the entities of each text.</p></div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Find the names in the text</span><button class="copy">Copy</button></div>
+<pre><code>def extract_entities(tokens):
+    tagged = pos_tag(tokens)
+    tree = ne_chunk(tagged, binary=False)
+    ents = []
+    for chunk in tree:
+        if hasattr(chunk, 'label'):           # a named entity is a subtree, not a leaf
+            ent_text = ' '.join(c[0] for c in chunk.leaves())
+            ents.append((ent_text, chunk.label()))
+    return ents
+
+for i, tokens in enumerate(filtered_tokens):
+    ents = extract_entities(tokens[:500])
+    print(f'Book {i} entities (sample): {ents[:30]}')</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><code>ne_chunk</code> — takes POS-tagged words and groups consecutive ones into named entities: <code>PERSON</code>, <code>GPE</code> (a place), <code>ORGANIZATION</code>.</li>
+        <li><code>hasattr(chunk, 'label')</code> — the result is a tree. Ordinary words come back as plain <code>(word, tag)</code> tuples; <b>entities come back as subtrees</b>, and only subtrees have a <code>.label()</code>. This line is how you tell them apart.</li>
+        <li><code>chunk.leaves()</code> — the words inside one entity, so a two-word name like <em>White Rabbit</em> is rejoined into a single string.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">What you should see</div>
+<pre>Book 0 entities (sample): []
+Book 1 entities (sample): []
+Book 2 entities (sample): []</pre>
+    </div>
+    <div class="warn"><span class="lbl">Three empty lists. This is the most valuable result in the challenge</span><p>Nothing is broken and your code is correct. <b>NLTK's entity recogniser depends almost entirely on capital letters</b>, and you removed every one of them with <code>.lower()</code> back in Task 3.</p><p>Proved on one sentence:</p><pre style="margin: 9px 0px 0px; background: var(--shell-bg); color: var(--shell-ink); padding: 11px 13px; border-radius: 2px; font-size: 12.5px; overflow-x: auto; --darkreader-inline-bg: var(--darkreader-bg--shell-bg); --darkreader-inline-color: var(--darkreader-text--shell-ink, var(--darkreader-text-000000, #ffffff));" data-darkreader-inline-bg="" data-darkreader-inline-color="">text = "Alice met the White Rabbit in London and spoke to Lewis Carroll."
+
+Capitalised : [('Alice', 'PERSON'), ('White Rabbit', 'FACILITY'),
+               ('London', 'GPE'), ('Lewis Carroll', 'PERSON')]
+Lowercased  : []</pre><p>Four entities, then none. Same sentence, same code, one <code>.lower()</code> apart.</p></div>
+    <div class="words"><span class="lbl">What to write in your submission</span><p>Do not hide the empty lists — explain them. Say that NER must run on the <b>original text</b>, before lowercasing and before stopword removal, because capitalisation and sentence structure are the evidence it uses.</p><p>Then prove you understood it by running one extra cell on the uncleaned text:</p><pre style="margin: 9px 0px 0px; background: var(--shell-bg); color: var(--shell-ink); padding: 11px 13px; border-radius: 2px; font-size: 12.5px; overflow-x: auto; --darkreader-inline-bg: var(--darkreader-bg--shell-bg); --darkreader-inline-color: var(--darkreader-text--shell-ink, var(--darkreader-text-000000, #ffffff));" data-darkreader-inline-bg="" data-darkreader-inline-color="">raw = requests.get(URLS[0], timeout=30).text
+raw = clean_bounds(raw)
+
+doc = nlp(raw[:5000])          # spaCy, on the ORIGINAL text
+for ent in doc.ents[:20]:
+    print(f'{ent.text:25} {ent.label_}')</pre><p>That is the difference between a notebook that ran and a student who understood it.</p></div>
+    <div class="why2"><span class="lbl">Why this step exists</span><p>Named entity recognition is how you get from <em>words</em> to <em>things</em> — the people, places and organisations a document is actually about. It is the backbone of document search, résumé parsing and compliance scanning.</p></div>
+  </div>
+</section>
+
+<div class="part"><span class="k">Part B · Tasks 10–14</span><h2>Analysing the text</h2><p>Three clean books, three lists of lemmas. Now count what is in them — and find out that counting is not enough.</p></div>
+
+<section class="step" id="t10">
+  <div class="shead"><button class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></button><div>
+    <span class="sn">TASK 10</span><h2>Display a word cloud of each book</h2></div></div>
+  <div class="body">
+    <div class="task"><span class="lbl">What the challenge asks</span><p>Using <code>wordcloud</code> and <code>matplotlib</code>, display a word cloud of each book.</p></div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Draw the three word clouds</span><button class="copy">Copy</button></div>
+<pre><code>wc_stopwords = set(stop_words)
+
+for i, tokens in enumerate(lemmatized_tokens):
+    text_blob = ' '.join(tokens)
+    wc = WordCloud(width=800, height=500, background_color='white',
+                   stopwords=wc_stopwords, colormap='plasma').generate(text_blob)
+    plt.figure(figsize=(10, 6))
+    plt.imshow(wc, interpolation='bilinear')
+    plt.axis('off')
+    plt.title(f'WordCloud - Book {i}')
+    plt.show()</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><code>' '.join(tokens)</code> — <code>WordCloud</code> wants <b>one string</b>, not a list. This is the commonest error in this task.</li>
+        <li><code>.generate(text_blob)</code> — counts the words itself and sizes each one by frequency.</li>
+        <li><code>stopwords=wc_stopwords</code> — a second line of defence. Your tokens are already filtered, so this changes nothing here, but it saves you when you point WordCloud at raw text.</li>
+        <li><code>plt.axis('off')</code> — hides the x and y axes. A word cloud is a picture, not a plot; leaving the axes on is the giveaway of a rushed submission.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">What you should see</div>
+<pre>(three images — alice, queen, say and turtle large in Book 0)</pre>
+    </div>
+    <div class="words"><span class="lbl">Read your own output critically</span><p>Alice is enormous. <em>say</em> is enormous. You already knew the book is about Alice and that people talk in it.</p><p><b>Hold on to that feeling</b> — it is the exact problem Tasks 15 and 16 fix.</p></div>
+    <div class="why2"><span class="lbl">Why this step exists</span><p>A word cloud is the fastest way to see what a document is about. It is also the least precise thing in this notebook — size is readable only roughly, and nobody can tell 400 occurrences from 450. Use it to open a presentation, never to support a claim.</p></div>
+  </div>
+</section>
+
+<section class="step" id="t11">
+  <div class="shead"><button class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></button><div>
+    <span class="sn">TASK 11</span><h2>Five most frequent words with Bag of Words</h2></div></div>
+  <div class="body">
+    <div class="task"><span class="lbl">What the challenge asks</span><p>Use the BoW method to check the five most frequent words in all the books.</p><p><b>Hint:</b> which text from the preprocessing step will work best — raw text, stemmed, lemmatized?</p></div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Count every word in every book</span><button class="copy">Copy</button></div>
+<pre><code>lemmas_joined = [' '.join(toks) for toks in lemmatized_tokens]   # the hint's answer
+
+cv = CountVectorizer(min_df=1)
+bow = cv.fit_transform(lemmas_joined)
+vocab = cv.get_feature_names_out()
+
+bow_df = bow.toarray()
+totals = bow_df.sum(axis=0)              # add the three books together
+top_idx = totals.argsort()[::-1][:5]     # sort ascending, reverse, take five
+top_words = [(vocab[i], totals[i]) for i in top_idx]
+
+print('Top 5 words overall (BoW):', top_words)
+print('\nBoW matrix shape:', bow_df.shape)</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><code>CountVectorizer</code> — builds the vocabulary from all three books, then counts each word per book. One row per book, one column per word.</li>
+        <li><code>.toarray()</code> — the result is a <b>sparse</b> matrix, which stores only the non-zero cells. This expands it to an ordinary grid. Fine for 3 books; never do it to a million.</li>
+        <li><code>totals = bow_df.sum(axis=0)</code> — <code>axis=0</code> sums <em>down</em> the columns, giving one total per word across all three books.</li>
+        <li><code>argsort()[::-1][:5]</code> — <code>argsort</code> returns positions, smallest first; <code>[::-1]</code> flips it; <code>[:5]</code> takes the top five. Memorise this idiom, it is everywhere.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">What you should see</div>
+<pre>Top 5 words overall (BoW): [('say', 1309), ('alice', 872), ('one', 474), ('go', 437), ('get', 314)]
+
+BoW matrix shape: (3, 4606)</pre>
+    </div>
+    <div class="words"><span class="lbl">The hint's answer, and why</span><p>Use the <b>lemmatized</b> tokens. Raw text keeps <em>say / says / said</em> as three separate words and splits their counts. Stemmed text would group them correctly but the chart would read <code>alic</code> and <code>adventur</code>.</p><p><b>Lemmas give you correct grouping and readable labels.</b> That is the whole answer, and it is why the pie charts two tasks from now are legible.</p></div>
+    <div class="why2"><span class="lbl">Why this step exists</span><p>Bag of Words is the first real text-to-numbers step. Order is thrown away — <em>the queen beheaded the knave</em> and <em>the knave beheaded the queen</em> give identical rows — and in exchange you get a table you can do arithmetic on.</p></div>
+  </div>
+</section>
+
+<section class="step" id="t12">
+  <div class="shead"><button class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></button><div>
+    <span class="sn">TASK 12</span><h2>Print the BoW and read the numbers</h2></div></div>
+  <div class="body">
+    <div class="task"><span class="lbl">What the challenge asks</span><p>Print the BoW and identify the numbers: what is the document number, what is the index, and how many times was the word found?</p></div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Decode the sparse matrix printout</span><button class="copy">Copy</button></div>
+<pre><code>print(bow[:1])        # the sparse form, for Book 0 only
+
+print('\nReading one row by hand:')
+row0 = bow_df[0]
+for idx in row0.argsort()[::-1][:5]:
+    print(f'  doc 0, column {idx:&gt;5} -&gt; "{vocab[idx]}" appears {row0[idx]} times')</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><code>print(bow[:1])</code> — prints the sparse matrix itself, which is what the task is asking you to interpret.</li>
+        <li>each line reads <code>(document, column)&nbsp;&nbsp;count</code>. <b>Only non-zero cells are stored</b> — that is what sparse means, and it is why a 3×4606 matrix does not print 13,818 lines.</li>
+        <li><code>vocab[idx]</code> — turns a column number back into the word. The vocabulary is alphabetical, so column 0 is the alphabetically first word, not the most frequent.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">What you should see</div>
+<pre>  (0, 3214)	8
+  (0, 1286)	3
+  (0, 4102)	1
+  ...
+
+Reading one row by hand:
+  doc 0, column   379 -&gt; "alice" appears 403 times
+  doc 0, column  3665 -&gt; "say" appears 478 times</pre>
+    </div>
+    <div class="words"><span class="lbl">The answer, in the task’s own words</span><p><b>Document number</b> — the first number in the bracket. The row: which book. <code>(0, ...)</code> is Book 0.</p><p><b>Index</b> — the second number. The column: which word. Look it up with <code>cv.get_feature_names_out()[index]</code>.</p><p><b>The count</b> — the number after the tab. How many times that word appears in that book.</p><p>So <code>(0, 3214)&nbsp;8</code> reads: <em>in Book 0, the word at column 3214 appears 8 times.</em></p></div>
+    <div class="why2"><span class="lbl">Why this step exists</span><p>This is the task that separates copying from understanding. Nearly every text-ML library hands back a sparse matrix, and if you cannot read one you cannot debug anything downstream.</p></div>
+  </div>
+</section>
+
+<section class="step" id="t13">
+  <div class="shead"><button class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></button><div>
+    <span class="sn">TASK 13</span><h2>Pie chart of the five most frequent words</h2></div></div>
+  <div class="body">
+    <div class="task"><span class="lbl">What the challenge asks</span><p>Display a pie plot of the 5 most frequent words in the text. Add the word and its frequency as labels.</p></div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">One pie per book</span><button class="copy">Copy</button></div>
+<pre><code>for doc_id, row in enumerate(bow_df):
+    top = row.argsort()[::-1][:5]
+    pairs = [(vocab[i], int(row[i])) for i in top]
+    print(f'Book {doc_id} top BoW words:', pairs)
+
+    plt.figure(figsize=(5, 5))
+    labels = [f"{w} ({c})" for w, c in pairs]       # the word AND its count, as asked
+    counts = [c for _, c in pairs]
+    plt.pie(counts, labels=labels, autopct='%1.1f%%')
+    plt.title(f'BoW Top 5 - Book {doc_id}')
+    plt.show()</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li>the loop runs <b>per book</b> this time — <code>row</code> is one book's counts, where Task 11 summed all three.</li>
+        <li><code>labels = [f"{w} ({c})" ...]</code> — the task asks for the word <em>and</em> its frequency, so both go in the label string.</li>
+        <li><code>autopct='%1.1f%%'</code> — writes the percentage inside each slice to one decimal place. The doubled <code>%%</code> is how you print a literal percent sign.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">What you should see</div>
+<pre>Book 0 top BoW words: [('say', 478), ('alice', 403), ('little', 128), ('go', 121), ('one', 104)]
+Book 1 top BoW words: [('say', 503), ('alice', 396), ('one', 116), ('go', 115), ('queen', 76)]
+Book 2 top BoW words: [('say', 328), ('one', 254), ('go', 201), ('two', 134), ('time', 118)]</pre>
+    </div>
+    <div class="why2"><span class="lbl">Why this step exists</span><p>Pie charts are a poor choice for comparing five similar values — a bar chart is easier to read. The challenge asks for one, so make it, but knowing <em>why</em> it is the weaker chart is worth saying in your write-up.</p></div>
+  </div>
+</section>
+
+<section class="step" id="t14">
+  <div class="shead"><button class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></button><div>
+    <span class="sn">TASK 14</span><h2>Are these words informative?</h2></div></div>
+  <div class="body">
+    <div class="task"><span class="lbl">What the challenge asks</span><p>Analyse the outputs: are those words informative? Are they insightful or expected?</p></div>
+    <div class="words"><span class="lbl">The answer</span><p><b>No. They are expected, and that is exactly the problem.</b></p><p><em>say</em> tops all three books. <em>alice</em> tops two. <em>one</em>, <em>go</em>, <em>little</em> fill the rest. You learned that these are books in which a character called Alice talks — which you knew from the titles.</p><p>The words that win are the ones that appear <b>everywhere</b>, and a word that appears everywhere cannot tell two documents apart. Counting rewards exactly the wrong thing.</p><p>Look at Book 2 for the proof that the method is not hopeless, only blunt: <em>two</em> and <em>time</em> appear, which <em>are</em> informative — <em>A Tangled Tale</em> is a book of mathematical puzzles. That signal is sitting there under <em>say</em> and <em>one</em>, and the next task is how you dig it out.</p></div>
+    <div class="why2"><span class="lbl">Why this step exists</span><p>This is a written answer, and it is the hinge of the whole challenge. Everything in Part C exists because of what you are about to notice.</p></div>
+  </div>
+</section>
+
+<div class="part"><span class="k">Part C · Tasks 15–16</span><h2>Solving the frequency problem with TF-IDF</h2><p>A word that appears in every document is not evidence. Weight each word by how rare it is across the corpus, and the books start telling you apart.</p></div>
+
+<section class="step" id="t15">
+  <div class="shead"><button class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></button><div>
+    <span class="sn">TASK 15</span><h2>Build the TF-IDF matrix</h2></div></div>
+  <div class="body">
+    <div class="task"><span class="lbl">What the challenge asks</span><p>Create another BoW, now using TF-IDF as vectorizer.</p><p><b>Hint:</b> you need to pass <code>min_df=1, max_df=2</code> as arguments of <code>TfidfVectorizer()</code>, because we are using a small dataset.</p></div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Weight each word by how rare it is</span><button class="copy">Copy</button></div>
+<pre><code>tfidf = TfidfVectorizer(min_df=1, max_df=2)
+tfidf_mat = tfidf.fit_transform(lemmas_joined).toarray()
+vocab_tfidf = tfidf.get_feature_names_out()
+
+print('BoW vocabulary  :', len(vocab))
+print('TF-IDF vocabulary:', len(vocab_tfidf))
+print("'alice' still in the vocabulary?", 'alice' in set(vocab_tfidf))
+
+for doc_id, row in enumerate(tfidf_mat):
+    top = row.argsort()[::-1][:5]
+    pairs = [(vocab_tfidf[i], round(float(row[i]), 4)) for i in top]
+    print(f'Book {doc_id} top TF-IDF words:', pairs)</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><code>TfidfVectorizer</code> — same counting as before, then each count is multiplied by an <b>inverse document frequency</b> weight: high for words in few documents, low for words in many.</li>
+        <li><code>min_df=1</code> — keep a word even if it appears in only one book. With three documents you cannot afford to throw anything away.</li>
+        <li><code>max_df=2</code> — <b>drop any word that appears in more than 2 of the 3 books.</b> This is the line that does the work, and it is why the hint exists.</li>
+        <li>the rest is the same <code>argsort</code> idiom as Task 11, applied to scores instead of counts.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">What you should see</div>
+<pre>BoW vocabulary  : 4606
+TF-IDF vocabulary: 3290
+'alice' still in the vocabulary? False
+
+Book 0 top TF-IDF words: [('turtle', 0.3147), ('mock', 0.2735), ('hatter', 0.2201),
+                          ('gryphon', 0.2149), ('duchess', 0.1882)]</pre>
+    </div>
+    <div class="warn"><span class="lbl">A trap in this exact setup</span><p>Because <code>max_df=2</code> deletes words, <code>vocab_tfidf</code> is <b>shorter and differently ordered</b> than <code>vocab</code> from Task 11. Index 379 is no longer <code>alice</code>.</p><p>Reusing the old <code>vocab</code> here gives you plausible-looking labels that are completely wrong, with no error message. Always look up names with the vectorizer that produced the matrix.</p></div>
+    <div class="words"><span class="lbl">What <code>max_df=2</code> really does — and why it is a blunt instrument</span><p>With 3 documents, <code>max_df=2</code> means: <b>if a word appears in all three books, delete it from the vocabulary entirely.</b> Not downweight — delete.</p><p>That is why <code>alice</code> is simply gone. It is in all three books, so it fails the filter. Same for <code>say</code>, <code>one</code>, <code>go</code> — and, incidentally, for <code>project</code>, <code>gutenberg</code> and <code>ebook</code>, which is why the Task 2 boilerplate never showed up in your results.</p><p><b>On a real corpus you would not do this.</b> With thousands of documents the IDF weighting handles common words gracefully on its own. With three documents the maths has almost nothing to work with, so the hint reaches for a crude filter instead. Say that in your write-up.</p></div>
+    <div class="why2"><span class="lbl">Why this step exists</span><p>TF-IDF is the single most useful idea in classical text analysis, and this task is where you see why in one line of output. The top words stop being <em>say</em> and <em>alice</em> and start being the things each book is actually about.</p></div>
+  </div>
+</section>
+
+<section class="step" id="t16">
+  <div class="shead"><button class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></button><div>
+    <span class="sn">TASK 16</span><h2>The pie charts again — and the comparison that earns the marks</h2></div></div>
+  <div class="body">
+    <div class="task"><span class="lbl">What the challenge asks</span><p>Create again the pie plots with the new 5 most relevant words from each document.</p></div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">One TF-IDF pie per book</span><button class="copy">Copy</button></div>
+<pre><code>for doc_id, row in enumerate(tfidf_mat):
+    top = row.argsort()[::-1][:5]
+    pairs = [(vocab_tfidf[i], round(float(row[i]), 4)) for i in top]
+
+    plt.figure(figsize=(5, 5))
+    labels = [f"{w} ({s})" for w, s in pairs]
+    scores = [s for _, s in pairs]
+    plt.pie(scores, labels=labels, autopct='%1.1f%%')
+    plt.title(f'TF-IDF Top 5 - Book {doc_id}')
+    plt.show()</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li>identical to Task 13 except for two things: <code>tfidf_mat</code> instead of <code>bow_df</code>, and <code>vocab_tfidf</code> instead of <code>vocab</code>.</li>
+        <li>the slice values are now <b>scores</b>, not counts. A TF-IDF score has no unit — it is only meaningful next to the other scores in the same row.</li>
+        <li><code>round(..., 4)</code> — scores run small. Without rounding your labels become unreadable.</li>
+      </ol>
+    </div>
+    <div class="check"><div class="hd">What you should see</div>
+<pre>(three pies — now showing each book's own characters and subjects)</pre>
+    </div>
+    <div class="words"><span class="lbl">Put both sets of charts next to each other and write this up</span><p><b>Counting</b> told you: say, alice, one, go, little. True of all three books, and useless for telling them apart.</p><p><b>TF-IDF</b> tells you what is in <em>this</em> book and not the others — the Mock Turtle and the Hatter in Wonderland, the chess pieces in Looking-Glass, the puzzle vocabulary in A Tangled Tale.</p><p>The sentence to land: <b>frequency measures how often a word is used; TF-IDF measures how much a word distinguishes one document from the rest.</b> Most of the time you want the second one.</p></div>
+    <div class="why2"><span class="lbl">Why this step exists</span><p>Side by side with Task 13, this is the clearest before-and-after in the whole challenge: the same books, the same preprocessing, one change in how words are weighted, and completely different answers.</p></div>
+  </div>
+</section>
+
+<section class="step" id="t17">
+  <div class="shead"><button class="tick"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg></button><div>
+    <span class="sn">TASK 17</span><h2>Before you submit</h2></div></div>
+  <div class="body">
+    <div class="task"><span class="lbl">What the challenge asks</span><p>Submit on the DI Learning platform by pasting a public Google Colab link to your finished notebook. Optionally, save the notebook to your own GitHub repo (<code>File → Save a copy in GitHub</code>).</p></div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">The check that catches most lost marks</span><button class="copy">Copy</button></div>
+<pre><code># Run this last, on a FRESH runtime, before you share the link:
+#   Runtime -&gt; Restart session and run all
+
+# Then check: does every cell have output under it?
+# A notebook that only works in your session is a notebook that does not work.</code></pre>
+    </div>
+    <div class="walk"><div class="hd">What the code does</div>
+      <ol>
+        <li><b>Restart and run all.</b> Notebooks accumulate variables you deleted from the cells. The only way to know yours runs top to bottom is to make it do so.</li>
+        <li><b>Set sharing to anyone with the link.</b> Share → General access → Anyone with the link. A private link is the most common reason a submitted challenge scores zero.</li>
+      </ol>
+    </div>
+    <div class="words"><span class="lbl">What actually earns marks here</span><p>Every task runs, every chart renders — that is the baseline, not the achievement. <b>The marks are in the four written answers</b>, and three of them are about things that went wrong:</p><p><b>Task 7</b> — stems are not words, lemmas are; and your lemmas are imperfect because the cleaning destroyed the grammar.<br><b>Task 8</b> — the POS tags are visibly wrong, and stopword removal is why.<br><b>Task 9</b> — the entity lists are empty, and <code>.lower()</code> is why. Show the fix on the original text.<br><b>Task 14</b> — the frequent words are expected rather than informative, which is the whole reason TF-IDF exists.</p><p>A notebook that runs cleanly and notices none of these is a worse submission than one that notices all four.</p></div>
+    <div class="why2"><span class="lbl">Why this step exists</span><p>Your grader runs your notebook on a machine that has never seen it. Everything that was true only in your session — a variable from a deleted cell, a file you uploaded by hand, a model you installed once — disappears.</p></div>
+  </div>
+</section>
+
+
+</main>
+
+<footer>
+  <div class="wrap">
+    GenAI &amp; Machine Learning Bootcamp · Week 8 · Day 1 of 4 — Daily Challenge solutions and explanation.
+    Submit a public Colab link on the DI Learning platform.
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('theme');
+  if(btn) btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    var dark = cur ? cur==='dark' : matchMedia('(prefers-color-scheme: dark)').matches;
+    root.setAttribute('data-theme', dark ? 'light' : 'dark');
+  });
+  var main=document.querySelector('main'), key=(main&&main.dataset.key)||'chal';
+  var steps=[].slice.call(document.querySelectorAll('.step'));
+  var bar=document.querySelector('.prog .bar i'), txt=document.querySelector('.prog .txt');
+  var done={};
+  try{ done=JSON.parse(localStorage.getItem(key)||'{}'); }catch(e){ done={}; }
+  function save(){ try{ localStorage.setItem(key, JSON.stringify(done)); }catch(e){} }
+  function paint(){
+    var n=0;
+    steps.forEach(function(s){ if(done[s.id]){ s.classList.add('done'); n++; } else s.classList.remove('done'); });
+    if(bar) bar.style.width=(steps.length? (n/steps.length*100):0)+'%';
+    if(txt) txt.textContent=n+' of '+steps.length+' done';
+  }
+  steps.forEach(function(s){
+    var t=s.querySelector('.tick');
+    if(!t) return;
+    t.innerHTML='<svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+    t.addEventListener('click',function(){ done[s.id]=!done[s.id]; save(); paint(); });
+  });
+  var r=document.querySelector('.prog .reset');
+  if(r) r.addEventListener('click',function(){ done={}; save(); paint(); });
+  paint();
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click',function(){
+      var pre=b.closest('.codewrap').querySelector('code');
+      navigator.clipboard.writeText(pre.innerText).then(function(){
+        var o=b.textContent; b.textContent='Copied'; setTimeout(function(){ b.textContent=o; },1200);
+      }).catch(function(){});
+    });
+  });
+})();
+</script>
+
+
+</body></html>

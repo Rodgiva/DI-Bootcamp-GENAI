@@ -1,0 +1,168 @@
+=== cell 6 ===
+SRC: import os
+import json
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import faiss
+from sentence_transformers import SentenceTransformer, InputExample
+import chromadb
+from chromadb.config import Settings
+from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
+from IPyt
+c:\Users\avigd\Desktop\GENAI\.venv2\Lib\site-packages\tqdm\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+
+ERROR: ValueError: Your currently installed version of Keras is Keras 3, but this is not yet supported in Transformers. Please install the backwards-compatible tf-keras package with `pip install tf-keras`.
+[31m---------------------------------------------------------------------------[39m
+[31mModuleNotFoundError[39m                       Traceback (most recent call last)
+[36mFile [39m[32m~\Desktop\GENAI\.venv2\Lib\site-packages\transformers\activations_tf.py:22[39m
+[32m     21[39m [38;5;28;01mtry[39;00m:
+[32m---> [39m[32m22[39m     [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mtf_keras[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[34;01mkeras[39;00m
+[32m     23[39m [38;5;28;01mexcept[39;00m ([38;5;167;01mModuleNotFoundError[39;00m, [38;5;167;01mImportError[39;00m):
+
+[31mModuleNotFoundError[39m: No module named 'tf_keras'
+
+During handling of the above exception, another exception occurred:
+
+[31mValueError[39m                                Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[3][39m[32m, line 7[39m
+[32m      3[39m [38;5;28;01mfrom[39;00m pathlib [38;5;28;01mimport[39;00m Path
+[32m      4[39m [38;5;28;01mimport[39;00m numpy [38;5;28;01mas[39;00m np
+[32m      5[39m [38;5;28;01mimport[39;00m pandas [38;5;28;01mas[39;00m pd
+[32m      6[39m [38;5;28;01mimport[39;00m faiss
+[32m----> [39m[32m7[39m [38;5;28;01mfrom[39;00m sentence_transformers [38;5;28;01mimport[39;00m SentenceTransformer, InputExample
+[32m      8[39m [38;5;28;01mimport[39;00m chromadb
+[32m      9[39m [38;5;28;01mfrom[39;00m chromadb.config [38;5;28;01mimport[39;00m Settings
+[32m     10[39m [38;5;28;01mfrom[39;00m transformers [38;5;28;01mimport[39;00m AutoTokenizer, AutoModelForCausalLM, pipeline
+
+[36mFile [39m[32m~\Desktop\GENAI\.venv2\Lib\site-packages\sentence_transformers\__init__.py:15[39m
+[32m      8[39m [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mwarnings[39;00m
+[32m     10[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01msentence_transformers[39;00m[34;01m.[39;00m[34;01mbackend[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m (
+[32m     11[39m     export_dynamic_quantized_onnx_model,
+[32m     12[39m     export_optimized_onnx_model,
+[32m     13[39m     export_static_quantized_openvino_model,
+[32m     14[39m )
+[32m---> [39m[32m15[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01msentence_transformers[39;00m[34;01m.[39;00m[34;01mbase[39;00m[34;01m.[39;00m[34;01msampler[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m DefaultBatchSampler, MultiDatasetDefaultBatchSampler
+[32m     16[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01msentence_transformers[39;00m[34;01m.[39;00m[34;01mcross_encoder[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m (
+[32m     17[39m     CrossEncoder,
+[32m     18[39m     CrossEncoderModelCardData,
+[32m     19[39m     CrossEncoderTrainer,
+[32m     20[39m     CrossEncoderTrainingArguments,
+[32m     21[39m )
+[32m     22[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01msentence_transformers[39;00m[34;01m.[39;00m[34;01mmulti_vector_encoder[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m (
+[32m     23[39m     MultiVectorEncoder,
+[32m     24[39m     MultiVectorEncoderModelCardData,
+[32m     25[39m     MultiVectorEncoderTrainer,
+[32m     26[39m     MultiVectorEncoderTrainingArguments,
+[32m     27[39m )
+
+[36mFile [39m[32m~\Desktop\GENAI\.venv2\Lib\site-packages\sentence_transformers\base\__init__.py:4[39m
+[32m      1[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01m__future__[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m annotations
+[32m      3[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01m.[39;00m[34;01mdata_collator[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m BaseDataCollator
+[32m----> [39m[32m4[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01m.[39;00m[34;01mmodel[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m BaseModel
+[32m      5[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01m.[39;00m[34;01mpeft_mixin[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m PeftAdapterMixin
+[32m      6[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01m.[39;00m[34;01msampler[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m (
+[32m      7[39m     DefaultBatchSampler,
+[32m      8[39m     GroupByLabelBatchSampler,
+[32m   (...)[39m[32m     12[39m     RoundRobinBatchSampler,
+[32m     13[39m )
+
+[36mFile [39m[32m~\Desktop\GENAI\.venv2\Lib\site-packages\sentence_transformers\base\model.py:38[39m
+[32m     36[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01msentence_transformers[39;00m[34;01m.[39;00m[34;01mbase[39;00m[34;01m.[39;00m[34;01mmodality[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m infer_batch_modality, is_message_dict, raise_unsupported_modality_error
+[32m     37[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01msentence_transformers[39;00m[34;01m.[39;00m[34;01mbase[39;00m[34;01m.[39;00m[34;01mmodality_types[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m Modality, PairInput, SingleInput
+[32m---> [39m[32m38[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01msentence_transformers[39;00m[34;01m.[39;00m[34;01mbase[39;00m[34;01m.[39;00m[34;01mmodel_card[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m BaseModelCardData, generate_model_card
+[32m     39[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01msentence_transformers[39;00m[34;01m.[39;00m[34;01mbase[39;00m[34;01m.[39;00m[34;01mmodules[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m Module, Router, Transformer
+[32m     40[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01msentence_transformers[39;00m[34;01m.[39;00m[34;01mbase[39;00m[34;01m.[39;00m[34;01mpeft_mixin[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m PeftAdapterMixin
+
+[36mFile [39m[32m~\Desktop\GENAI\.venv2\Lib\site-packages\sentence_transformers\base\model_card.py:28[39m
+[32m     26[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mtqdm[39;00m[34;01m.[39;00m[34;01mautonotebook[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m tqdm
+[32m     27[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mtransformers[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m TrainerCallback
+[32m---> [39m[32m28[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mtransformers[39;00m[34;01m.[39;00m[34;01mintegrations[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m CodeCarbonCallback
+[32m     29[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mtransformers[39;00m[34;01m.[39;00m[34;01mmodelcard[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m make_markdown_table
+[32m     30[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mtransformers[39;00m[34;01m.[39;00m[34;01mtrainer_callback[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m TrainerControl, TrainerState
+
+[36mFile [39m[32m<frozen importlib._bootstrap>:1412[39m, in [36m_handle_fromlist[39m[34m(module, fromlist, import_, recursive)[39m
+
+[36mFile [39m[32m~\Desktop\GENAI\.venv2\Lib\site-packages\transformers\utils\import_utils.py:2317[39m, in [36m_LazyModule.__getattr__[39m[34m(self, name)[39m
+[32m   2315[39m [38;5;28;01melif[39;00m name [38;5;129;01min[39;00m [38;5;28mself[39m._class_to_module:
+[32m   2316[39m     [38;5;28;01mtry[39;00m:
+[32m-> [39m[32m2317[39m         module = [30;43mself[39;49m[30;43m.[39;49m[30;43m_get_module[39;49m[30;43m([39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43m_class_to_module[39;49m[30;43m[[39;49m[30;43mname[39;49m[30;43m][39;49m[30;43m)[39;49m
+[32m   2318[39m         value = [38;5;28mgetattr[39m(module, name)
+[32m   2319[39m     [38;5;28;01mexcept[39;00m ([38;5;167;01mModuleNotFoundError[39;00m, [38;5;167;01mRuntimeError[39;00m) [38;5;28;01mas[39;00m e:
+
+[36mFile [39m[32m~\Desktop\GENAI\.venv2\Lib\site-packages\transformers\utils\import_utils.py:2347[39m, in [36m_LazyModule._get_module[39m[34m(self, module_name)[39m
+[32m   2345[39m     [38;5;28;01mreturn[39;00m importlib.import_module([33m"[39m[33m.[39m[33m"[39m + module_name, [38;5;28mself[39m.[34m__name__[39m)
+[32m   2346[39m [38;5;28;01mexcept[39;00m [38;5;167;01mException[39;00m [38;5;28;01mas[39;00m e:
+[32m-> [39m[32m2347[39m     [38;5;28;01mraise[39;00m e
+
+[36mFile [39m[32m~\Desktop\GENAI\.venv2\Lib\site-packages\transformers\utils\import_utils.py:2345[39m, in [36m_LazyModule._get_module[39m[34m(self, module_name)[39m
+[32m   2343[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34m_get_module[39m([38;5;28mself[39m, module_name: [38;5;28mstr[39m):
+[32m   2344[39m     [38;5;28;01mtry[39;00m:
+[32m-> [39m[32m2345[39m         [38;5;28;01mreturn[39;00m [30;43mimportlib[39;49m[30;43m.[39;49m[30;43mimport_module[39;49m[30;43m([39;49m[30;43m"[39;49m[30;43m.[39;49m[30;43m"[39;49m[30;43m [39;49m[30;43m+[39;49m[30;43m [39;49m[30;43mmodule_name[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43m__name__[39;49m[30;43m)[39;49m
+[32m   2346[39m     [38;5;28;01mexcept[39;00m [38;5;167;01mException[39;00m [38;5;28;01mas[39;00m e:
+[32m   2347[39m         [38;5;28;01mraise[39;00m e
+
+[36mFile [39m[32m~\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90[39m, in [36mimport_module[39m[34m(name, package)[39m
+[32m     88[39m             [38;5;28;01mbreak[39;00m
+[32m     89[39m         level += [32m1[39m
+[32m---> [39m[32m90[39m [38;5;28;01mreturn[39;00m [30;43m_bootstrap[39;49m[30;43m.[39;49m[30;43m_gcd_import[39;49m[30;43m([39;49m[30;43mname[39;49m[30;43m[[39;49m[30;43mlevel[39;49m[30;43m:[39;49m[30;43m][39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mpackage[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mlevel[39;49m[30;43m)[39;49m
+
+[36mFile [39m[32m~\Desktop\GENAI\.venv2\Lib\site-packages\transformers\integrations\integration_utils.py:60[39m
+[32m     57[39m logger = logging.get_logger([34m__name__[39m)
+[32m     59[39m [38;5;28;01mif[39;00m is_tf_available():
+[32m---> [39m[32m60[39m     [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01m.[39;00m[34;01m.[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m TFPreTrainedModel
+[32m     62[39m [38;5;28;01mif[39;00m is_torch_available():
+[32m     63[39m     [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mtorch[39;00m
+
+[36mFile [39m[32m<frozen importlib._bootstrap>:1412[39m, in [36m_handle_fromlist[39m[34m(module, fromlist, import_, recursive)[39m
+
+[36mFile [39m[32m~\Desktop\GENAI\.venv2\Lib\site-packages\transformers\utils\import_utils.py:2317[39m, in [36m_LazyModule.__getattr__[39m[34m(self, name)[39m
+[32m   2315[39m [38;5;28;01melif[39;00m name [38;5;129;01min[39;00m [38;5;28mself[39m._class_to_module:
+[32m   2316[39m     [38;5;28;01mtry[39;00m:
+[32m-> [39m[32m2317[39m         module = [30;43mself[39;49m[30;43m.[39;49m[30;43m_get_module[39;49m[30;43m([39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43m_class_to_module[39;49m[30;43m[[39;49m[30;43mname[39;49m[30;43m][39;49m[30;43m)[39;49m
+[32m   2318[39m         value = [38;5;28mgetattr[39m(module, name)
+[32m   2319[39m     [38;5;28;01mexcept[39;00m ([38;5;167;01mModuleNotFoundError[39;00m, [38;5;167;01mRuntimeError[39;00m) [38;5;28;01mas[39;00m e:
+
+[36mFile [39m[32m~\Desktop\GENAI\.venv2\Lib\site-packages\transformers\utils\import_utils.py:2347[39m, in [36m_LazyModule._get_module[39m[34m(self, module_name)[39m
+[32m   2345[39m     [38;5;28;01mreturn[39;00m importlib.import_module([33m"[39m[33m.[39m[33m"[39m + module_name, [38;5;28mself[39m.[34m__name__[39m)
+[32m   2346[39m [38;5;28;01mexcept[39;00m [38;5;167;01mException[39;00m [38;5;28;01mas[39;00m e:
+[32m-> [39m[32m2347[39m     [38;5;28;01mraise[39;00m e
+
+[36mFile [39m[32m~\Desktop\GENAI\.venv2\Lib\site-packages\transformers\utils\import_utils.py:2345[39m, in [36m_LazyModule._get_module[39m[34m(self, module_name)[39m
+[32m   2343[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34m_get_module[39m([38;5;28mself[39m, module_name: [38;5;28mstr[39m):
+[32m   2344[39m     [38;5;28;01mtry[39;00m:
+[32m-> [39m[32m2345[39m         [38;5;28;01mreturn[39;00m [30;43mimportlib[39;49m[30;43m.[39;49m[30;43mimport_module[39;49m[30;43m([39;49m[30;43m"[39;49m[30;43m.[39;49m[30;43m"[39;49m[30;43m [39;49m[30;43m+[39;49m[30;43m [39;49m[30;43mmodule_name[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43m__name__[39;49m[30;43m)[39;49m
+[32m   2346[39m     [38;5;28;01mexcept[39;00m [38;5;167;01mException[39;00m [38;5;28;01mas[39;00m e:
+[32m   2347[39m         [38;5;28;01mraise[39;00m e
+
+[36mFile [39m[32m~\AppData\Local\Programs\Python\Python312\Lib\importlib\__init__.py:90[39m, in [36mimport_module[39m[34m(name, package)[39m
+[32m     88[39m             [38;5;28;01mbreak[39;00m
+[32m     89[39m         level += [32m1[39m
+[32m---> [39m[32m90[39m [38;5;28;01mreturn[39;00m [30;43m_bootstrap[39;49m[30;43m.[39;49m[30;43m_gcd_import[39;49m[30;43m([39;49m[30;43mname[39;49m[30;43m[[39;49m[30;43mlevel[39;49m[30;43m:[39;49m[30;43m][39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mpackage[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mlevel[39;49m[30;43m)[39;49m
+
+[36mFile [39m[32m~\Desktop\GENAI\.venv2\Lib\site-packages\transformers\modeling_tf_utils.py:38[39m
+[32m     35[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01mpackaging[39;00m[34;01m.[39;00m[34;01mversion[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m parse
+[32m     37[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01m.[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m DataCollatorWithPadding, DefaultDataCollator
+[32m---> [39m[32m38[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01m.[39;00m[34;01mactivations_tf[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m get_tf_activation
+[32m     39[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01m.[39;00m[34;01mconfiguration_utils[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m PretrainedConfig
+[32m     40[39m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01m.[39;00m[34;01mdynamic_module_utils[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m custom_object_save
+
+[36mFile [39m[32m~\Desktop\GENAI\.venv2\Lib\site-packages\transformers\activations_tf.py:27[39m
+[32m     24[39m     [38;5;28;01mimport[39;00m[38;5;250m [39m[34;01mkeras[39;00m
+[32m     26[39m     [38;5;28;01mif[39;00m parse(keras.__version__).major > [32m2[39m:
+[32m---> [39m[32m27[39m         [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m(
+[32m     28[39m             [33m"[39m[33mYour currently installed version of Keras is Keras 3, but this is not yet supported in [39m[33m"[39m
+[32m     29[39m             [33m"[39m[33mTransformers. Please install the backwards-compatible tf-keras package with [39m[33m"[39m
+[32m     30[39m             [33m"[39m[33m`pip install tf-keras`.[39m[33m"[39m
+[32m     31[39m         )
+[32m     34[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34m_gelu[39m(x):
+[32m     35[39m [38;5;250m    [39m[33;03m"""[39;00m
+[32m     36[39m [33;03m    Gaussian Error Linear Unit. Original Implementation of the gelu activation function in Google Bert repo when[39;00m
+[32m     37[39m [33;03m    initially created. For information: OpenAI GPT's gelu is slightly different (and gives slightly different results):[39;00m
+[32m     38[39m [33;03m    0.5 * x * (1 + torch.tanh(math.sqrt(2 / math.pi) * (x + 0.044715 * torch.pow(x, 3)))) Also see[39;00m
+[32m     39[39m [33;03m    https://huggingface.co/papers/1606.08415[39;00m
+[32m     40[39m [33;03m    """[39;00m
+
+[31mValueError[39m: Your currently installed version of Keras is Keras 3, but this is not yet supported in Transformers. Please install the backwards-compatible tf-keras package with `pip install tf-keras`.
+
