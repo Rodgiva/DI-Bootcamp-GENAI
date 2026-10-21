@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+<html lang="en" data-darkreader-mode="dynamic" data-darkreader-scheme="dark"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style class="darkreader darkreader--fallback" media="screen"></style><style class="darkreader darkreader--user-agent" media="screen">@layer {
+html {
+    background-color: var(--darkreader-background-ffffff, #1e2122) !important;
+}
+html {
+    color-scheme: dark !important;
+}
+iframe {
+    color-scheme: dark !important;
+}
+html, body {
+    background-color: var(--darkreader-background-ffffff, #1e2122);
+}
+html, body {
+    border-color: var(--darkreader-border-4c4c4c, #908676);
+    color: var(--darkreader-text-000000, #ffffff);
+}
+a {
+    color: var(--darkreader-text-0040ff, #40b5ff);
+}
+table {
+    border-color: var(--darkreader-border-808080, #697276);
+}
+mark {
+    color: var(--darkreader-text-000000, #ffffff);
+}
+::placeholder {
+    color: var(--darkreader-text-a9a9a9, #dfd6c9);
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: var(--darkreader-background-faffbd, #505500) !important;
+    color: var(--darkreader-text-000000, #ffffff) !important;
+}
+* {
+    scrollbar-color: var(--darkreader-background-b0b0b0, #565d60) var(--darkreader-background-f1f1f1, #282c2d);
+}
+::selection {
+    background-color: var(--darkreader-background-0060d4, #0060d4) !important;
+    color: var(--darkreader-text-ffffff, #ffffff) !important;
+}
+::-moz-selection {
+    background-color: var(--darkreader-background-0060d4, #0060d4) !important;
+    color: var(--darkreader-text-ffffff, #ffffff) !important;
+}
+}</style><style class="darkreader darkreader--text" media="screen"></style><style class="darkreader darkreader--invert" media="screen">c-wiz div > svg > circle, .jfk-bubble.gtx-bubble, .captcheck_answer_label > input + img, span#closed_text > img[src^="https://www.gstatic.com/images/branding/googlelogo"], span[data-href^="https://www.hcaptcha.com/"] > #icon, img.Wirisformula, a[data-testid="headerMediumLogo"]>svg, .d2l-navigation-link-image-container, .d2l-iframe-loading-container, div.mc-ip-hide[style*="background: rgb(255, 255, 255) !important"], [style*="color: rgb(0, 0, 1) !important;"] {
+    filter: invert(100%) hue-rotate(180deg) brightness(125%) contrast(90%) !important;
+}</style><style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}
+[data-darkreader-inline-stopcolor] {
+  stop-color: var(--darkreader-inline-stopcolor) !important;
+}
+[data-darkreader-inline-bg] {
+  background: var(--darkreader-inline-bg) !important;
+}
+[data-darkreader-inline-border-short] {
+  border: var(--darkreader-inline-border-short) !important;
+}
+[data-darkreader-inline-border-bottom-short] {
+  border-bottom: var(--darkreader-inline-border-bottom-short) !important;
+}
+[data-darkreader-inline-border-left-short] {
+  border-left: var(--darkreader-inline-border-left-short) !important;
+}
+[data-darkreader-inline-border-right-short] {
+  border-right: var(--darkreader-inline-border-right-short) !important;
+}
+[data-darkreader-inline-border-top-short] {
+  border-top: var(--darkreader-inline-border-top-short) !important;
+}
+[data-darkreader-inline-invert] {
+    filter: invert(100%) hue-rotate(180deg);
+}</style><style class="darkreader darkreader--variables" media="screen">:root {
+   --darkreader-neutral-background: var(--darkreader-background-ffffff, #1e2122);
+   --darkreader-neutral-text: var(--darkreader-text-000000, #ffffff);
+   --darkreader-selection-background: var(--darkreader-background-0060d4, #0060d4);
+   --darkreader-selection-text: var(--darkreader-text-ffffff, #ffffff);
+}</style><style class="darkreader darkreader--root-vars" media="screen"></style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NLP Day 3 Student Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link rel="stylesheet" href="NLP%20Day%203%20Student%20Guide_files/css2_uIvY.css">
+
+<style>
+/* Student follow-along: a numbered ladder of steps, each with code to copy and a checkpoint. */
+:root{
+  --ground:#F2F3F0; --surface:#FFFFFF; --surface-2:#E9EBE6;
+  --ink:#16191A; --ink-2:#434A4C; --ink-3:#6E767A;
+  --line:#D3D7D1; --line-soft:#E3E6E1;
+  --accent:#0F5F62; --accent-soft:#DDEBEA;
+  --warn:#8A4B10; --warn-soft:#F6E8D8;
+  --ok:#1F6B3A; --ok-soft:#DEEDE2;
+  --shell-bg:#1A2022; --shell-ink:#E4E8E6; --shell-dim:#8D9A99;
+  --f-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Newsreader",Georgia,serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#121516; --surface:#1A1E1F; --surface-2:#222728;
+    --ink:#EAEDEB; --ink-2:#B4BBB9; --ink-3:#848C8B;
+    --line:#2E3435; --line-soft:#262B2C;
+    --accent:#5FC3C2; --accent-soft:#17302F;
+    --warn:#D79A55; --warn-soft:#2B2217;
+    --ok:#6FC68C; --ok-soft:#16281D;
+    --shell-bg:#0D1011; --shell-ink:#DDE2E0; --shell-dim:#7C8887;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#121516; --surface:#1A1E1F; --surface-2:#222728;
+  --ink:#EAEDEB; --ink-2:#B4BBB9; --ink-3:#848C8B;
+  --line:#2E3435; --line-soft:#262B2C;
+  --accent:#5FC3C2; --accent-soft:#17302F;
+  --warn:#D79A55; --warn-soft:#2B2217;
+  --ok:#6FC68C; --ok-soft:#16281D;
+  --shell-bg:#0D1011; --shell-ink:#DDE2E0; --shell-dim:#7C8887;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--f-body); font-size:18px; line-height:1.6; -webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--f-display); text-wrap:balance; line-height:1.17;
+  letter-spacing:-.02em; margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:3px}
+.wrap{max-width:900px; margin-inline:auto; padding-inline:20px}
+
+.mast{background:var(--surface); border-bottom:1px solid var(--line)}
+.mast .wrap{padding-block:34px 26px; display:flex; flex-wrap:wrap; gap:22px;
+  align-items:flex-end; justify-content:space-between}
+.eyebrow{font-family:var(--f-mono); font-size:11px; letter-spacing:.17em;
+  text-transform:uppercase; color:var(--accent); margin-bottom:12px}
+.mast h1{font-size:clamp(29px,4.6vw,43px); font-weight:700; letter-spacing:-.03em}
+.mast .sub{font-size:18px; color:var(--ink-2); margin:10px 0 0; max-width:52ch}
+.btn{font-family:var(--f-mono); font-size:11.5px; letter-spacing:.05em; padding:8px 13px;
+  background:var(--surface-2); color:var(--ink-2); border:1px solid var(--line);
+  border-radius:2px; cursor:pointer}
+.btn:hover{border-color:var(--accent); color:var(--accent)}
+
+/* progress bar */
+.prog{position:sticky; top:env(safe-area-inset-top, 0px); z-index:30;
+  background:var(--surface); border-bottom:1px solid var(--line)}
+.prog .wrap{padding-block:10px; display:flex; align-items:center; gap:14px}
+.prog .bar{flex:1; height:8px; background:var(--surface-2); border-radius:4px; overflow:hidden}
+.prog .bar i{display:block; height:100%; width:0; background:var(--ok);
+  border-radius:4px; transition:width .2s}
+.prog .txt{font-family:var(--f-mono); font-size:11.5px; color:var(--ink-3); white-space:nowrap}
+.prog .reset{font-family:var(--f-mono); font-size:11px; color:var(--ink-3);
+  background:none; border:0; cursor:pointer; text-decoration:underline; padding:0}
+
+main{padding-block:34px 70px}
+
+/* day opener */
+.today{background:var(--accent-soft); border:1px solid var(--accent); border-radius:4px;
+  padding:22px 24px; margin-bottom:22px}
+.today .kick{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--accent); margin-bottom:9px}
+.today h2{font-size:clamp(20px,2.4vw,24px); font-weight:600; margin-bottom:11px}
+.today p{margin:0 0 13px; font-size:17.5px; color:var(--ink)}
+.today ol{margin:0 0 13px; padding-left:1.35em; font-size:16.5px; color:var(--ink-2)}
+.today li{margin-bottom:5px}
+.today .why{margin:0; padding-top:13px; border-top:1px solid var(--accent);
+  font-size:16.5px; color:var(--ink-2)}
+
+/* where today sits in the week */
+.weekmap{background:var(--surface); border:1px solid var(--line); border-radius:4px;
+  padding:22px 24px; margin-bottom:22px}
+.weekmap h2{font-size:20px; font-weight:600; margin-bottom:12px}
+.weekmap p{margin:0 0 12px; color:var(--ink-2); font-size:17px}
+.weekmap ol{margin:0 0 14px; padding-left:1.3em; color:var(--ink-2); font-size:17px}
+.weekmap li{margin-bottom:7px}
+.weekmap table{width:100%; border-collapse:collapse; margin:4px 0 0; font-size:16px}
+.weekmap td{border-top:1px solid var(--line); padding:9px 10px; color:var(--ink-2);
+  vertical-align:top}
+.weekmap td:first-child{width:92px; white-space:nowrap; font-family:var(--f-mono);
+  font-size:13px; letter-spacing:.03em; color:var(--ink-3)}
+.weekmap tr.here td{background:var(--accent-soft); color:var(--ink); font-weight:500}
+.weekmap tr.here td:first-child{color:var(--accent)}
+.weekmap .sub{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-3); margin:18px 0 8px}
+
+/* understand check */
+.grasp{margin:22px 0 0; border:1px solid var(--accent); border-radius:3px;
+  background:var(--surface); overflow:hidden}
+.grasp .hd{background:var(--accent-soft); padding:7px 13px; font-family:var(--f-mono);
+  font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent)}
+.grasp .intro-l{padding:11px 15px 0; margin:0; font-size:15.5px; color:var(--ink-3)}
+.grasp ol{margin:0; padding:11px 16px 13px 32px; font-size:16.5px; color:var(--ink-2)}
+.grasp li{margin-bottom:11px; line-height:1.5}
+.grasp li:last-child{margin-bottom:0}
+.grasp details{margin-top:6px}
+.grasp summary{cursor:pointer; font-family:var(--f-mono); font-size:11px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--accent)}
+.grasp details p{margin:7px 0 0; font-size:16px; color:var(--ink-2); max-width:62ch}
+
+/* running analogy */
+.lib{margin:18px 0 0; padding:13px 16px 13px 15px; border-left:3px solid var(--ink-3);
+  background:var(--surface-2); border-radius:0 2px 2px 0; max-width:66ch}
+.lib .lbl{font-family:var(--f-mono); font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--ink-3); display:block; margin-bottom:5px}
+.lib p{margin:0; font-size:16.5px; color:var(--ink-2); font-style:italic}
+.lib p+p{margin-top:8px}
+.lib b{font-style:normal}
+
+/* diagrams */
+.fig{margin:24px 0 0; padding:0}
+.fig svg{display:block; width:100%; max-width:680px; height:auto; margin:0;
+  color:var(--ink-2); font-family:var(--f-display)}
+.fig figcaption{margin:11px 0 0; max-width:62ch; font-size:15px; color:var(--ink-3);
+  text-align:left; line-height:1.45}
+
+/* intro panel */
+.intro{background:var(--surface); border:1px solid var(--line); border-radius:4px;
+  padding:22px 24px; margin-bottom:34px}
+.intro h2{font-size:21px; font-weight:600; margin-bottom:10px}
+.intro p{margin:0 0 12px; color:var(--ink-2); font-size:17px}
+.intro p:last-child{margin-bottom:0}
+.intro ul{margin:0 0 12px; padding-left:1.2em; color:var(--ink-2); font-size:17px}
+.intro li{margin-bottom:5px}
+
+/* steps */
+.step{border-top:1px solid var(--line); padding-block:30px 8px}
+.shead{display:flex; align-items:flex-start; gap:14px}
+.tick{flex:0 0 auto; width:26px; height:26px; margin-top:4px; border-radius:50%;
+  border:2px solid var(--line); background:var(--surface); cursor:pointer;
+  display:grid; place-items:center; padding:0; transition:.12s}
+.tick:hover{border-color:var(--ok)}
+.tick svg{width:14px; height:14px; opacity:0; stroke:var(--surface); stroke-width:3;
+  fill:none; stroke-linecap:round; stroke-linejoin:round}
+.step.done .tick{background:var(--ok); border-color:var(--ok)}
+.step.done .tick svg{opacity:1}
+.sn{font-family:var(--f-mono); font-size:12px; color:var(--accent);
+  letter-spacing:.1em; display:block; margin-bottom:5px}
+.step h2{font-size:clamp(21px,2.6vw,27px); font-weight:600}
+.step.done h2{color:var(--ink-3)}
+.step p{margin:13px 0 0; max-width:64ch; color:var(--ink-2)}
+.step p.lead{color:var(--ink); font-size:19px}
+.step ul,.step ol{margin:13px 0 0; padding-left:1.25em; max-width:64ch; color:var(--ink-2)}
+.step li{margin-bottom:6px}
+.step h3{font-size:18px; font-weight:600; margin:26px 0 0; color:var(--ink)}
+.body{padding-left:40px}
+@media (max-width:620px){ .body{padding-left:0} }
+
+/* code */
+.codewrap{margin:18px 0 0; border:1px solid var(--line); border-radius:3px; overflow:hidden}
+.codebar{display:flex; align-items:center; justify-content:space-between; gap:12px;
+  background:var(--surface-2); padding:7px 12px; border-bottom:1px solid var(--line)}
+.codebar .t{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink-3)}
+.copy{font-family:var(--f-mono); font-size:10.5px; padding:4px 10px; cursor:pointer;
+  background:var(--surface); color:var(--ink-2); border:1px solid var(--line); border-radius:2px}
+.copy:hover{border-color:var(--accent); color:var(--accent)}
+pre{margin:0; background:var(--shell-bg); color:var(--shell-ink); padding:14px 16px;
+  overflow-x:auto; font-family:var(--f-mono); font-size:13.5px; line-height:1.64}
+pre .c{color:var(--shell-dim)}
+pre code{background:none; padding:0; color:inherit; font-size:inherit}
+code{font-family:var(--f-mono); font-size:.85em; background:var(--surface-2);
+  padding:1.5px 5px; border-radius:2px; color:var(--ink)}
+
+/* line-by-line code walkthrough */
+.walk{margin:18px 0 0; border:1px solid var(--line); border-radius:3px;
+  background:var(--surface); overflow:hidden}
+.walk .hd{background:var(--surface-2); padding:7px 13px; font-family:var(--f-mono);
+  font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3);
+  border-bottom:1px solid var(--line)}
+.walk ol{margin:0; padding:12px 16px 12px 32px; font-size:16px; color:var(--ink-2)}
+.walk li{margin-bottom:7px; line-height:1.5}
+.walk li:last-child{margin-bottom:0}
+.walk li code{font-size:.84em}
+
+/* checkpoint */
+.check{margin:16px 0 0; border:1px solid var(--ok); border-radius:3px; overflow:hidden}
+.check .hd{background:var(--ok-soft); padding:7px 13px; font-family:var(--f-mono);
+  font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ok)}
+.check pre{background:var(--surface); color:var(--ink-2); font-size:12.5px;
+  border-top:1px solid var(--ok-soft)}
+.check .note{padding:10px 13px; font-size:15.5px; color:var(--ink-2);
+  border-top:1px solid var(--line-soft); background:var(--surface)}
+
+/* warn */
+.warn{margin:18px 0 0; padding:13px 16px; border-left:3px solid var(--warn);
+  background:var(--warn-soft); border-radius:0 2px 2px 0; max-width:66ch}
+.warn .lbl{font-family:var(--f-mono); font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--warn); display:block; margin-bottom:5px}
+.warn p{margin:0; font-size:16.5px; color:var(--ink-2)}
+.warn p+p{margin-top:8px}
+
+/* plain-words box */
+.words{margin:18px 0 0; padding:13px 16px; border-left:3px solid var(--accent);
+  background:var(--accent-soft); border-radius:0 2px 2px 0; max-width:66ch}
+.words .lbl{font-family:var(--f-mono); font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--accent); display:block; margin-bottom:5px}
+.words p{margin:0; font-size:17px; color:var(--ink)}
+
+/* tables */
+.tw{overflow-x:auto; margin:18px 0 0; border:1px solid var(--line);
+  border-radius:3px; background:var(--surface)}
+table{border-collapse:collapse; width:100%; font-size:14.5px; min-width:430px}
+th,td{text-align:left; padding:9px 12px; border-bottom:1px solid var(--line-soft);
+  vertical-align:top; line-height:1.45}
+th{font-family:var(--f-mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ink-3); font-weight:500; background:var(--surface-2); white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.m{font-family:var(--f-mono); font-size:12.5px}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:26px 60px; font-size:15px; color:var(--ink-3)}
+
+@media (max-width:620px){ body{font-size:17px} .step p.lead{font-size:18px} }
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style><style class="darkreader darkreader--sync" media="screen"></style>
+
+
+<meta name="darkreader" content="8274560aa74c4c878301ad5b995c0a25"><style class="darkreader darkreader--override" media="screen">c-wiz div {
+    --action-items-action-item-background-color: var(--darkreader-neutral-background) !important;
+}
+.jfk-bubble.gtx-bubble {
+    background-color: white !important;
+}
+.vimvixen-hint {
+    background-color: var(--darkreader-background-ffd76e, #825e00) !important;
+    border-color: var(--darkreader-background-c59d00, #c69e00) !important;
+    color: var(--darkreader-text-302505, #ffffff) !important;
+}
+#vimvixen-console-frame {
+    color-scheme: light !important;
+}
+::placeholder {
+    opacity: 0.5 !important;
+}
+#edge-translate-panel-body,
+.MuiTypography-body1,
+.nfe-quote-text {
+    color: var(--darkreader-neutral-text) !important;
+}
+gr-main-header {
+    background-color: var(--darkreader-background-add8e6, #225b6e) !important;
+}
+.tou-z65h9k,
+.tou-mignzq,
+.tou-1b6i2ox,
+.tou-lnqlqk {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.tou-75mvi {
+    background-color: var(--darkreader-background-cfecf5, #134959) !important;
+}
+.tou-ta9e87,
+.tou-1w3fhi0,
+.tou-1b8t2us,
+.tou-py7lfi,
+.tou-1lpmd9d,
+.tou-1frrtv8,
+.tou-17ezmgn {
+    background-color: var(--darkreader-background-f5f5f5, #262829) !important;
+}
+.tou-uknfeu {
+    background-color: var(--darkreader-background-faedda, #54370b) !important;
+}
+.tou-6i3zyv {
+    background-color: var(--darkreader-background-85c3d8, #2d748c) !important;
+}
+div.mermaid-viewer-control-panel .btn {
+    background-color: var(--darkreader-neutral-background);
+    fill: var(--darkreader-neutral-text);
+}
+svg g rect.er {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.entityBox {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.attributeBoxOdd {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.er.attributeBoxEven {
+    fill: var(--darkreader-selection-background);
+    fill-opacity: 0.8 !important;
+}
+svg rect.er.relationshipLabelBox {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g g.nodes rect,
+svg g g.nodes polygon {
+    fill: var(--darkreader-neutral-background) !important;
+}
+svg g rect.task {
+    fill: var(--darkreader-selection-background) !important;
+}
+svg line.messageLine0,
+svg line.messageLine1 {
+    stroke: var(--darkreader-neutral-text) !important;
+}
+div.mermaid .actor {
+    fill: var(--darkreader-neutral-background) !important;
+}
+mitid-authenticators-code-app > .code-app-container {
+    background-color: white !important;
+    padding-top: 1rem;
+}
+iframe#unpaywall[src$="unpaywall.html"] {
+    color-scheme: light !important;
+}
+select {
+    --darkreader-bg--form-control-background-color: rgba(22, 22, 22, 0) !important;
+}
+body#tumblr {
+    --darkreader-bg--secondary-accent: 31, 32, 34 !important;
+    --darkreader-bg--white: 23, 23, 23 !important;
+    --darkreader-text--black: 228, 224, 218 !important;
+}
+:host {
+    --d2l-border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+    --d2l-button-icon-background-color-hover: var(--darkreader-bg--d2l-color-gypsum) !important;
+    --d2l-color-ferrite: var(--darkreader-neutral-text) !important;
+    --d2l-color-sylvite: var(--darkreader-bg--d2l-color-sylvite) !important;
+    --d2l-dropdown-background-color: var(--darkreader-neutral-background) !important;
+    --d2l-dropdown-border-color: var(--darkreader-border--d2l-color-mica) !important;
+    --d2l-input-backgroud-color: var(--darkreader-neutral-background) !important;
+    --d2l-menu-border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+    --d2l-tooltip-background-color: var(--darkreader-neutral-background) !important;
+    --d2l-tooltip-border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+:host([_floating]) .d2l-floating-buttons-container {
+    background-color: var(--darkreader-neutral-background) !important;
+    border-top-color: var(--darkreader-border--d2l-color-mica) !important;
+    opacity: 0.88 !important;
+}
+d2l-card {
+    background: var(--darkreader-neutral-background) !important;
+    border-color: var(--darkreader-border--d2l-color-gypsum) !important;
+}
+d2l-dropdown-content > div,
+d2l-menu-item {
+    background-color: var(--darkreader-neutral-background) !important;
+    border-radius: 10px !important;
+}
+d2l-empty-state-simple {
+    border-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+.d2l-button-filter > ul > li > a.vui-button {
+    border-color: var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-label-text:has(.d2l-button-subtle-content):hover,
+.d2l-label-text:has(.d2l-button-subtle-content):focus,
+.d2l-label-text:has(.d2l-button-subtle-content):active {
+    background-color: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+.d2l-navigation-centerer {
+    color: inherit !important;
+}
+.d2l-tabs-layout {
+    border-color: var(--darkreader-border--d2l-color-gypsum) !important;
+}
+.d2l-input,
+.d2l-calendar-date,
+.d2l-htmleditor-container {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.d2l-collapsible-panel {
+    border: 1px solid var(--darkreader-border--d2l-color-mica) !important;
+    border-radius: 0.4rem !important;
+}
+.d2l-collapsible-panel-divider {
+    border-bottom: 1px solid var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-w2d-flex {
+    border-bottom: 2px solid var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-collapsible-panel scrolled,
+.d2l-collapsible-panel-header,
+.d2l-w2d-collection-fixed {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+.d2l-loading-spinner-bg {
+    fill: var(--darkreader-bg--d2l-color-gypsum) !important;
+}
+.d2l-loading-spinner-bg-stroke {
+    stroke: var(--darkreader-border--d2l-color-mica) !important;
+}
+.d2l-loading-spinner-wrapper svg path,
+.d2l-loading-spinner-wrapper svg circle {
+    fill: var(--darkreader-neutral-background) !important;
+}
+.d2l-twopanelselector-side.d2l-twopanelselector-side-sep {
+    background: var(--darkreader-bg--d2l-color-mica) !important;
+}
+.d2l-le-TreeAccordionItem-anchor::before {
+    background: var(--darkreader-bg--d2l-color-corundum) !important;
+}
+table[class|="moz-header"] {
+    background: none;
+}
+*[style*="color: rgba(0,0,0,"]:not([style*="color: rgba(0,0,0,0)"]),
+*[style*="color: rgba(0, 0, 0,"]:not([style*="color: rgba(0, 0, 0, 0)"]),
+*[style*="color:#000"]:not(.cell-input > span),
+*[style*="color:black"]:not(.cell-input > span),
+*[style*="color:#282828"]:not(.cell-input > span),
+*[style*="color:#444"]:not(.cell-input > span),
+*[style*="color: #222222"]:not(.cell-input > span) {
+    color: var(--darkreader-neutral-text) !important;
+}
+*[style*="background:#fff"],
+*[style*="background-color:#fff"],
+*[style*="background: #fff"],
+*[style*="background: rgb(255, 255, 255)"] {
+    background: var(--darkreader-neutral-background) !important;
+}
+*[bgcolor="#F5F5F5"],
+*[style*="background-color: #F5F5F5"] {
+    background: var(--darkreader-background-f5f5f5, #262829) !important;
+}
+*[style*="background: #e6e6e6"] {
+    background: var(--darkreader-background-e6e6e6, #303336) !important;
+}
+body[style*="background: rgb(255, 255, 255) !important"] *:not(a),
+.body[style*="background-color: rgb(254, 254, 254) !important"] *:not(a) {
+    background-color: var(--darkreader-neutral-background) !important;
+}
+div[style*="www.gstatic.com/android/"] {
+    background: none !important;
+}
+*[style*="background:#f9f9f9"] {
+    background: var(--darkreader-background-f9f9f9, #222627) !important;
+}
+body.mediawiki.skin-vector #mw-page-base {
+    background-image: none !important;
+}
+.overflow-hidden .spinning-bg,
+.overflow-hidden .solid-bg {
+    background: transparent !important;
+}
+*[style*="color: rgb(0,0,0) !imoprtant"][style*="--darkreader-inline-color"],
+*[style*="color: rgb(0, 0, 0) !important"][style*="--darkreader-inline-color"] {
+    -webkit-text-fill-color: var(--darkreader-inline-color) !important;
+}
+embed[type="application/pdf"] { filter: invert(100%) contrast(90%); }</style></head><body><header class="mast">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">GenAI Bootcamp · Week 8 · Day 3</div>
+      <h1>Day 3 — Follow Along</h1>
+      <p class="sub">Real documents, LangChain, and the moment you find out that 93% of your text never reached the model.</p>
+    </div>
+    <div><button class="btn" id="theme">Theme</button></div>
+  </div>
+</header>
+
+<nav class="prog" aria-label="Progress">
+  <div class="wrap">
+    <span class="bar"><i style="width: 0%;"></i></span>
+    <span class="txt">0 of 14 done</span>
+    <button class="reset">reset</button>
+  </div>
+</nav>
+
+<main class="wrap" data-key="nlp-day3-student">
+
+<div class="today">
+  <div class="kick">Week 8 · Day 3 of 4</div>
+  <h2>RAG on real documents, and how to check it</h2>
+  <p>Everything so far worked on sentences of about two hundred characters. Today's documents
+  average ten thousand. You run yesterday's pipeline unchanged — and it fails without a single
+  error message.</p>
+  <p><b>By the end of today you can:</b></p>
+  <ol>
+    <li>Explain an embedding model's <b>reading window</b>, and why long documents fail silently.</li>
+    <li><b>Chunk</b> documents, and choose a chunk size on purpose rather than by default.</li>
+    <li>Rebuild the whole pipeline in <b>LangChain</b>, and say what LangChain actually is.</li>
+    <li>Read the prompt the framework wrote for you without asking.</li>
+    <li>Treat <b>k</b> as a token budget instead of a dial marked "more is better".</li>
+    <li>Tell a retrieval failure from a model failure by reading the retrieved chunks.</li>
+    <li>Measure whether an answer actually came from your documents.</li>
+  </ol>
+  <p class="why"><b>Why it matters.</b> Long, messy documents are what real corpora look like,
+  and a RAG system that is quietly broken looks exactly like one that works. The habits you
+  build today — read the chunks, check the grounding — are the only things that tell them apart.</p>
+</div>
+
+<div class="weekmap">
+    <h2>Where today sits in the week</h2>
+<p><b>The one idea:</b> everything in the first two days ran on text about <b>two hundred characters</b> long. Real documents are ten thousand. Today you run yesterday's pipeline, completely unchanged, on real documents — and it <b>fails without a single error message</b>. The day is about why, and what you do about it.</p>
+    <p>Three jobs in a line:</p>
+    <ol>
+      <li><b>Make long documents fit.</b> Every embedding model has a reading window, and text past the end of it is silently ignored. So you cut documents into <b>chunks</b> — and you choose the size on purpose instead of accepting a default.</li>
+      <li><b>Rebuild it in a framework.</b> LangChain does the same work in a fifth of the code, and hides the prompt while doing it. You will read that hidden prompt out loud.</li>
+      <li><b>Diagnose it.</b> <code>k</code> is a token budget, not a dial marked "more is better". When an answer is wrong you read the retrieved chunks before blaming the model. And you measure whether the answer actually came from your documents at all.</li>
+    </ol>
+    <p><b>What today is not.</b> There is <b>no new retrieval maths</b>. The embeddings, the index and the cosine similarity are all yesterday's, untouched. The new variable is the <b>shape of the documents</b> — and that turns out to be most of the work in a real system.</p>
+    <p>The grounding score at the end is <b>one measurement, not evaluation</b>. It answers "did this answer come from the text?" and nothing else. The full toolkit is tomorrow.</p>
+    <p class="sub">The week at a glance</p>
+    <table>
+      <tbody>
+        <tr><td>Day 1</td><td>Text → numbers. Matching <b>words</b>. Why that breaks.</td></tr>
+        <tr><td>Day 2</td><td>Matching <b>meaning</b> — embeddings, vector databases, and joining the two halves.</td></tr>
+        <tr class="here"><td>Day 3 — today</td><td><b>RAG that survives real documents</b> — chunking, the prompt nobody wrote, and why answers go wrong.</td></tr>
+        <tr><td>Day 4</td><td><b>Evaluation</b> — how you know any of it works.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="intro">
+  <h2>Before you start</h2>
+  <p>Same routine: copy, paste, <b>Shift + Enter</b>, check the green Checkpoint.</p>
+  <p>Today has <b>two odd-looking entries</b> in the install line that are not typos: one limits a version, the other adds a package. Both are explained in Step 1. Don't remove either.</p>
+</div>
+
+<!-- 1 -->
+<section class="step" id="s1">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 1</span><h2>Install — note the two odd bits</h2></div></div>
+  <div class="body">
+    <p class="lead">Two things in this install line look like typos and are not — they pin versions. Without them, later cells fail with errors that point at the wrong thing entirely.</p>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Run now, then restart the runtime</span><button class="copy">Copy</button></div>
+<pre><code>!pip install -q "transformers&lt;5" langchain langchain-community \
+                langchain-huggingface langchain-classic langchain-text-splitters \
+                sentence-transformers faiss-cpu datasets</code></pre>
+    </div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>The odd bit</th><th>Why it's there</th></tr></thead>
+        <tbody>
+          <tr><td class="m">"transformers&lt;5"</td><td>Version 5 <b>removed</b> the task name our model needs. Without this pin you get <code>KeyError: Unknown task text2text-generation</code>.</td></tr>
+          <tr><td class="m">langchain-classic</td><td>LangChain 1.0 <b>moved</b> the piece we use out of the main package. Without this, <code>from langchain.chains import ...</code> fails.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="warn"><span class="lbl">Then restart — not optional</span>
+      <p><b>Runtime → Restart session</b> when the cell finishes. You don't need to run Step 1 again afterwards.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="step" id="s2">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 2</span><h2>Imports</h2></div></div>
+  <div class="body">
+    <p class="lead">One import per job — that's genuinely how LangChain is designed, and this list is the shape of the rest of the day.</p>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Imports</span><button class="copy">Copy</button></div>
+<pre><code>import os, platform, time, re
+import numpy as np
+import warnings
+<span class="c"># Silence one known-harmless notice, not everything. On a day about silent</span>
+<span class="c"># failure, a blanket filter would hide the warnings you most want to see.</span>
+warnings.filterwarnings("ignore", message=".*resume_download.*")
+
+if platform.system() == "Darwin":
+    os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
+
+from datasets import load_dataset
+from sentence_transformers import SentenceTransformer
+import transformers
+transformers.logging.set_verbosity_error()
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, pipeline
+
+from langchain_core.documents import Document
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_huggingface import HuggingFaceEmbeddings, HuggingFacePipeline
+from langchain_community.vectorstores import FAISS
+from langchain_classic.chains import RetrievalQA
+
+print("Setup complete!")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>Setup complete!</pre>
+      <div class="note">If any line here fails, you skipped the restart in Step 1. Restart and run this again.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="step" id="s3">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 3</span><h2>Load 200 pages of real documentation</h2></div></div>
+  <div class="body">
+    <p class="lead">Not headlines this time. Real technical pages averaging ten thousand characters each. Nothing about the method changes, which is why what happens next is worth watching.</p>
+    <div class="lib"><span class="lbl">The library — yesterday’s, with one thing changed</span>
+      <p><b>Same library. Same librarian. The books have changed.</b> Yesterday she was summarising index cards — single sentences. Today someone wheels in <b>200 full technical manuals</b> and asks her to do exactly what she did before.</p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">The corpus</span><button class="copy">Copy</button></div>
+<pre><code>pages = load_dataset("m-ric/huggingface_doc", split="train[:200]")
+texts, sources = list(pages["text"]), list(pages["source"])
+
+lengths = np.array([len(t) for t in texts])
+print(f"{len(texts)} documents")
+print(f"characters: mean {lengths.mean():,.0f}   median {np.median(lengths):,.0f}   "
+      f"longest {lengths.max():,}")
+print(f"\nThe first 200 characters of document [3]:")
+print(f"  {texts[3][:200]!r}")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>200 documents
+characters: mean 10,226   median 4,915   longest 371,057
+
+The first 200 characters of document [3]:
+  '!--Copyright 2023 The HuggingFace Team. All rights reserved.
+   Licensed under the Apache License, Version 2.0...'</pre>
+      <div class="note"><b>Look hard at that last bit.</b> The first 200 characters of the document are a copyright notice. Remember this in Step 5.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="step" id="s4">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 4</span><h2>Point yesterday's pipeline at it</h2></div></div>
+  <div class="body">
+    <p class="lead">Same model, same search, same code as yesterday — only the documents are bigger. We run it unchanged on purpose.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p>She files all 200 and you ask for one. What comes back is junk — and she hands it over with the same calm confidence as yesterday.</p><p><b>Nobody raised an alarm.</b> No error, no warning, no empty result. Just a confident wrong answer, which is the hardest kind to catch.</p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Yesterday's pipeline, unchanged</span><button class="copy">Copy</button></div>
+<pre><code>embedder = SentenceTransformer('all-MiniLM-L6-v2')
+QUESTION = "Why does XLA recompile the model when input shapes keep changing?"
+
+doc_vectors = embedder.encode(texts, normalize_embeddings=True, batch_size=32)
+q_vector = embedder.encode([QUESTION], normalize_embeddings=True)
+scores = (doc_vectors @ q_vector.T).ravel()
+
+<span class="c"># We found the page that answers it beforehand, by searching the raw text.</span>
+<span class="c"># That's the yardstick, not the method.</span>
+ANSWER_DOC = next(i for i, t in enumerate(texts) if "recompile your model for every" in t)
+order = np.argsort(scores)[::-1]
+
+print(f"QUESTION: {QUESTION}\n")
+print("TOP 3 DOCUMENTS:")
+for i in order[:3]:
+    print(f"   {scores[i]:.3f}  {sources[i].split('/')[-1]}")
+
+rank = list(order).index(ANSWER_DOC) + 1
+print(f"\nThe page that answers it, {sources[ANSWER_DOC].split('/')[-1]},"
+      f" scored {scores[ANSWER_DOC]:.3f}")
+print(f"-&gt; ranked {rank} out of {len(texts)}.")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>TOP 3 DOCUMENTS:
+   0.320  DESCRIPTION.md
+   0.315  archived_changes.md
+   0.300  dummy_input_generators.mdx
+
+The page that answers it, perf_train_tpu_tf.md, scored 0.194
+-&gt; ranked 38 out of 200.</pre>
+      <div class="note"><b>Rank 38 of 200.</b> No error. No zero. The scores look reasonable and the filenames look believable. <b>This is what a broken search looks like from the outside: completely normal.</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="step" id="s5">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 5</span><h2>Find out why — the reading window</h2></div></div>
+  <div class="body">
+    <p class="lead">An embedding model doesn't read as much text as you give it. It has a fixed window, and it never tells you when you go over.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p>Here is what she has been doing. <b>She only ever reads the first page.</b> She writes her summary from that, files it, and moves on.</p><p>And these manuals all open with the same licence page. So her summary of manual 7 and her summary of manual 183 are <em>nearly the same summary</em> — because she read nearly the same page. The ranking was never about the content.</p>
+    </div>
+    <figure class="fig">
+<svg viewBox="0 0 680 268" role="img" aria-label="One documentation page is about 10,000 characters, but the embedding model reads only the first 256 tokens. Because every page opens with the same licence header, the three pages produce near-identical vectors.">
+<defs><marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"></path></marker></defs>
+  <text x="0" y="13" font-size="11.5" fill="currentColor" opacity=".65" letter-spacing=".06em">ONE DOCUMENTATION PAGE — ABOUT 10,000 CHARACTERS</text>
+  <rect x="0" y="24" width="62" height="32" fill="var(--accent)" style="--darkreader-inline-fill: var(--darkreader-bg--accent, var(--darkreader-background-ffffff, #1e2122));" data-darkreader-inline-fill=""></rect>
+  <rect x="62" y="24" width="618" height="32" fill="none" stroke="currentColor" stroke-dasharray="4 3" opacity=".5" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></rect>
+  <text x="371" y="44" font-size="13" text-anchor="middle" fill="currentColor" opacity=".7">never reached the model</text>
+  <line x1="62" y1="16" x2="62" y2="78" stroke="var(--accent)" stroke-width="1.5" style="--darkreader-inline-stroke: var(--darkreader-border--accent);" data-darkreader-inline-stroke=""></line>
+  <text x="68" y="74" font-size="12.5" fill="var(--accent)" style="--darkreader-inline-fill: var(--darkreader-text--accent, var(--darkreader-text-000000, #ffffff));" data-darkreader-inline-fill="">it stops reading here — 256 tokens</text>
+
+  <line x1="0" y1="104" x2="680" y2="104" stroke="currentColor" opacity=".18" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></line>
+
+  <text x="0" y="128" font-size="11.5" fill="currentColor" opacity=".65" letter-spacing=".06em">SO THIS IS ALL IT EVER SAW OF EACH PAGE</text>
+  <rect x="0" y="140" width="62" height="22" fill="var(--accent)" style="--darkreader-inline-fill: var(--darkreader-bg--accent, var(--darkreader-background-ffffff, #1e2122));" data-darkreader-inline-fill=""></rect>
+  <text x="70" y="156" font-size="12.5" fill="currentColor" opacity=".8">page 7 — “&lt;!--Copyright 2023 The HuggingFace Team…”</text>
+  <rect x="0" y="170" width="62" height="22" fill="var(--accent)" style="--darkreader-inline-fill: var(--darkreader-bg--accent, var(--darkreader-background-ffffff, #1e2122));" data-darkreader-inline-fill=""></rect>
+  <text x="70" y="186" font-size="12.5" fill="currentColor" opacity=".8">page 42 — “&lt;!--Copyright 2023 The HuggingFace Team…”</text>
+  <rect x="0" y="200" width="62" height="22" fill="var(--accent)" style="--darkreader-inline-fill: var(--darkreader-bg--accent, var(--darkreader-background-ffffff, #1e2122));" data-darkreader-inline-fill=""></rect>
+  <text x="70" y="216" font-size="12.5" fill="currentColor" opacity=".8">page 183 — “&lt;!--Copyright 2023 The HuggingFace Team…”</text>
+
+  <line x1="0" y1="238" x2="214" y2="238" stroke="currentColor" opacity=".45" marker-end="url(#a1)" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></line>
+  <text x="224" y="243" font-size="13" fill="currentColor"><tspan font-weight="600">three near-identical vectors</tspan> — so the ranking was noise</text>
+</svg>
+<figcaption>Nothing errored. The model was handed 10,000 characters, read the first 256 tokens of it, and those tokens were the same licence header on every page.</figcaption>
+</figure>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">How much did it actually read?</span><button class="copy">Copy</button></div>
+<pre><code>WINDOW = embedder.max_seq_length
+token_counts = np.array([len(embedder.tokenizer.encode(t)) for t in texts])
+
+print(f"Reading window: {WINDOW} tokens (~{WINDOW*4:,} characters)\n")
+print(f"documents longer than that: {(token_counts &gt; WINDOW).sum()} of {len(texts)}")
+print(f"tokens in the corpus      : {token_counts.sum():,}")
+print(f"tokens it actually read   : {np.minimum(token_counts, WINDOW).sum():,}")
+print(f"\n-&gt; {1 - np.minimum(token_counts, WINDOW).sum()/token_counts.sum():.0%} "
+      f"of this corpus never reached the model.")
+print(f"\nWhat it DID read from the page that answers our question:")
+print(f"  {texts[ANSWER_DOC][:140]!r}")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>Reading window: 256 tokens (~1,024 characters)
+
+documents longer than that: 181 of 200
+tokens in the corpus      : 680,393
+tokens it actually read   :  48,786
+
+-&gt; 93% of this corpus never reached the model.
+
+What it DID read from the page that answers our question:
+  '!--Copyright 2023 The HuggingFace Team. All rights reserved...'</pre>
+      <div class="note"><b>93%.</b> And what it read of this page was the licence header these docs open with — so pages that share that opening look nearly identical to the model. <b>That's why the ranking was noise.</b> (Check it rather than take my word for it: <code>sum(d[:60] == docs[0][:60] for d in docs)</code> tells you how many of the 200 really do start the same way.)</div>
+    </div>
+    <div class="words"><span class="lbl">The thing to remember from today</span>
+      <p>Every embedding model has a reading window. <b>Find out what yours is before you store anything.</b> Going over doesn't warn you, doesn't error, and doesn't even slow down.</p>
+        <div class="grasp"><div class="hd">Check you understood</div>
+      <p class="intro-l">You have just watched a working system fail. Make sure you can say why before you fix it.</p>
+      <ol>
+        <li>Same model, same search, same code as yesterday — and now it fails. What actually changed?
+          <details><summary>Show the answer</summary><p>Only the length of the documents. The embedding model reads a fixed number of tokens and no more, so most of each ten-thousand-character page never reached it at all. The vectors describe the opening paragraph and nothing else.</p></details></li>
+        <li>Why is this worse than an error message?
+          <details><summary>Show the answer</summary><p>Because nothing goes wrong. You get a vector, you get scores, you get a ranking that looks exactly like a working one. Silent truncation is the hardest class of bug in this whole week: the system is confidently describing text it never read.</p></details></li>
+        <li>On a new corpus, how would you check for this yourself in two lines?
+          <details><summary>Show the answer</summary><p>Embed a full document, then embed only its first few hundred characters, and compare the two. If the similarity comes back at or near 1.00, the model was reading the same opening either way — the rest of the document was thrown away.</p></details></li>
+      </ol>
+    </div>
+</div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="step" id="s6">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 6</span><h2>Cut the documents into readable pieces</h2></div></div>
+  <div class="body">
+    <p class="lead">If the model can only read a thousand characters at a time, give it a thousand characters at a time. The pieces are called <b>chunks</b>.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p>So stop handing her whole manuals. <b>Tear each one into sections short enough that she reads to the end</b>, and let her summarise each section on its own.</p><p>Now a summary describes something she actually read.</p>
+    </div>
+    <figure class="fig">
+<svg viewBox="0 0 680 212" role="img" aria-label="Chunking cuts the page into overlapping pieces, each small enough to be read to the end, so every piece produces a vector that describes text the model actually read.">
+<defs><marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"></path></marker></defs>
+  <text x="0" y="13" font-size="11.5" fill="currentColor" opacity=".65" letter-spacing=".06em">BEFORE — ONE PIECE, MOSTLY UNREAD</text>
+  <rect x="0" y="24" width="62" height="26" fill="var(--accent)" style="--darkreader-inline-fill: var(--darkreader-bg--accent, var(--darkreader-background-ffffff, #1e2122));" data-darkreader-inline-fill=""></rect>
+  <rect x="62" y="24" width="618" height="26" fill="none" stroke="currentColor" stroke-dasharray="4 3" opacity=".5" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></rect>
+
+  <text x="0" y="88" font-size="11.5" fill="currentColor" opacity=".65" letter-spacing=".06em">AFTER — MANY PIECES, EACH READ TO THE END</text>
+  <rect x="0" y="99" width="96" height="26" fill="var(--accent)" style="--darkreader-inline-fill: var(--darkreader-bg--accent, var(--darkreader-background-ffffff, #1e2122));" data-darkreader-inline-fill=""></rect>
+  <rect x="104" y="99" width="96" height="26" fill="var(--accent)" style="--darkreader-inline-fill: var(--darkreader-bg--accent, var(--darkreader-background-ffffff, #1e2122));" data-darkreader-inline-fill=""></rect>
+  <rect x="208" y="99" width="96" height="26" fill="var(--accent)" style="--darkreader-inline-fill: var(--darkreader-bg--accent, var(--darkreader-background-ffffff, #1e2122));" data-darkreader-inline-fill=""></rect>
+  <rect x="312" y="99" width="96" height="26" fill="var(--accent)" style="--darkreader-inline-fill: var(--darkreader-bg--accent, var(--darkreader-background-ffffff, #1e2122));" data-darkreader-inline-fill=""></rect>
+  <rect x="416" y="99" width="96" height="26" fill="var(--accent)" style="--darkreader-inline-fill: var(--darkreader-bg--accent, var(--darkreader-background-ffffff, #1e2122));" data-darkreader-inline-fill=""></rect>
+  <rect x="520" y="99" width="96" height="26" fill="var(--accent)" style="--darkreader-inline-fill: var(--darkreader-bg--accent, var(--darkreader-background-ffffff, #1e2122));" data-darkreader-inline-fill=""></rect>
+  <rect x="624" y="99" width="56" height="26" fill="var(--accent)" opacity=".55" style="--darkreader-inline-fill: var(--darkreader-bg--accent, var(--darkreader-background-ffffff, #1e2122));" data-darkreader-inline-fill=""></rect>
+
+  <line x1="88" y1="133" x2="88" y2="143" stroke="currentColor" opacity=".5" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></line>
+  <line x1="112" y1="133" x2="112" y2="143" stroke="currentColor" opacity=".5" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></line>
+  <line x1="88" y1="143" x2="112" y2="143" stroke="currentColor" opacity=".5" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></line>
+  <text x="100" y="159" font-size="12" text-anchor="middle" fill="currentColor" opacity=".7">overlap</text>
+
+  <text x="0" y="190" font-size="13" fill="currentColor">Every piece now fits inside the window, so <tspan font-weight="600">every vector describes text that was actually read.</tspan></text>
+</svg>
+<figcaption>Same page, same model. The only change is the size of what you hand it — and the overlap keeps a sentence from being split away from the line that explains it.</figcaption>
+</figure>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Chunking, and the same question again</span><button class="copy">Copy</button></div>
+<pre><code>splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
+print("Separators it tries, in order:", splitter._separators)
+
+chunk_texts, chunk_source = [], []
+for i, t in enumerate(texts):
+    for piece in splitter.split_text(t):
+        chunk_texts.append(piece)
+        chunk_source.append(i)
+
+print(f"\n{len(texts)} documents -&gt; {len(chunk_texts):,} chunks\n")
+
+chunk_vectors = embedder.encode(chunk_texts, normalize_embeddings=True, batch_size=256)
+chunk_scores = (chunk_vectors @ q_vector.T).ravel()
+
+print("TOP 3 CHUNKS:")
+for j in np.argsort(chunk_scores)[::-1][:3]:
+    print(f"   {chunk_scores[j]:.3f}  from {sources[chunk_source[j]].split('/')[-1]}")
+
+print(f"\n-&gt; whole documents: rank {rank} of {len(texts)}, score {scores[ANSWER_DOC]:.3f}")
+print(f"-&gt; chunks:          rank 1,          score {chunk_scores.max():.3f}")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>Separators it tries, in order: ['\n\n', '\n', ' ', '']
+
+200 documents -&gt; 2,784 chunks
+
+TOP 3 CHUNKS:
+   0.668  from perf_train_tpu_tf.md
+   0.480  from perf_train_tpu_tf.md
+   0.460  from perf_train_tpu_tf.md
+
+-&gt; whole documents: rank 38 of 200, score 0.194
+-&gt; chunks:          rank 1,         score 0.668</pre>
+      <div class="note">All three top results now come from the right file. <b>Rank 38 → rank 1, and nothing changed except how the text was cut up.</b></div>
+    </div>
+    <div class="words"><span class="lbl">What the separators mean</span>
+      <p>It splits on blank lines first, then single newlines, then spaces, then individual characters — only dropping to a cruder cut when a piece is still too big. That's why it's called <em>recursive</em>. The <b>overlap</b> repeats a bit of text between neighbours so a sentence on a boundary survives whole somewhere.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="step" id="s7">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 7</span><h2>Choosing a chunk size is a trade</h2></div></div>
+  <div class="body">
+    <p class="lead">Chunk size is a trade, not a setting with a right answer. Run three settings side by side and pick one on purpose.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p>How big a section? Too small and the sentence you need is separated from the paragraph that explains it. Too big and she is back to reading only the opening.</p><p>And the catch: <b>you are measuring sections in pages; she measures them in how much she can read.</b> They are not the same unit, and assuming they are is how you end up just over the line without noticing.</p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Three sizes compared</span><button class="copy">Copy</button></div>
+<pre><code>print(f"{'chunk_size':&gt;11} {'chunks':&gt;9} {'avg tokens':&gt;12}   fits the 256 window?")
+print("=" * 58)
+for size, overlap in [(500, 50), (1000, 150), (2000, 200)]:
+    sp = RecursiveCharacterTextSplitter(chunk_size=size, chunk_overlap=overlap)
+    pieces = [p for t in texts for p in sp.split_text(t)]
+    avg = np.mean([len(embedder.tokenizer.encode(p)) for p in pieces])
+    print(f"{size:&gt;11} {len(pieces):&gt;9,} {avg:&gt;12.0f}   "
+          f"{'yes' if avg &lt; 256 else 'NO - truncated again'}")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre> chunk_size    chunks   avg tokens   fits the 256 window?
+==========================================================
+        500     5,966          118   yes
+       1000     2,784          258   NO - truncated again
+       2000     1,317          535   NO - truncated again</pre>
+      <div class="note"><b>Look at the middle row — that's the setting we just used.</b> 258 tokens against a 256 window. We're still slightly over.</div>
+    </div>
+    <div class="warn"><span class="lbl">Yes, really — and this is the lesson</span>
+      <p>We spent ten minutes fixing silent truncation and the setting we picked has an <em>average</em> a couple of tokens over the line. It still works well, because the useful sentence is rarely at the very end of a chunk.</p>
+      <p><b>But an average is the wrong number to decide on</b>, and this is the part worth taking with you. A mean of 258 does not tell you how many chunks are over 256 — that could be most of them, or a few long ones dragging the mean up. <b>Measure the share that actually exceeds the limit, and the worst case</b>, with the cell below.</p><p>Then: <b>"it still works" is not the same as "it's correct."</b> If you were building this for real you'd use 500. Choosing to live with a known compromise is fine. <b>Not knowing you made one is not.</b></p></div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">The check the average could not give you</span><button class="copy">Copy</button></div>
+<pre><code>LIMIT = embedder.max_seq_length          <span class="c"># ask the model, do not hardcode 256</span>
+
+print(f"{'chunk_size':&gt;11} {'median':&gt;8} {'max':&gt;7}   over the {LIMIT}-token limit")
+print("=" * 56)
+for size, overlap in [(500, 50), (1000, 150), (2000, 200)]:      <span class="c"># same settings as above</span>
+    sp = RecursiveCharacterTextSplitter(chunk_size=size, chunk_overlap=overlap)
+    pieces = [p for t in texts for p in sp.split_text(t)]         <span class="c"># texts, one doc at a time</span>
+    lens = np.array([len(embedder.tokenizer.encode(p)) for p in pieces])
+    over = (lens &gt; LIMIT).mean()
+    print(f"{size:&gt;11} {np.median(lens):&gt;8.0f} {lens.max():&gt;7}   {over:&gt;10.1%}")</code></pre>
+    </div>
+    <div class="words"><span class="lbl">Read the new numbers, not the old ones</span>
+      <p><b>The percentage is the answer</b>, and the maximum tells you how much the worst chunk loses. <code>chunk_size</code> is counted in <b>characters</b>; the model's window is counted in <b>tokens</b>. The two are related by roughly four characters per token in English prose — a rule of thumb, never a conversion. This cell is how you stop guessing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="step" id="s8">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 8</span><h2>The same thing, in LangChain</h2></div></div>
+  <div class="body">
+    <p class="lead">What you have now is four lists that line up only because you remember they do. LangChain gives each piece a name and a standard interface — that is genuinely most of what it is.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p>Until now you have kept four lists on loose scraps of paper that line up only because you remember they do.</p><p><b>LangChain is the filing system</b> — labelled drawers, a standard card format, one place to ask. It does nothing you were not already doing by hand; it means the next person can find things without asking you.</p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Documents → splitter → store → retriever</span><button class="copy">Copy</button></div>
+<pre><code>documents = [Document(page_content=t, metadata={"source": s})
+             for t, s in zip(texts, sources)]
+chunks = splitter.split_documents(documents)
+
+embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+db = FAISS.from_documents(chunks, embeddings)   <span class="c"># encodes AND indexes AND keeps the text</span>
+
+retriever = db.as_retriever(search_kwargs={"k": 4})
+found = retriever.invoke(QUESTION)
+
+print(f"FAISS store: {db.index.ntotal:,} vectors, {db.index.d} numbers each\n")
+for d in found:
+    print(f"   {d.metadata['source'].split('/')[-1]:26} {d.page_content[:58].strip()!r}...")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>FAISS store: 2,784 vectors, 384 numbers each
+
+   perf_train_tpu_tf.md       'Here, we avoid data-dependent shapes by comput'...
+   perf_train_tpu_tf.md       'XLA will need to recompile your model for ever'...
+   ...</pre>
+      <div class="note">Four chunks, and <b>every one knows which file it came from</b>. That's the <code>metadata</code> travelling with the text — and it's what makes Step 11 possible.</div>
+    </div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>What you built by hand</th><th>What LangChain calls it</th></tr></thead>
+        <tbody>
+          <tr><td class="m">two parallel lists</td><td class="m">Document(page_content, metadata)</td></tr>
+          <tr><td class="m">your splitter loop</td><td class="m">splitter.split_documents(docs)</td></tr>
+          <tr><td class="m">embedder.encode(...)</td><td class="m">HuggingFaceEmbeddings(...)</td></tr>
+          <tr><td class="m">index + a table beside it</td><td class="m">FAISS.from_documents(...)</td></tr>
+          <tr><td class="m">argsort and take the top k</td><td class="m">db.as_retriever(search_kwargs={"k": 4})</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 9 -->
+<section class="step" id="s9">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 9</span><h2>Read the prompt nobody wrote</h2></div></div>
+  <div class="body">
+    <p class="lead">Yesterday you wrote the prompt yourself. Today the framework writes it — and it gets sent whether or not anyone looks at it. So look at it.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p>There is a <b>standing instruction pinned above the desk</b>, written by somebody who left years ago, and it goes out with every single request.</p><p>You have never read it. It is going out in your name. <b>Read it.</b></p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">The model, the chain, and its hidden prompt</span><button class="copy">Copy</button></div>
+<pre><code>LLM_ID = "google/flan-t5-small"
+lm_tokenizer = AutoTokenizer.from_pretrained(LLM_ID)
+lm_model = AutoModelForSeq2SeqLM.from_pretrained(LLM_ID)
+generator = pipeline("text2text-generation", model=lm_model,
+                     tokenizer=lm_tokenizer, max_new_tokens=80)
+llm = HuggingFacePipeline(pipeline=generator)
+
+qa = RetrievalQA.from_chain_type(
+    llm=llm,
+    chain_type="stuff",
+    retriever=db.as_retriever(search_kwargs={"k": 2}),
+    return_source_documents=True,
+)
+
+print(f"The window this model reports: {lm_tokenizer.model_max_length} tokens\n")
+print("THE PROMPT LANGCHAIN SENDS, WHICH WE DID NOT WRITE:")
+print("=" * 72)
+print(qa.combine_documents_chain.llm_chain.prompt.template)
+print("=" * 72)</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>The window this model reports: 512 tokens
+
+THE PROMPT LANGCHAIN SENDS, WHICH WE DID NOT WRITE:
+========================================================================
+Use the following pieces of context to answer the question at the end.
+If you don't know the answer, just say that you don't know, don't try
+to make up an answer.
+
+{context}
+
+Question: {question}
+Helpful Answer:
+========================================================================</pre>
+      <div class="note"><b>Read the second sentence and remember it.</b> In Step 12 we find out whether it means anything at all.</div>
+    </div>
+    <div class="words"><span class="lbl">What "stuff" means</span>
+      <p><code>chain_type="stuff"</code> = paste every retrieved chunk into one prompt. One model call, fast. <code>"refine"</code> = answer from chunk 1, then revise with chunk 2, and so on — <b>one call per chunk</b>, slow but nothing gets dropped. That's the one your daily challenge uses.</p>
+        <div class="grasp"><div class="hd">Check you understood</div>
+      <ol>
+        <li>Chunk size is a trade. Describe what goes wrong at <em>each</em> end.
+          <details><summary>Show the answer</summary><p>Too small and a chunk no longer holds enough to answer anything — the sentence you need is split from the context that explains it. Too big and you are back where Step 4 was: the chunk overflows the reading window, and what you retrieve is mostly text that has nothing to do with the question.</p></details></li>
+        <li>What does LangChain actually give you that your own four lists did not?
+          <details><summary>Show the answer</summary><p>Names and a standard interface for pieces you had already built by hand. It does nothing here you could not do yourself — what it buys is that each piece can be swapped for another without rewriting the rest. That is most of what a framework is.</p></details></li>
+        <li>The framework writes a prompt and sends it whether or not anyone reads it. Why is reading it the <em>first</em> thing you do when an answer looks wrong?
+          <details><summary>Show the answer</summary><p>Because the prompt is where the instructions live — including things like ‘say you don’t know’. If you have never read it, you are debugging a system whose instructions you have not seen, and you will blame the model for doing exactly what it was told.</p></details></li>
+      </ol>
+    </div>
+</div>
+  </div>
+</section>
+
+<!-- 10 -->
+<section class="step" id="s10">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 10</span><h2>Ask the question</h2></div></div>
+  <div class="body">
+    <p class="lead">The first end-to-end answer, with its sources printed beside it.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p>Finally: you ask a question and get a sentence back, not a stack of pages. That is the thing the whole building was for.</p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">The whole pipeline, working</span><button class="copy">Copy</button></div>
+<pre><code>result = qa.invoke({"query": QUESTION})
+
+print(f"QUESTION: {QUESTION}\n")
+print(f"ANSWER:   {result['result']}\n")
+print("BUILT FROM:")
+for d in result["source_documents"]:
+    print(f"   {d.metadata['source'].split('/')[-1]}")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>ANSWER:   XLA will need to recompile your model for every different
+          input shapes it sees
+
+BUILT FROM:
+   perf_train_tpu_tf.md
+   perf_train_tpu_tf.md</pre>
+      <div class="note">From rank 38 and useless, to a correct answer with its sources named — and the only thing we changed was cutting the documents up.</div>
+    </div>
+  
+    <div class="words"><span class="lbl">Change one thing before you move on</span>
+      <p>Everything here runs at <code>k=2</code> — two chunks handed to the model. Your exercise
+      tonight asks for <b>k = 2, 4 and 6</b>. Re-run this cell with
+      <code>search_kwargs={"k": 4}</code> and then <code>6</code>, and watch the answer and the
+      time change. More context is not automatically better: each extra chunk is roughly 250 more
+      tokens of prompt, and this model's window is 512.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 11 -->
+<section class="step" id="s11">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 11</span><h2>Read the sources before you trust the answer</h2></div></div>
+  <div class="body">
+    <p class="lead">A RAG system has two things that can go wrong and the output looks the same either way. The only way to tell them apart is to read the chunks.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p>The answer sounds right. <b>Ask which pages it came from, and go and read them.</b></p><p>Because two completely different failures produce an answer that looks identical: the right pages were never found, or the right pages were found and misread. <b>From the answer alone you cannot tell which.</b> From the pages you can, in about ten seconds.</p>
+    </div>
+    <figure class="fig">
+<svg viewBox="0 0 680 230" role="img" aria-label="A RAG pipeline retrieves chunks, augments the prompt and generates an answer. Two different failures, wrong chunks retrieved or right chunks misread, produce answers that look identical, so you have to read the chunks to tell them apart.">
+<defs><marker id="a4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"></path></marker></defs>
+  <text x="0" y="13" font-size="11.5" fill="currentColor" opacity=".65" letter-spacing=".06em">WHAT HAPPENS WHEN SOMEONE ASKS A QUESTION</text>
+  <rect x="0" y="26" width="92" height="36" fill="none" stroke="currentColor" opacity=".55" rx="2" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></rect>
+  <text x="46" y="49" font-size="12.5" text-anchor="middle" fill="currentColor">question</text>
+  <line x1="92" y1="44" x2="134" y2="44" stroke="currentColor" opacity=".5" marker-end="url(#a4)" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></line>
+  <rect x="142" y="26" width="110" height="36" fill="none" stroke="var(--accent)" stroke-width="1.5" rx="2" style="--darkreader-inline-stroke: var(--darkreader-text--accent, var(--darkreader-text-000000, #ffffff));" data-darkreader-inline-stroke=""></rect>
+  <text x="197" y="49" font-size="12.5" text-anchor="middle" fill="var(--accent)" style="--darkreader-inline-fill: var(--darkreader-text--accent, var(--darkreader-text-000000, #ffffff));" data-darkreader-inline-fill="">retrieve k chunks</text>
+  <line x1="252" y1="44" x2="294" y2="44" stroke="currentColor" opacity=".5" marker-end="url(#a4)" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></line>
+  <rect x="302" y="26" width="110" height="36" fill="none" stroke="currentColor" opacity=".55" rx="2" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></rect>
+  <text x="357" y="49" font-size="12.5" text-anchor="middle" fill="currentColor">augment prompt</text>
+  <line x1="412" y1="44" x2="454" y2="44" stroke="currentColor" opacity=".5" marker-end="url(#a4)" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></line>
+  <rect x="462" y="26" width="110" height="36" fill="none" stroke="var(--accent)" stroke-width="1.5" rx="2" style="--darkreader-inline-stroke: var(--darkreader-text--accent, var(--darkreader-text-000000, #ffffff));" data-darkreader-inline-stroke=""></rect>
+  <text x="517" y="49" font-size="12.5" text-anchor="middle" fill="var(--accent)" style="--darkreader-inline-fill: var(--darkreader-text--accent, var(--darkreader-text-000000, #ffffff));" data-darkreader-inline-fill="">generate</text>
+  <line x1="572" y1="44" x2="614" y2="44" stroke="currentColor" opacity=".5" marker-end="url(#a4)" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></line>
+  <text x="622" y="49" font-size="12.5" fill="currentColor">answer</text>
+
+  <line x1="197" y1="62" x2="197" y2="104" stroke="currentColor" stroke-dasharray="3 3" opacity=".5" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></line>
+  <line x1="517" y1="62" x2="517" y2="104" stroke="currentColor" stroke-dasharray="3 3" opacity=".5" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></line>
+  <text x="197" y="122" font-size="12.5" text-anchor="middle" fill="currentColor" opacity=".85">the right chunk was</text>
+  <text x="197" y="139" font-size="12.5" text-anchor="middle" fill="currentColor" opacity=".85">never retrieved</text>
+  <text x="517" y="122" font-size="12.5" text-anchor="middle" fill="currentColor" opacity=".85">it was retrieved</text>
+  <text x="517" y="139" font-size="12.5" text-anchor="middle" fill="currentColor" opacity=".85">and misread</text>
+
+  <line x1="197" y1="154" x2="340" y2="178" stroke="currentColor" opacity=".4" marker-end="url(#a4)" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></line>
+  <line x1="517" y1="154" x2="374" y2="178" stroke="currentColor" opacity=".4" marker-end="url(#a4)" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></line>
+  <text x="357" y="200" font-size="13" text-anchor="middle" fill="currentColor"><tspan font-weight="600">Both give you a confident, wrong answer that looks the same.</tspan></text>
+  <text x="357" y="220" font-size="12.5" text-anchor="middle" fill="var(--accent)" style="--darkreader-inline-fill: var(--darkreader-text--accent, var(--darkreader-text-000000, #ffffff));" data-darkreader-inline-fill="">Printing the chunks is what tells them apart.</text>
+</svg>
+<figcaption>Two failures, one symptom. This is why you read the sources before you touch the prompt or swap the model.</figcaption>
+</figure>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Two questions, same system</span><button class="copy">Copy</button></div>
+<pre><code>def ask_and_show(question, k=2):
+    out = RetrievalQA.from_chain_type(
+        llm=llm, chain_type="stuff",
+        retriever=db.as_retriever(search_kwargs={"k": k}),
+        return_source_documents=True,
+    ).invoke({"query": question})
+    print(f"Q: {question}")
+    print(f"A: {out['result'][:170]}")
+    print("   retrieved from:")
+    for d in out["source_documents"]:
+        print(f"      {d.metadata['source'].split('/')[-1]}")
+    print()
+    return out
+
+ask_and_show("How do I choose a metric for evaluation?")
+ask_and_show("What is the Endpoint creation page?")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>Q: How do I choose a metric for evaluation?
+A: **Looking at the [Task pages](...)** to see what metrics can be used...
+   retrieved from:
+      choosing_a_metric.mdx          &lt;- the right page
+
+Q: What is the Endpoint creation page?
+A: [https://ui.endpoints.huggingface.co/new]
+   retrieved from:
+      mantis-case-study.md           &lt;- the WRONG pages
+      text-to-webapp.md</pre>
+      <div class="note">The second answer <b>looks completely fine</b> — a plausible URL. It was built from two case studies that happen to mention endpoints. The corpus does contain the real page; the search just never found it.</div>
+    </div>
+    <div class="words"><span class="lbl">The habit</span>
+      <p><b>retrieval wrong</b> → a correct-sounding answer built from the wrong text. <b>model wrong</b> → a bad answer built from the right text. From the answer alone you cannot tell which. From the sources it's obvious in seconds. <b>Always set <code>return_source_documents=True</code>.</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- 12 -->
+<section class="step" id="s12">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 12</span><h2>Did it answer from our text, or invent it?</h2></div></div>
+  <div class="body">
+    <p class="lead">Now we find out whether that “say you don't know” instruction means anything. The check is crude: count how many words of the answer appear in the text we retrieved.</p>
+    <div class="lib"><span class="lbl">The library</span>
+      <p>Last question: did she answer <em>from the pages</em>, or from something she half-remembered?</p><p>Our check is crude — how many of her words appear on the pages at all. That catches an answer invented out of nothing. <b>It does not catch an answer that borrows the right vocabulary and still says something the pages never said.</b> Knowing which of those you have caught is the whole of tomorrow.</p>
+    </div>
+    <div class="codewrap">
+      <div class="codebar"><span class="t">Grounding check</span><button class="copy">Copy</button></div>
+<pre><code>def grounded_fraction(answer, docs):
+    context = " ".join(d.page_content for d in docs).lower()
+    words = re.findall(r"[a-z]{4,}", answer.lower())
+    if not words:
+        return 0.0, 0, 0
+    hits = sum(w in context for w in words)
+    return hits / len(words), hits, len(words)
+
+for question in [QUESTION, "What is the capital city of Uruguay?"]:
+    out = RetrievalQA.from_chain_type(
+        llm=llm, chain_type="stuff",
+        retriever=db.as_retriever(search_kwargs={"k": 2}),
+        return_source_documents=True,
+    ).invoke({"query": question})
+    share, hits, total = grounded_fraction(out["result"], out["source_documents"])
+    print(f"Q: {question}")
+    print(f"A: {out['result'][:120]}")
+    print(f"   grounded: {hits}/{total} ({share:.0%})")
+    print(f"   verdict : {'from our documents' if share &gt; 0.5 else 'NOT SUPPORTED'}\n")</code></pre>
+    </div>
+    <div class="check"><div class="hd">Checkpoint</div>
+<pre>Q: Why does XLA recompile the model when input shapes keep changing?
+A: XLA will need to recompile your model for every different input shapes it sees
+   grounded: 10/10 (100%)
+   verdict : from our documents
+
+Q: What is the capital city of Uruguay?
+A: Uruguay
+   grounded: 0/1 (0%)
+   verdict : NOT SUPPORTED</pre>
+      <div class="note"><b>The prompt told it to say "I don't know". It did not.</b> It answered "Uruguay" — wrong, unsupported, and in exactly the same confident format as the correct answer.</div>
+    </div>
+    <div class="words"><span class="lbl">The conclusion of the whole week</span>
+      <p><b>A prompt instruction is not a guarantee.</b> This model ignored it on this question — which is one example, not a law about every small model. But it is enough to kill the assumption: you cannot ship "I told it to say I don't know" as a safety measure.</p><p>What you need instead is a count: <b>how often does your system abstain when the retrieved context cannot answer?</b> That is a measurement, and measuring it is what tomorrow is about.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 13 -->
+<section class="step" id="s13">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">STEP 13</span><h2>The two windows — the thing to take away</h2></div></div>
+  <div class="body">
+    <p class="lead">Today you met two numbers that look the same and behave completely differently. Confusing them is the most common way people break a RAG system.</p>
+    <figure class="fig">
+<svg viewBox="0 0 680 250" role="img" aria-label="Two different windows at two different moments: the embedding model's window applies once at indexing time and drops text silently, while the language model's window applies at every question and only degrades the answer.">
+<defs><marker id="a3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"></path></marker></defs>
+  <rect x="0" y="22" width="320" height="156" fill="none" stroke="currentColor" opacity=".3" rx="3" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></rect>
+  <text x="0" y="13" font-size="11.5" fill="var(--accent)" letter-spacing=".06em" style="--darkreader-inline-fill: var(--darkreader-text--accent, var(--darkreader-text-000000, #ffffff));" data-darkreader-inline-fill="">ONCE, WHEN YOU INDEX</text>
+  <text x="16" y="48" font-size="13" fill="currentColor">chunk</text>
+  <line x1="68" y1="43" x2="112" y2="43" stroke="currentColor" opacity=".5" marker-end="url(#a3)" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></line>
+  <rect x="120" y="30" width="118" height="30" fill="none" stroke="var(--accent)" stroke-width="1.5" rx="2" style="--darkreader-inline-stroke: var(--darkreader-text--accent, var(--darkreader-text-000000, #ffffff));" data-darkreader-inline-stroke=""></rect>
+  <text x="179" y="50" font-size="12.5" text-anchor="middle" fill="var(--accent)" style="--darkreader-inline-fill: var(--darkreader-text--accent, var(--darkreader-text-000000, #ffffff));" data-darkreader-inline-fill="">embedding model</text>
+  <line x1="246" y1="43" x2="286" y2="43" stroke="currentColor" opacity=".5" marker-end="url(#a3)" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></line>
+  <text x="294" y="48" font-size="13" fill="currentColor">vector</text>
+  <text x="16" y="88" font-size="12.5" fill="currentColor" opacity=".75">window: <tspan font-weight="600">256 tokens</tspan> (MiniLM)</text>
+  <text x="16" y="112" font-size="12.5" fill="currentColor" opacity=".75">over it → text is <tspan font-weight="600">dropped, silently</tspan></text>
+  <text x="16" y="136" font-size="12.5" fill="currentColor" opacity=".75">you find out months later</text>
+  <text x="16" y="162" font-size="12.5" fill="var(--accent)" style="--darkreader-inline-fill: var(--darkreader-text--accent, var(--darkreader-text-000000, #ffffff));" data-darkreader-inline-fill="">check it BEFORE you store anything</text>
+
+  <rect x="360" y="22" width="320" height="156" fill="none" stroke="currentColor" opacity=".3" rx="3" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></rect>
+  <text x="360" y="13" font-size="11.5" fill="currentColor" opacity=".65" letter-spacing=".06em">EVERY TIME SOMEONE ASKS</text>
+  <text x="376" y="48" font-size="13" fill="currentColor">prompt + k chunks</text>
+  <line x1="494" y1="43" x2="520" y2="43" stroke="currentColor" opacity=".5" marker-end="url(#a3)" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></line>
+  <rect x="528" y="30" width="110" height="30" fill="none" stroke="currentColor" opacity=".55" rx="2" style="--darkreader-inline-stroke: currentColor;" data-darkreader-inline-stroke=""></rect>
+  <text x="583" y="50" font-size="12.5" text-anchor="middle" fill="currentColor">language model</text>
+  <text x="376" y="88" font-size="12.5" fill="currentColor" opacity=".75">window: <tspan font-weight="600">512 tokens</tspan> (flan-t5-small)</text>
+  <text x="376" y="112" font-size="12.5" fill="currentColor" opacity=".75">over it → depends on the pipeline</text>
+  <text x="376" y="136" font-size="12.5" fill="currentColor" opacity=".75">you get a worse answer, or an error</text>
+  <text x="376" y="162" font-size="12.5" fill="currentColor" opacity=".8">measure your own assembled prompt</text>
+
+  <text x="340" y="212" font-size="13" text-anchor="middle" fill="currentColor"><tspan font-weight="600">Different models. Different moments. Different failures.</tspan></text>
+  <text x="340" y="234" font-size="12.5" text-anchor="middle" fill="currentColor" opacity=".7">Both counted in tokens — <tspan font-style="italic">chunk_size</tspan> is counted in characters.</text>
+</svg>
+<figcaption>Confusing these two is the commonest way people break a RAG system. Only the left-hand one loses text without telling you.</figcaption>
+</figure>
+    <div class="lib"><span class="lbl">The library — and where it breaks</span>
+      <p>Two limits, two different people. <b>How much of each manual the summariser reads</b> before she files it — exceed that and text is dropped silently, at filing time, and you find out months later. And <b>how much the answerer can hold in front of her at once</b> — exceed that and you simply get a worse answer.</p><p><b>And here is where the whole analogy finally breaks.</b> A librarian who had only read the first page <em>would tell you so.</em> She would say “I only skimmed it.” The model never says that. It has no idea it was handed half a document, and it will answer in exactly the same confident voice either way.</p><p><b>That is the entire reason today existed.</b> Not chunking, not LangChain — the fact that nothing in this system will ever tell you it did not read the page.</p>
+    </div>
+    <div class="tw">
+      <table>
+        <thead><tr><th></th><th>The embedding model's window</th><th>The language model's window</th></tr></thead>
+        <tbody>
+          <tr><td>Ours today</td><td class="m">256 (MiniLM)</td><td class="m">512 (flan-t5-small)</td></tr>
+          <tr><td>What it limits</td><td><code>chunk_size</code></td><td>the whole assembled prompt — instructions + question + all <em>k</em> chunks, <b>counted in tokens</b></td></tr>
+          <tr><td>Going over it</td><td><b>Hard truncation.</b> Text is silently dropped. This is what cost us 93%.</td><td>Depends on the model and the pipeline. Measure what <em>yours</em> does with one over-long prompt — a hosted API usually returns an error instead.</td></tr>
+          <tr><td>What to do</td><td>Check it <b>before</b> you store anything.</td><td>Do the arithmetic, then test your own model with one over-long prompt.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="words"><span class="lbl">And the lesson that outlives all the libraries</span>
+      <p>This whole ecosystem breaks compatibility every few months — that's why Step 1 has two pins in it. <b>When an example from a tutorial fails on an import or a task name, check the version before you doubt the code.</b> It is almost never a logic error.</p>
+    </div>
+  
+    <div class="words"><span class="lbl">Two things to be able to say out loud</span>
+      <p><b>RAG stands for Retrieval-Augmented Generation</b> — generation whose prompt has been
+      augmented with retrieved text. In practice it is three steps, and they are the three boxes you
+      built today: <b>retrieve</b> the relevant chunks, <b>augment</b> the prompt with them,
+      <b>generate</b> the answer from that prompt.</p>
+      <p><b>RAG is not fine-tuning.</b> Fine-tuning changes what the model <em>knows</em> and costs
+      a training run; RAG changes what the model can <em>see</em> and costs a database lookup. If
+      your facts change weekly, you want RAG.</p>
+        <div class="grasp"><div class="hd">Check you understood</div>
+      <p class="intro-l">The last three. The first one is the thing most likely to catch you in your own project.</p>
+      <ol>
+        <li>Name the two windows, and say what each one limits.
+          <details><summary>Show the answer</summary><p>The <b>embedding model’s</b> window limits how much of a document becomes a vector at all — exceed it and text is silently dropped at indexing time. The <b>language model’s</b> context window limits how much retrieved text it can read while answering. They are different sizes, they fail at different moments, and confusing them is the commonest way people break a RAG system.</p></details></li>
+        <li>‘k is a budget.’ A budget of what, exactly?
+          <details><summary>Show the answer</summary><p>Of the language model’s context window. Every extra chunk you retrieve is more text it has to read. Raising k improves your chance of including the right chunk, and past a point it buries that chunk among irrelevant ones or pushes it out of the window entirely.</p></details></li>
+        <li>The groundedness check counts how many of the answer’s words appear in the retrieved text. Give one way it is wrong in each direction.
+          <details><summary>Show the answer</summary><p>False alarm: a perfectly correct answer, written in the model’s own words rather than the document’s, scores low. False pass: a model can echo plenty of retrieved vocabulary while still asserting something the text never said. It is a crude smoke alarm, not a proof.</p></details></li>
+      </ol>
+    </div>
+</div>
+  </div>
+</section>
+
+<!-- 14 -->
+<section class="step" id="s14">
+  <div class="shead"><button class="tick" aria-label="Mark this step done" aria-pressed="false"><svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"></polyline></svg></button><div>
+    <span class="sn">IF IT BREAKS</span><h2>Errors you might actually see</h2></div></div>
+  <div class="body">
+    <p class="lead">Most of today's errors come from versions and from running cells out of order. Check here before you start editing.</p>
+    <div class="tw">
+      <table>
+        <thead><tr><th>What you see</th><th>What to do</th></tr></thead>
+        <tbody>
+          <tr><td class="m">KeyError: Unknown task text2text-generation</td><td>You're on Transformers 5. Re-run Step 1 with the <code>"transformers&lt;5"</code> pin, then restart.</td></tr>
+          <tr><td class="m">ModuleNotFoundError: No module named 'langchain.chains'</td><td>LangChain 1.0. Import from <code>langchain_classic.chains</code> — as Step 2 does.</td></tr>
+          <tr><td class="m">NameError: name 'texts' is not defined</td><td>Step 3 didn't finish, or you ran cells out of order. Run Step 3 again.</td></tr>
+          <tr><td class="m">StopIteration on the ANSWER_DOC line</td><td>The dataset loaded differently. Check Step 3's checkpoint shows 200 documents.</td></tr>
+          <tr><td class="m">Step 6 is slow</td><td>It's encoding 2,784 chunks. A minute or two is normal.</td></tr>
+          <tr><td class="m">Your answer wording differs from a checkpoint</td><td>Expected. Judge it by whether it's supported by the sources.</td></tr>
+          <tr><td class="m">Everything is broken</td><td><b>Runtime → Restart session</b>, then run every cell from Step 2 down, in order.</td></tr>
+        
+          <tr><td class="m">The challenge model only ever quotes the text</td><td>Expected. <code>Intel/dynamic_tinybert</code> in challenge 4458 is an <b>extractive</b> model — it picks a span out of the context rather than writing an answer. It cannot rephrase, and it almost cannot hallucinate. Different tool, different failure mode.</td></tr>
+          <tr><td class="m">qa.run({"query": ...}) warns or fails</td><td><code>.run()</code> is deprecated. Use <code>qa.invoke({"query": ...})</code>, as in Step 10, and read the answer from <code>result["result"]</code>.</td></tr>
+          <tr><td class="m">Empty or useless answers in the challenge</td><td>The dolly dataset has rows with an empty <code>context</code>. They become empty documents that embed to nothing. Drop them before you build the store.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="warn"><span class="lbl">The golden rule, one more time</span>
+      <p>Cells remember what earlier cells did. Skip one, or restart, and <b>everything after it stops working.</b> When in doubt: restart and run them all from the top.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer><div class="wrap">
+  Day 3 of 4 · You now have the whole pipeline: cut the documents up, turn them into numbers, search them, hand the best bits to a model, and check it answered from them. Next: how to measure whether any of it is actually any good.
+</div></footer>
+<script>
+(function(){
+  var KEY = ((document.querySelector('main') && document.querySelector('main').getAttribute('data-key')) || 'studentboard') + '-progress';
+  var steps = [].slice.call(document.querySelectorAll('.step'));
+  var fill = document.querySelector('.prog .bar i');
+  var txt  = document.querySelector('.prog .txt');
+
+  var done = {};
+  try { done = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { done = {}; }
+
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(done)); } catch (e) {} }
+
+  function paint(){
+    var n = 0;
+    steps.forEach(function(s){
+      var on = !!done[s.id];
+      s.classList.toggle('done', on);
+      s.querySelector('.tick').setAttribute('aria-pressed', on ? 'true' : 'false');
+      if (on) n++;
+    });
+    fill.style.width = (steps.length ? (n / steps.length) * 100 : 0) + '%';
+    txt.textContent = n + ' of ' + steps.length + ' done';
+  }
+
+  steps.forEach(function(s){
+    var b = s.querySelector('.tick');
+    b.innerHTML = '<svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"/></svg>';
+    b.setAttribute('aria-label', 'Mark this step done');
+    b.addEventListener('click', function(){
+      done[s.id] = !done[s.id];
+      if (!done[s.id]) delete done[s.id];
+      save(); paint();
+    });
+  });
+
+  var reset = document.querySelector('.prog .reset');
+  if (reset) reset.addEventListener('click', function(){ done = {}; save(); paint(); });
+
+  paint();
+
+  // copy buttons
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click', function(){
+      var pre = b.closest('.codewrap').querySelector('pre');
+      var ok = function(){ b.textContent = 'Copied'; setTimeout(function(){ b.textContent = 'Copy'; }, 1400); };
+      var pick = function(){
+        var r = document.createRange(); r.selectNodeContents(pre);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        b.textContent = 'Select + copy'; setTimeout(function(){ b.textContent = 'Copy'; }, 2000);
+      };
+      try { navigator.clipboard.writeText(pre.innerText).then(ok, pick); } catch (e) { pick(); }
+    });
+  });
+
+  // theme
+  var root = document.documentElement, tb = document.getElementById('theme');
+  try { var sv = localStorage.getItem(KEY + '-theme'); if (sv) root.setAttribute('data-theme', sv); } catch (e) {}
+  tb.addEventListener('click', function(){
+    var cur = root.getAttribute('data-theme');
+    var dark = cur ? cur === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var next = dark ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem(KEY + '-theme', next); } catch (e) {}
+  });
+})();
+</script>
+
+
+</body></html>
