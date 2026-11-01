@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open-Source LLMs Day 2 — Student Guide</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Student follow-along: a numbered ladder of steps, each with code to copy and a checkpoint. */
+:root{
+  --ground:#F2F3F0; --surface:#FFFFFF; --surface-2:#E9EBE6;
+  --ink:#16191A; --ink-2:#434A4C; --ink-3:#6E767A;
+  --line:#D3D7D1; --line-soft:#E3E6E1;
+  --accent:#0F5F62; --accent-soft:#DDEBEA;
+  --warn:#8A4B10; --warn-soft:#F6E8D8;
+  --ok:#1F6B3A; --ok-soft:#DEEDE2;
+  --shell-bg:#1A2022; --shell-ink:#E4E8E6; --shell-dim:#8D9A99;
+  --f-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Newsreader",Georgia,serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#121516; --surface:#1A1E1F; --surface-2:#222728;
+    --ink:#EAEDEB; --ink-2:#B4BBB9; --ink-3:#848C8B;
+    --line:#2E3435; --line-soft:#262B2C;
+    --accent:#5FC3C2; --accent-soft:#17302F;
+    --warn:#D79A55; --warn-soft:#2B2217;
+    --ok:#6FC68C; --ok-soft:#16281D;
+    --shell-bg:#0D1011; --shell-ink:#DDE2E0; --shell-dim:#7C8887;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#121516; --surface:#1A1E1F; --surface-2:#222728;
+  --ink:#EAEDEB; --ink-2:#B4BBB9; --ink-3:#848C8B;
+  --line:#2E3435; --line-soft:#262B2C;
+  --accent:#5FC3C2; --accent-soft:#17302F;
+  --warn:#D79A55; --warn-soft:#2B2217;
+  --ok:#6FC68C; --ok-soft:#16281D;
+  --shell-bg:#0D1011; --shell-ink:#DDE2E0; --shell-dim:#7C8887;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--f-body); font-size:18px; line-height:1.6; -webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--f-display); text-wrap:balance; line-height:1.17;
+  letter-spacing:-.02em; margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:3px}
+.wrap{max-width:900px; margin-inline:auto; padding-inline:20px}
+
+.mast{background:var(--surface); border-bottom:1px solid var(--line)}
+.mast .wrap{padding-block:34px 26px; display:flex; flex-wrap:wrap; gap:22px;
+  align-items:flex-end; justify-content:space-between}
+.eyebrow{font-family:var(--f-mono); font-size:11px; letter-spacing:.17em;
+  text-transform:uppercase; color:var(--accent); margin-bottom:12px}
+.mast h1{font-size:clamp(29px,4.6vw,43px); font-weight:700; letter-spacing:-.03em}
+.mast .sub{font-size:18px; color:var(--ink-2); margin:10px 0 0; max-width:52ch}
+.btn{font-family:var(--f-mono); font-size:11.5px; letter-spacing:.05em; padding:8px 13px;
+  background:var(--surface-2); color:var(--ink-2); border:1px solid var(--line);
+  border-radius:2px; cursor:pointer}
+.btn:hover{border-color:var(--accent); color:var(--accent)}
+
+/* progress bar */
+.prog{position:sticky; top:env(safe-area-inset-top, 0px); z-index:30;
+  background:var(--surface); border-bottom:1px solid var(--line)}
+.prog .wrap{padding-block:10px; display:flex; align-items:center; gap:14px}
+.prog .bar{flex:1; height:8px; background:var(--surface-2); border-radius:4px; overflow:hidden}
+.prog .bar i{display:block; height:100%; width:0; background:var(--ok);
+  border-radius:4px; transition:width .2s}
+.prog .txt{font-family:var(--f-mono); font-size:11.5px; color:var(--ink-3); white-space:nowrap}
+.prog .reset{font-family:var(--f-mono); font-size:11px; color:var(--ink-3);
+  background:none; border:0; cursor:pointer; text-decoration:underline; padding:0}
+
+main{padding-block:34px 70px}
+
+/* day opener */
+.today{background:var(--accent-soft); border:1px solid var(--accent); border-radius:4px;
+  padding:22px 24px; margin-bottom:22px}
+.today .kick{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--accent); margin-bottom:9px}
+.today h2{font-size:clamp(20px,2.4vw,24px); font-weight:600; margin-bottom:11px}
+.today p{margin:0 0 13px; font-size:17.5px; color:var(--ink)}
+.today ol{margin:0 0 13px; padding-left:1.35em; font-size:16.5px; color:var(--ink-2)}
+.today li{margin-bottom:5px}
+.today .why{margin:0; padding-top:13px; border-top:1px solid var(--accent);
+  font-size:16.5px; color:var(--ink-2)}
+
+/* where today sits in the week */
+.weekmap{background:var(--surface); border:1px solid var(--line); border-radius:4px;
+  padding:22px 24px; margin-bottom:22px}
+.weekmap h2{font-size:20px; font-weight:600; margin-bottom:12px}
+.weekmap p{margin:0 0 12px; color:var(--ink-2); font-size:17px}
+.weekmap ol{margin:0 0 14px; padding-left:1.3em; color:var(--ink-2); font-size:17px}
+.weekmap li{margin-bottom:7px}
+.weekmap table{width:100%; border-collapse:collapse; margin:4px 0 0; font-size:16px}
+.weekmap td{border-top:1px solid var(--line); padding:9px 10px; color:var(--ink-2);
+  vertical-align:top}
+.weekmap td:first-child{width:92px; white-space:nowrap; font-family:var(--f-mono);
+  font-size:13px; letter-spacing:.03em; color:var(--ink-3)}
+.weekmap tr.here td{background:var(--accent-soft); color:var(--ink); font-weight:500}
+.weekmap tr.here td:first-child{color:var(--accent)}
+.weekmap .sub{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-3); margin:18px 0 8px}
+
+/* understand check */
+.grasp{margin:22px 0 0; border:1px solid var(--accent); border-radius:3px;
+  background:var(--surface); overflow:hidden}
+.grasp .hd{background:var(--accent-soft); padding:7px 13px; font-family:var(--f-mono);
+  font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent)}
+.grasp .intro-l{padding:11px 15px 0; margin:0; font-size:15.5px; color:var(--ink-3)}
+.grasp ol{margin:0; padding:11px 16px 13px 32px; font-size:16.5px; color:var(--ink-2)}
+.grasp li{margin-bottom:11px; line-height:1.5}
+.grasp li:last-child{margin-bottom:0}
+.grasp details{margin-top:6px}
+.grasp summary{cursor:pointer; font-family:var(--f-mono); font-size:11px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--accent)}
+.grasp details p{margin:7px 0 0; font-size:16px; color:var(--ink-2); max-width:62ch}
+
+/* intro panel */
+.intro{background:var(--surface); border:1px solid var(--line); border-radius:4px;
+  padding:22px 24px; margin-bottom:34px}
+.intro h2{font-size:21px; font-weight:600; margin-bottom:10px}
+.intro p{margin:0 0 12px; color:var(--ink-2); font-size:17px}
+.intro p:last-child{margin-bottom:0}
+.intro ul{margin:0 0 12px; padding-left:1.2em; color:var(--ink-2); font-size:17px}
+.intro li{margin-bottom:5px}
+
+/* steps */
+.step{border-top:1px solid var(--line); padding-block:30px 8px}
+.shead{display:flex; align-items:flex-start; gap:14px}
+.tick{flex:0 0 auto; width:26px; height:26px; margin-top:4px; border-radius:50%;
+  border:2px solid var(--line); background:var(--surface); cursor:pointer;
+  display:grid; place-items:center; padding:0; transition:.12s}
+.tick:hover{border-color:var(--ok)}
+.tick svg{width:14px; height:14px; opacity:0; stroke:var(--surface); stroke-width:3;
+  fill:none; stroke-linecap:round; stroke-linejoin:round}
+.step.done .tick{background:var(--ok); border-color:var(--ok)}
+.step.done .tick svg{opacity:1}
+.sn{font-family:var(--f-mono); font-size:12px; color:var(--accent);
+  letter-spacing:.1em; display:block; margin-bottom:5px}
+.step h2{font-size:clamp(21px,2.6vw,27px); font-weight:600}
+.step.done h2{color:var(--ink-3)}
+.step p{margin:13px 0 0; max-width:64ch; color:var(--ink-2)}
+.step p.lead{color:var(--ink); font-size:19px}
+.step ul,.step ol{margin:13px 0 0; padding-left:1.25em; max-width:64ch; color:var(--ink-2)}
+.step li{margin-bottom:6px}
+.step h3{font-size:18px; font-weight:600; margin:26px 0 0; color:var(--ink)}
+.body{padding-left:40px}
+@media (max-width:620px){ .body{padding-left:0} }
+
+/* code */
+.codewrap{margin:18px 0 0; border:1px solid var(--line); border-radius:3px; overflow:hidden}
+.codebar{display:flex; align-items:center; justify-content:space-between; gap:12px;
+  background:var(--surface-2); padding:7px 12px; border-bottom:1px solid var(--line)}
+.codebar .t{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink-3)}
+.copy{font-family:var(--f-mono); font-size:10.5px; padding:4px 10px; cursor:pointer;
+  background:var(--surface); color:var(--ink-2); border:1px solid var(--line); border-radius:2px}
+.copy:hover{border-color:var(--accent); color:var(--accent)}
+pre{margin:0; background:var(--shell-bg); color:var(--shell-ink); padding:14px 16px;
+  overflow-x:auto; font-family:var(--f-mono); font-size:13.5px; line-height:1.64}
+pre .c{color:var(--shell-dim)}
+pre code{background:none; padding:0; color:inherit; font-size:inherit}
+code{font-family:var(--f-mono); font-size:.85em; background:var(--surface-2);
+  padding:1.5px 5px; border-radius:2px; color:var(--ink)}
+
+/* line-by-line code walkthrough */
+.walk{margin:18px 0 0; border:1px solid var(--line); border-radius:3px;
+  background:var(--surface); overflow:hidden}
+.walk .hd{background:var(--surface-2); padding:7px 13px; font-family:var(--f-mono);
+  font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3);
+  border-bottom:1px solid var(--line)}
+.walk ol{margin:0; padding:12px 16px 12px 32px; font-size:16px; color:var(--ink-2)}
+.walk li{margin-bottom:7px; line-height:1.5}
+.walk li:last-child{margin-bottom:0}
+.walk li code{font-size:.84em}
+
+/* checkpoint */
+.check{margin:16px 0 0; border:1px solid var(--ok); border-radius:3px; overflow:hidden}
+.check .hd{background:var(--ok-soft); padding:7px 13px; font-family:var(--f-mono);
+  font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ok)}
+.check pre{background:var(--surface); color:var(--ink-2); font-size:12.5px;
+  border-top:1px solid var(--ok-soft)}
+.check .note{padding:10px 13px; font-size:15.5px; color:var(--ink-2);
+  border-top:1px solid var(--line-soft); background:var(--surface)}
+
+/* warn */
+.warn{margin:18px 0 0; padding:13px 16px; border-left:3px solid var(--warn);
+  background:var(--warn-soft); border-radius:0 2px 2px 0; max-width:66ch}
+.warn .lbl{font-family:var(--f-mono); font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--warn); display:block; margin-bottom:5px}
+.warn p{margin:0; font-size:16.5px; color:var(--ink-2)}
+.warn p+p{margin-top:8px}
+
+/* plain-words box */
+.words{margin:18px 0 0; padding:13px 16px; border-left:3px solid var(--accent);
+  background:var(--accent-soft); border-radius:0 2px 2px 0; max-width:66ch}
+.words .lbl{font-family:var(--f-mono); font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--accent); display:block; margin-bottom:5px}
+.words p{margin:0; font-size:17px; color:var(--ink)}
+
+/* tables */
+.tw{overflow-x:auto; margin:18px 0 0; border:1px solid var(--line);
+  border-radius:3px; background:var(--surface)}
+table{border-collapse:collapse; width:100%; font-size:14.5px; min-width:430px}
+th,td{text-align:left; padding:9px 12px; border-bottom:1px solid var(--line-soft);
+  vertical-align:top; line-height:1.45}
+th{font-family:var(--f-mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ink-3); font-weight:500; background:var(--surface-2); white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.m{font-family:var(--f-mono); font-size:12.5px}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:26px 60px; font-size:15px; color:var(--ink-3)}
+
+@media (max-width:620px){ body{font-size:17px} .step p.lead{font-size:18px} }
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<header class="mast"><div class="wrap"><div>
+<div class="eyebrow">Open-Source LLMs · Day 2 · Student</div><h1>Student Guide — Follow Along</h1><p class="sub">Everything you touch today: terminal checks, the exact commands to copy, the Python ladder, and what the screen should say when it works.</p>
+</div><div><button class="btn" id="theme">Theme</button></div></div></header>
+<nav class="prog" aria-label="Progress"><div class="wrap"><span class="bar"><i></i></span>
+<span class="txt">0 of 0 done</span><button class="reset">reset</button></div></nav>
+<main class="wrap" data-key="ossllm-day2-student">
+<div class="today">
+  <div class="kick">Open-Source LLMs · Day 2 · Follow Along</div>
+  <h2>By minute 20, a language model is running on YOUR laptop — no internet, no API key, no bill</h2>
+  <p>Yesterday you talked to models through a website. Today the model comes to you. You'll pull a
+  real model, run it offline, drive it from Python, and compare it against hosted giants — then learn
+  the six questions that tell you which model to pick for any job.</p>
+  <p><b>By the end you can:</b></p>
+  <ol>
+    <li>Prove a model is just <b>a file of numbers</b> + a small program that runs it.</li>
+    <li><code>pull</code> and <code>run</code> a model locally, offline.</li>
+    <li>Drive a local model from <b>Python</b> (the same OpenAI dialect every cloud speaks).</li>
+    <li>Run a <b>hosted bake-off</b> across three model families.</li>
+    <li>Match a model to your machine using <b>quantization</b> + a hardware table.</li>
+    <li>Pick any model with the <b>six questions</b> that never go stale.</li>
+  </ol>
+  <p class="why"><b>Why it matters.</b> A model you run yourself is private, free, offline, and yours —
+  nobody can meter it, rate-limit it, or take it away. The leaderboard changes every 8 weeks; this
+  skill doesn't.</p>
+</div>
+<div class="weekmap">
+  <h2>The shape of today (keyboard every ~10 min)</h2>
+  <table><tbody>
+    <tr class="here"><td>0:00–0:24</td><td>Terminal check → a model is a file → pull → <b>first local token</b>.</td></tr>
+    <tr><td>0:24–0:40</td><td>The landscape, MoE, and the six questions (shout-along drill).</td></tr>
+    <tr><td>0:40–1:00</td><td><b>Lab 1</b> — hosted bake-off across three families.</td></tr>
+    <tr><td>1:05–1:37</td><td>Match model to machine → <b>Lab 2</b>: Python + Ollama ladder.</td></tr>
+    <tr><td>1:37–2:00</td><td>Debrief → agents teaser → cheat sheet.</td></tr>
+  </tbody></table>
+  <p class="sub">Model you'll pull first</p>
+  <p><b>qwen3:0.6b</b> — only ~520&nbsp;MB, runs on any laptop (even 8&nbsp;GB, no GPU). If you have 16&nbsp;GB, also pull <b>mistral:7b</b> in a second tab for later.</p>
+</div>
+<div class="intro">
+  <h2>How to use this page</h2>
+  <p>Work down the steps. Each has a <b>Copy</b> button — paste into your terminal (or notebook cell) and run.
+  Green <b>Checkpoints</b> show what success looks like; if yours differs, hand up before moving on.</p>
+  <p>Tick each step's circle to fill the progress bar (saved in your browser).</p>
+</div>
+<section class="step" id="d-term"><div class="shead"><button class="tick" aria-pressed="false"></button>
+<div><span class="sn">1</span><h2>Terminal check</h2></div></div><div class="body"><div class="words"><span class="lbl">In plain words</span><p>Terminal on Mac, <b>PowerShell</b> on Windows (not WSL, unless you installed Ollama there).</p></div><p class='lead'>Confirm Ollama is installed.</p><div class="codewrap"><div class="codebar"><span class="t">Terminal</span><button class="copy">Copy</button></div><pre><code>ollama --version</code></pre></div><div class="check"><div class="hd">Checkpoint — what you should see</div><div class="note">A version number prints. If you get an error, Ollama isn't installed — grab it from <a href='https://ollama.com/download'>ollama.com/download</a> and hand up.</div></div></div></section>
+<section class="step" id="d-file"><div class="shead"><button class="tick" aria-pressed="false"></button>
+<div><span class="sn">2</span><h2>See that a model is just a file</h2></div></div><div class="body"><div class="words"><span class="lbl">In plain words</span><p>“Open weights” means the model's file is published for anyone to download and run forever. “Closed” (ChatGPT, Claude, Gemini) means the file stays on their servers and you rent access through a window.</p></div><p class='lead'>Open <a href='https://huggingface.co'>huggingface.co</a>, search <b>“Qwen3 GGUF”</b>, open the <b>Files</b> tab.</p><div class="walk"><div class="hd">What you're looking at</div><ol><li>Hugging Face is “GitHub for models” — where open models are published.</li><li>A file like <code>qwen3-...-Q4_K_M.gguf</code> (a few GB) <b>is the model</b> — nothing else needed.</li><li>Inside are billions of learned numbers (“weights”). “7B” = seven billion of them.</li></ol></div><div class="check"><div class="hd">Checkpoint — what you should see</div><div class="note">You can see the <code>.gguf</code> files and their sizes. A whole model is ~a few GB — smaller than one season of a show.</div></div></div></section>
+<section class="step" id="d-pull"><div class="shead"><button class="tick" aria-pressed="false"></button>
+<div><span class="sn">3</span><h2>Pull your first model</h2></div></div><div class="body"><p class='lead'>Download a tiny model now (it streams in the background while we talk).</p><div class="codewrap"><div class="codebar"><span class="t">Terminal</span><button class="copy">Copy</button></div><pre><code>ollama pull qwen3:0.6b</code></pre></div><div class="codewrap"><div class="codebar"><span class="t">Terminal — only if you have 16 GB RAM (second tab)</span><button class="copy">Copy</button></div><pre><code>ollama pull mistral:7b</code></pre></div><div class="words"><span class="lbl">In plain words</span><p><code>ollama</code> runs model files (like a music player); the <code>.gguf</code> is the song. <code>pull</code> downloads from a registry — just like <code>docker pull</code> or <code>npm install</code>. <code>qwen3:0.6b</code> = family Qwen3, size 0.6&nbsp;billion weights.</p></div><div class="check"><div class="hd">Checkpoint — what you should see</div><div class="note">A progress bar fills to 100%. That bar is ~600&nbsp;million learned numbers arriving on your laptop.</div></div><div class="warn"><span class="lbl">Watch out</span><p>Corporate laptop blocks the install? The hosted provider (Lab 1) covers every lab — same API shape. Slow wifi? 0.6b is tiny on purpose; nobody waits more than ~3 min.</p></div></div></section>
+<section class="step" id="d-token"><div class="shead"><button class="tick" aria-pressed="false"></button>
+<div><span class="sn">4</span><h2>Your first local token</h2></div></div><div class="body"><p class='lead'>Run it. You get a chat prompt — ask it anything.</p><div class="codewrap"><div class="codebar"><span class="t">Terminal</span><button class="copy">Copy</button></div><pre><code>ollama run qwen3:0.6b</code></pre></div><div class="walk"><div class="hd">90 seconds of play — try all three</div><ol><li>Throw a Day-1 six-ingredient prompt at it and see if it obeys.</li><li>Ask something after its training cutoff — watch it guess confidently (yesterday's hallucination lesson, live).</li><li><b>The dare:</b> turn off your wifi and ask again. Still works. No internet, no key, no meter.</li></ol></div><p>Exit the chat with <code>/bye</code>.</p><div class="check"><div class="hd">Checkpoint — what you should see</div><div class="note">The model answers on your machine, offline. That's a language model running on your own hardware — milestone reached.</div></div></div></section>
+<section class="step" id="d-six"><div class="shead"><button class="tick" aria-pressed="false"></button>
+<div><span class="sn">5</span><h2>The six questions (pick any model)</h2></div></div><div class="body"><div class="words"><span class="lbl">In plain words</span><p>The leaderboard changes every ~8 weeks, so don't memorise models — memorise the six questions that never expire.</p></div><div class="walk"><div class="hd">Before you pick a model, ask:</div><ol><li><b>Task</b> — what job is it doing?</li><li><b>License</b> — can you legally use it? (MIT / Apache = do-anything; others may cap commercial use.)</li><li><b>Hardware</b> — does it fit your machine?</li><li><b>Latency</b> — interactive UI or batch?</li><li><b>Quality bar</b> — does it really need to beat the frontier, or is “good enough” fine?</li><li><b>Hosting</b> — your laptop, your server, or a hosted provider?</li></ol></div><div class="check"><div class="hd">Checkpoint — what you should see</div><div class="note">Say them back without looking. Walk the drill: an internal HR chatbot on sensitive data, 200 users, small budget → self-hosted, MIT/Apache, mid-size 7–13B, good-enough quality.</div></div></div></section>
+<section class="step" id="d-lab1"><div class="shead"><button class="tick" aria-pressed="false"></button>
+<div><span class="sn">6</span><h2>Lab 1 — hosted bake-off (20 min)</h2></div></div><div class="body"><div class="words"><span class="lbl">In plain words</span><p>Hosted providers (Groq / Together / Hugging Face) run the big models for you via an API key. Great for comparing flagships you can't fit on a laptop.</p></div><p class='lead'>In your hosted provider, pick <b>three models from three families</b> and run the same prompt on each. Rank them for THIS task; note latency, quality, length.</p><div class="codewrap"><div class="codebar"><span class="t">The prompt</span><button class="copy">Copy</button></div><pre><code>Explain how Mixture of Experts (MoE) works in exactly 3 bullets,
+plain English, no jargon, each bullet under 25 words.</code></pre></div><div class="codewrap"><div class="codebar"><span class="t">Suggested picks — pick 3 in the dropdown</span><button class="copy">Copy</button></div><pre><code># Groq retires models often - current ids: console.groq.com/docs/models
+openai/gpt-oss-120b      # OpenAI (open-weight)
+qwen/qwen3.8-27b         # Qwen
+allam-2-7b               # SDAIA (Arabic + English)</code></pre></div><div class="walk"><div class="hd">As you go</div><ol><li>First write your predicted winner (a bet) — upsets are common.</li><li>Note: there's no single best model — only the best fit for your specific task.</li><li>If a model is missing from your provider, that's a finding too: availability is part of picking.</li></ol></div><div class="check"><div class="hd">Checkpoint — what you should see</div><div class="note">Three rankings across the room will disagree — that's the point. The bake-off beats the leaderboard for your task.</div></div></div></section>
+<section class="step" id="d-machine"><div class="shead"><button class="tick" aria-pressed="false"></button>
+<div><span class="sn">7</span><h2>Match model to your machine</h2></div></div><div class="body"><div class="words"><span class="lbl">In plain words</span><p><b>Quantization</b> compresses weights to 4-bit (“Q4” in the filename) — ~4× smaller, barely dumber. It's JPEG for neural networks, and it's why a few-GB file holds billions of numbers.</p></div><div class="walk"><div class="hd">Find your row and pick a model</div><ol><li><b>8 GB RAM, no GPU:</b> up to ~3B at Q4 — you already have <code>qwen3:0.6b</code>. Zero shame; every lab works on it.</li><li><b>16 GB RAM:</b> the sweet spot — <code>mistral:7b</code> or <code>llama3.1:8b</code>.</li><li><b>Discrete GPU (8+ GB VRAM):</b> ~13B is in reach.</li><li><b>Apple Silicon:</b> unified memory punches above its weight.</li></ol></div><p>Rule of thumb: a 7B model at Q4 needs roughly <b>4–5&nbsp;GB</b> of RAM/VRAM.</p><div class="check"><div class="hd">Checkpoint — what you should see</div><div class="note">You can name the model you'll drive in Lab 2 and why it fits your laptop.</div></div></div></section>
+<section class="step" id="d-lab2"><div class="shead"><button class="tick" aria-pressed="false"></button>
+<div><span class="sn">8</span><h2>Lab 2 — Python + Ollama ladder (25 min)</h2></div></div><div class="body"><div class="words"><span class="lbl">In plain words</span><p>Ollama exposes an <b>OpenAI-compatible</b> API on <code>localhost:11434</code>. Learn that one request shape and the same code drives a local model OR any cloud — you change one line.</p></div><p class='lead'>First, confirm Python can reach Ollama:</p><div class="codewrap"><div class="codebar"><span class="t">Pre-flight check</span><button class="copy">Copy</button></div><pre><code>import requests
+r = requests.get('http://localhost:11434/api/tags', timeout=5)
+print([m['name'] for m in r.json()['models']])</code></pre></div><p class='lead'>Then the helper — climb the rungs, no pressure to finish:</p><div class="codewrap"><div class="codebar"><span class="t">The helper (Rung 1: run it)</span><button class="copy">Copy</button></div><pre><code>import requests
+
+def ask(prompt, system=None, temperature=0, model="qwen3:0.6b", max_tokens=400):
+    msgs = ([{"role": "system", "content": system}] if system else []) \
+         + [{"role": "user", "content": prompt}]
+    r = requests.post(
+        "http://localhost:11434/v1/chat/completions",   # OpenAI-compatible, but LOCAL
+        json={"model": model, "messages": msgs,
+              "temperature": temperature, "max_tokens": max_tokens,
+              "reasoning_effort": "none"},   # qwen3 thinks first; "none" = answer now
+        timeout=300)
+    return r.json()["choices"][0]["message"]["content"]
+
+print(ask("Say hi in 3 languages, one per line."))</code></pre></div><div class="walk"><div class="hd">Climb the ladder</div><ol><li><b>Rung 1</b> — run the script, get your first Python-driven local reply.</li><li><b>Rung 2</b> — add a <code>system</code> message (your Day-1 six-ingredient frame).</li><li><b>Rung 3</b> — force JSON out (below).</li><li><b>Rung 4</b> — point the same code at your hosted provider; compare latency + quality.</li><li><b>Rung 5</b> — swap <code>model="mistral:7b"</code>. Same code, zero other changes.</li></ol></div><div class="codewrap"><div class="codebar"><span class="t">Rung 3 — force JSON (Day-1 skill, local model)</span><button class="copy">Copy</button></div><pre><code>SYSTEM = """You output ONLY valid JSON. No prose. No markdown fences.
+Schema: {"sentiment": "pos"|"neg"|"neu", "confidence": number 0.0-1.0}
+Example: {"sentiment":"neu","confidence":0.7}"""
+
+import json
+raw = ask('Classify: "Loved the coffee, hated the wait."', system=SYSTEM)
+# small models often wrap JSON in ```fences``` even when told not to - strip them:
+raw = raw.strip().removeprefix("```json").removeprefix("```").removesuffix("```")
+print(json.loads(raw))</code></pre></div><div class="check"><div class="hd">Checkpoint — what you should see</div><div class="note">You see a JSON object printed from a model on your laptop. Small 0.6b models often wrap JSON in ```fences``` — the code above strips them before <code>json.loads</code>. Cleaner still: Ollama's own library forces the shape with <code>format=schema</code> (see <code>lab-solutions/lab2_ollama_native.py</code>).</div></div><div class="warn"><span class="lbl">Pitfall</span><p><code>requests</code> missing → <code>pip install requests</code>. Port already in use → Ollama's already running, skip <code>ollama serve</code>. Empty reply from qwen3 → it's spending the budget on hidden thinking; the helper's <code>reasoning_effort: "none"</code> turns that off. Still empty → bump <code>max_tokens</code>.</p></div></div></section>
+<section class="step" id="d-next"><div class="shead"><button class="tick" aria-pressed="false"></button>
+<div><span class="sn">WRAP</span><h2>Agents teaser + where next</h2></div></div>
+<div class="body">
+<p class="lead">Models <b>answer</b>; agents <b>act</b> — call tools, loop, work multi-step. Four names to recognise:</p>
+<ul>
+<li><b>MCP</b> — the wiring standard between any model and any tool. Later this week you'll build an MCP server and your local model becomes its engine.</li>
+<li><b>LangGraph</b> — workflows as graphs; the production choice.</li>
+<li><b>CrewAI</b> — agents as a team with roles; the easy start.</li>
+<li><b>Pydantic AI</b> — type-safe agents; today's JSON skill, weaponised.</li>
+</ul>
+<p><b>The honest trade:</b> local is private, free, offline, yours; hosted is stronger, faster, zero-ops. Pros use both — the six questions tell you when. And remember: the model table goes stale by autumn; the capability and the six questions don't.</p>
+</div></section>
+</main>
+<footer><div class="wrap">Open-Source LLMs · Day 2 · Student follow-along · Runs fully local with Ollama — no API key required.</div></footer>
+<script>
+(function(){
+  var KEY = ((document.querySelector('main') && document.querySelector('main').getAttribute('data-key')) || 'studentboard') + '-progress';
+  var steps = [].slice.call(document.querySelectorAll('.step'));
+  var fill = document.querySelector('.prog .bar i');
+  var txt  = document.querySelector('.prog .txt');
+
+  var done = {};
+  try { done = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { done = {}; }
+
+  function save(){ try { localStorage.setItem(KEY, JSON.stringify(done)); } catch (e) {} }
+
+  function paint(){
+    var n = 0;
+    steps.forEach(function(s){
+      var on = !!done[s.id];
+      s.classList.toggle('done', on);
+      s.querySelector('.tick').setAttribute('aria-pressed', on ? 'true' : 'false');
+      if (on) n++;
+    });
+    fill.style.width = (steps.length ? (n / steps.length) * 100 : 0) + '%';
+    txt.textContent = n + ' of ' + steps.length + ' done';
+  }
+
+  steps.forEach(function(s){
+    var b = s.querySelector('.tick');
+    b.innerHTML = '<svg viewBox="0 0 16 16" aria-hidden="true"><polyline points="3,8.5 6.5,12 13,4.5"/></svg>';
+    b.setAttribute('aria-label', 'Mark this step done');
+    b.addEventListener('click', function(){
+      done[s.id] = !done[s.id];
+      if (!done[s.id]) delete done[s.id];
+      save(); paint();
+    });
+  });
+
+  var reset = document.querySelector('.prog .reset');
+  if (reset) reset.addEventListener('click', function(){ done = {}; save(); paint(); });
+
+  paint();
+
+  // copy buttons
+  document.querySelectorAll('.copy').forEach(function(b){
+    b.addEventListener('click', function(){
+      var pre = b.closest('.codewrap').querySelector('pre');
+      var ok = function(){ b.textContent = 'Copied'; setTimeout(function(){ b.textContent = 'Copy'; }, 1400); };
+      var pick = function(){
+        var r = document.createRange(); r.selectNodeContents(pre);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+        b.textContent = 'Select + copy'; setTimeout(function(){ b.textContent = 'Copy'; }, 2000);
+      };
+      try { navigator.clipboard.writeText(pre.innerText).then(ok, pick); } catch (e) { pick(); }
+    });
+  });
+
+  // theme
+  var root = document.documentElement, tb = document.getElementById('theme');
+  try { var sv = localStorage.getItem(KEY + '-theme'); if (sv) root.setAttribute('data-theme', sv); } catch (e) {}
+  tb.addEventListener('click', function(){
+    var cur = root.getAttribute('data-theme');
+    var dark = cur ? cur === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var next = dark ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem(KEY + '-theme', next); } catch (e) {}
+  });
+})();
+</script>
+
+</body></html>

@@ -1,0 +1,7 @@
+# LAB solutions — install what each file needs
+requests>=2.31.0
+openai>=1.50.0
+python-dotenv>=1.0.0
+ollama>=0.6.0
+langchain-ollama>=1.1.0
+langchain-core>=1.7.0

@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open-Source LLMs Day 2 — Cheat Sheet</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Student follow-along: a numbered ladder of steps, each with code to copy and a checkpoint. */
+:root{
+  --ground:#F2F3F0; --surface:#FFFFFF; --surface-2:#E9EBE6;
+  --ink:#16191A; --ink-2:#434A4C; --ink-3:#6E767A;
+  --line:#D3D7D1; --line-soft:#E3E6E1;
+  --accent:#0F5F62; --accent-soft:#DDEBEA;
+  --warn:#8A4B10; --warn-soft:#F6E8D8;
+  --ok:#1F6B3A; --ok-soft:#DEEDE2;
+  --shell-bg:#1A2022; --shell-ink:#E4E8E6; --shell-dim:#8D9A99;
+  --f-display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --f-body:"Newsreader",Georgia,serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#121516; --surface:#1A1E1F; --surface-2:#222728;
+    --ink:#EAEDEB; --ink-2:#B4BBB9; --ink-3:#848C8B;
+    --line:#2E3435; --line-soft:#262B2C;
+    --accent:#5FC3C2; --accent-soft:#17302F;
+    --warn:#D79A55; --warn-soft:#2B2217;
+    --ok:#6FC68C; --ok-soft:#16281D;
+    --shell-bg:#0D1011; --shell-ink:#DDE2E0; --shell-dim:#7C8887;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#121516; --surface:#1A1E1F; --surface-2:#222728;
+  --ink:#EAEDEB; --ink-2:#B4BBB9; --ink-3:#848C8B;
+  --line:#2E3435; --line-soft:#262B2C;
+  --accent:#5FC3C2; --accent-soft:#17302F;
+  --warn:#D79A55; --warn-soft:#2B2217;
+  --ok:#6FC68C; --ok-soft:#16281D;
+  --shell-bg:#0D1011; --shell-ink:#DDE2E0; --shell-dim:#7C8887;
+  color-scheme:dark;
+}
+
+*{box-sizing:border-box}
+body{margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--f-body); font-size:18px; line-height:1.6; -webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--f-display); text-wrap:balance; line-height:1.17;
+  letter-spacing:-.02em; margin:0}
+a{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:3px}
+.wrap{max-width:900px; margin-inline:auto; padding-inline:20px}
+
+.mast{background:var(--surface); border-bottom:1px solid var(--line)}
+.mast .wrap{padding-block:34px 26px; display:flex; flex-wrap:wrap; gap:22px;
+  align-items:flex-end; justify-content:space-between}
+.eyebrow{font-family:var(--f-mono); font-size:11px; letter-spacing:.17em;
+  text-transform:uppercase; color:var(--accent); margin-bottom:12px}
+.mast h1{font-size:clamp(29px,4.6vw,43px); font-weight:700; letter-spacing:-.03em}
+.mast .sub{font-size:18px; color:var(--ink-2); margin:10px 0 0; max-width:52ch}
+.btn{font-family:var(--f-mono); font-size:11.5px; letter-spacing:.05em; padding:8px 13px;
+  background:var(--surface-2); color:var(--ink-2); border:1px solid var(--line);
+  border-radius:2px; cursor:pointer}
+.btn:hover{border-color:var(--accent); color:var(--accent)}
+
+/* progress bar */
+.prog{position:sticky; top:env(safe-area-inset-top, 0px); z-index:30;
+  background:var(--surface); border-bottom:1px solid var(--line)}
+.prog .wrap{padding-block:10px; display:flex; align-items:center; gap:14px}
+.prog .bar{flex:1; height:8px; background:var(--surface-2); border-radius:4px; overflow:hidden}
+.prog .bar i{display:block; height:100%; width:0; background:var(--ok);
+  border-radius:4px; transition:width .2s}
+.prog .txt{font-family:var(--f-mono); font-size:11.5px; color:var(--ink-3); white-space:nowrap}
+.prog .reset{font-family:var(--f-mono); font-size:11px; color:var(--ink-3);
+  background:none; border:0; cursor:pointer; text-decoration:underline; padding:0}
+
+main{padding-block:34px 70px}
+
+/* day opener */
+.today{background:var(--accent-soft); border:1px solid var(--accent); border-radius:4px;
+  padding:22px 24px; margin-bottom:22px}
+.today .kick{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--accent); margin-bottom:9px}
+.today h2{font-size:clamp(20px,2.4vw,24px); font-weight:600; margin-bottom:11px}
+.today p{margin:0 0 13px; font-size:17.5px; color:var(--ink)}
+.today ol{margin:0 0 13px; padding-left:1.35em; font-size:16.5px; color:var(--ink-2)}
+.today li{margin-bottom:5px}
+.today .why{margin:0; padding-top:13px; border-top:1px solid var(--accent);
+  font-size:16.5px; color:var(--ink-2)}
+
+/* where today sits in the week */
+.weekmap{background:var(--surface); border:1px solid var(--line); border-radius:4px;
+  padding:22px 24px; margin-bottom:22px}
+.weekmap h2{font-size:20px; font-weight:600; margin-bottom:12px}
+.weekmap p{margin:0 0 12px; color:var(--ink-2); font-size:17px}
+.weekmap ol{margin:0 0 14px; padding-left:1.3em; color:var(--ink-2); font-size:17px}
+.weekmap li{margin-bottom:7px}
+.weekmap table{width:100%; border-collapse:collapse; margin:4px 0 0; font-size:16px}
+.weekmap td{border-top:1px solid var(--line); padding:9px 10px; color:var(--ink-2);
+  vertical-align:top}
+.weekmap td:first-child{width:92px; white-space:nowrap; font-family:var(--f-mono);
+  font-size:13px; letter-spacing:.03em; color:var(--ink-3)}
+.weekmap tr.here td{background:var(--accent-soft); color:var(--ink); font-weight:500}
+.weekmap tr.here td:first-child{color:var(--accent)}
+.weekmap .sub{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--ink-3); margin:18px 0 8px}
+
+/* understand check */
+.grasp{margin:22px 0 0; border:1px solid var(--accent); border-radius:3px;
+  background:var(--surface); overflow:hidden}
+.grasp .hd{background:var(--accent-soft); padding:7px 13px; font-family:var(--f-mono);
+  font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent)}
+.grasp .intro-l{padding:11px 15px 0; margin:0; font-size:15.5px; color:var(--ink-3)}
+.grasp ol{margin:0; padding:11px 16px 13px 32px; font-size:16.5px; color:var(--ink-2)}
+.grasp li{margin-bottom:11px; line-height:1.5}
+.grasp li:last-child{margin-bottom:0}
+.grasp details{margin-top:6px}
+.grasp summary{cursor:pointer; font-family:var(--f-mono); font-size:11px;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--accent)}
+.grasp details p{margin:7px 0 0; font-size:16px; color:var(--ink-2); max-width:62ch}
+
+/* intro panel */
+.intro{background:var(--surface); border:1px solid var(--line); border-radius:4px;
+  padding:22px 24px; margin-bottom:34px}
+.intro h2{font-size:21px; font-weight:600; margin-bottom:10px}
+.intro p{margin:0 0 12px; color:var(--ink-2); font-size:17px}
+.intro p:last-child{margin-bottom:0}
+.intro ul{margin:0 0 12px; padding-left:1.2em; color:var(--ink-2); font-size:17px}
+.intro li{margin-bottom:5px}
+
+/* steps */
+.step{border-top:1px solid var(--line); padding-block:30px 8px}
+.shead{display:flex; align-items:flex-start; gap:14px}
+.tick{flex:0 0 auto; width:26px; height:26px; margin-top:4px; border-radius:50%;
+  border:2px solid var(--line); background:var(--surface); cursor:pointer;
+  display:grid; place-items:center; padding:0; transition:.12s}
+.tick:hover{border-color:var(--ok)}
+.tick svg{width:14px; height:14px; opacity:0; stroke:var(--surface); stroke-width:3;
+  fill:none; stroke-linecap:round; stroke-linejoin:round}
+.step.done .tick{background:var(--ok); border-color:var(--ok)}
+.step.done .tick svg{opacity:1}
+.sn{font-family:var(--f-mono); font-size:12px; color:var(--accent);
+  letter-spacing:.1em; display:block; margin-bottom:5px}
+.step h2{font-size:clamp(21px,2.6vw,27px); font-weight:600}
+.step.done h2{color:var(--ink-3)}
+.step p{margin:13px 0 0; max-width:64ch; color:var(--ink-2)}
+.step p.lead{color:var(--ink); font-size:19px}
+.step ul,.step ol{margin:13px 0 0; padding-left:1.25em; max-width:64ch; color:var(--ink-2)}
+.step li{margin-bottom:6px}
+.step h3{font-size:18px; font-weight:600; margin:26px 0 0; color:var(--ink)}
+.body{padding-left:40px}
+@media (max-width:620px){ .body{padding-left:0} }
+
+/* code */
+.codewrap{margin:18px 0 0; border:1px solid var(--line); border-radius:3px; overflow:hidden}
+.codebar{display:flex; align-items:center; justify-content:space-between; gap:12px;
+  background:var(--surface-2); padding:7px 12px; border-bottom:1px solid var(--line)}
+.codebar .t{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink-3)}
+.copy{font-family:var(--f-mono); font-size:10.5px; padding:4px 10px; cursor:pointer;
+  background:var(--surface); color:var(--ink-2); border:1px solid var(--line); border-radius:2px}
+.copy:hover{border-color:var(--accent); color:var(--accent)}
+pre{margin:0; background:var(--shell-bg); color:var(--shell-ink); padding:14px 16px;
+  overflow-x:auto; font-family:var(--f-mono); font-size:13.5px; line-height:1.64}
+pre .c{color:var(--shell-dim)}
+pre code{background:none; padding:0; color:inherit; font-size:inherit}
+code{font-family:var(--f-mono); font-size:.85em; background:var(--surface-2);
+  padding:1.5px 5px; border-radius:2px; color:var(--ink)}
+
+/* line-by-line code walkthrough */
+.walk{margin:18px 0 0; border:1px solid var(--line); border-radius:3px;
+  background:var(--surface); overflow:hidden}
+.walk .hd{background:var(--surface-2); padding:7px 13px; font-family:var(--f-mono);
+  font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-3);
+  border-bottom:1px solid var(--line)}
+.walk ol{margin:0; padding:12px 16px 12px 32px; font-size:16px; color:var(--ink-2)}
+.walk li{margin-bottom:7px; line-height:1.5}
+.walk li:last-child{margin-bottom:0}
+.walk li code{font-size:.84em}
+
+/* checkpoint */
+.check{margin:16px 0 0; border:1px solid var(--ok); border-radius:3px; overflow:hidden}
+.check .hd{background:var(--ok-soft); padding:7px 13px; font-family:var(--f-mono);
+  font-size:10.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--ok)}
+.check pre{background:var(--surface); color:var(--ink-2); font-size:12.5px;
+  border-top:1px solid var(--ok-soft)}
+.check .note{padding:10px 13px; font-size:15.5px; color:var(--ink-2);
+  border-top:1px solid var(--line-soft); background:var(--surface)}
+
+/* warn */
+.warn{margin:18px 0 0; padding:13px 16px; border-left:3px solid var(--warn);
+  background:var(--warn-soft); border-radius:0 2px 2px 0; max-width:66ch}
+.warn .lbl{font-family:var(--f-mono); font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--warn); display:block; margin-bottom:5px}
+.warn p{margin:0; font-size:16.5px; color:var(--ink-2)}
+.warn p+p{margin-top:8px}
+
+/* plain-words box */
+.words{margin:18px 0 0; padding:13px 16px; border-left:3px solid var(--accent);
+  background:var(--accent-soft); border-radius:0 2px 2px 0; max-width:66ch}
+.words .lbl{font-family:var(--f-mono); font-size:10px; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--accent); display:block; margin-bottom:5px}
+.words p{margin:0; font-size:17px; color:var(--ink)}
+
+/* tables */
+.tw{overflow-x:auto; margin:18px 0 0; border:1px solid var(--line);
+  border-radius:3px; background:var(--surface)}
+table{border-collapse:collapse; width:100%; font-size:14.5px; min-width:430px}
+th,td{text-align:left; padding:9px 12px; border-bottom:1px solid var(--line-soft);
+  vertical-align:top; line-height:1.45}
+th{font-family:var(--f-mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ink-3); font-weight:500; background:var(--surface-2); white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td.m{font-family:var(--f-mono); font-size:12.5px}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:26px 60px; font-size:15px; color:var(--ink-3)}
+
+@media (max-width:620px){ body{font-size:17px} .step p.lead{font-size:18px} }
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+
+<style>
+.cs section{border-top:1px solid var(--line); padding-block:22px 6px}
+.cs h2{font-size:clamp(19px,2.3vw,23px); font-weight:600; color:var(--ink); margin:0 0 6px}
+.cs h2 .n{font-family:var(--f-mono); font-size:13px; color:var(--accent); margin-right:10px}
+.cs p{margin:8px 0 0; color:var(--ink-2); max-width:70ch}
+.cs .pin{background:var(--accent-soft); border:1px solid var(--accent); border-radius:4px; padding:16px 20px; margin-bottom:18px}
+.cs .pin p{margin:0; color:var(--ink)}
+.grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:12px}
+@media (max-width:680px){.grid2{grid-template-columns:1fr}}
+.box{border:1px solid var(--line); border-radius:4px; background:var(--surface); padding:14px 16px}
+.box .k{font-family:var(--f-mono); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:var(--accent); margin-bottom:6px}
+.box p{margin:0; font-size:15.5px; color:var(--ink-2)}
+ol.q{margin:10px 0 0; padding-left:1.3em} ol.q li{margin-bottom:6px; color:var(--ink-2)}
+</style>
+<header class="mast"><div class="wrap"><div><div class="eyebrow">Open-Source LLMs · Day 2 · Cheat Sheet</div><h1>Cheat Sheet — one page, pin it</h1><p class="sub">The whole Day 2 on one page: the model map, the six questions, MoE, quantization, the two labs, and the 2026 agent lineup.</p></div>
+<div><button class="btn" id="theme">Theme</button></div></div></header>
+<main class="wrap cs">
+<div class="pin"><p><b>Pin this near your screen.</b> Open-Source LLMs · Day 2 · one-page reference. The model table ages in weeks — the <em>questions</em> don’t. Check <code>ollama.com/search</code> + the Open LLM Leaderboard for today’s best.</p></div>
+<section><h2><span class="n">1</span>The model map (July 2026 — will be stale by autumn)</h2><div class="tw"><table><thead><tr><th>Family</th><th>Flagship</th><th>License</th><th>Note</th></tr></thead><tbody><tr><td>GLM (Zhipu)</td><td>GLM-5.x · 753B/40B MoE · 1M ctx</td><td>MIT</td><td>#1 open-weights model</td></tr><tr><td>Kimi (Moonshot)</td><td>K3 · 2.8T · 16-of-896 experts</td><td>open</td><td>largest open model ever</td></tr><tr><td>DeepSeek</td><td>V4.1 Pro &amp; Flash · 1M ctx</td><td>MIT</td><td>Flash open, Pro API-only</td></tr><tr><td>Qwen (Alibaba)</td><td>3.5/3.6 open · newest API-only</td><td>Apache 2.0</td><td>family split open/closed</td></tr><tr><td>Llama (Meta)</td><td>Llama 4 Scout/Maverick</td><td>Llama lic.</td><td>legacy — Meta went closed</td></tr><tr><td>Gemma (Google)</td><td>Gemma 4 · E2B→31B</td><td>Apache 2.0</td><td>best laptop family</td></tr><tr><td>MiniMax</td><td>M3.x · agentic</td><td>open</td><td>agentic + multimodal</td></tr></tbody></table></div><p><b>The 8-week lesson:</b> between May and July 2026 GLM took #1, Kimi K3 shipped at 2.8T, Meta exited open frontier, Qwen split. Don’t memorise the table — learn the six questions below.</p></section>
+<div class="grid2"><div class="box"><div class="k">What is a weight?</div><p>One learned number (like <code>0.0273</code>) setting how strongly one signal pushes another. “7B” = 7 billion of them. Nobody writes them — training <b>finds</b> them. So: file size = count×bytes; facts are smeared across numbers (no lookup table); quantization just rounds them slightly.</p></div><div class="box"><div class="k">MoE in one paragraph</div><p>A <b>Mixture of Experts</b> model has a huge <em>total</em> count but routes each token through a small <em>active</em> slice. Speed &amp; cost follow the small number; download &amp; RAM follow the big one. Almost every 2026 flagship is MoE.</p></div></div>
+<section><h2><span class="n">2</span>Picking a model — six questions (the forever-skill)</h2><ol class="q"><li><b>Task</b> — chat, code, classify, multilingual, reasoning?</li><li><b>License</b> — Apache/MIT (do anything) · Llama (MAU cap) · restrictive (read it)?</li><li><b>Hardware</b> — laptop, single GPU, or cluster? Sets the size.</li><li><b>Latency</b> — interactive or batch? Smaller is faster.</li><li><b>Quality bar</b> — must it beat the frontier, or is good-enough fine?</li><li><b>Hosting</b> — local, your cloud, or a hosted open provider?</li></ol><div class="box"><div class="k">Default heuristic</div><p>Start with the <b>medium-tier</b> model in any frontier family. Reach for the flagship (or shrink to an SLM) only when a specific task makes you.</p></div></section>
+<section><h2><span class="n">3</span>Run a model — pick by job</h2><div class="tw"><table><thead><tr><th>Tool</th><th>Best for</th><th>What you get</th></tr></thead><tbody><tr><td>Ollama</td><td>solo dev, prototyping</td><td>one command; OpenAI-compatible API on <code>localhost:11434</code></td></tr><tr><td>LM Studio</td><td>beginners, no discrete GPU</td><td>click-to-run GUI; strong on integrated GPUs</td></tr><tr><td>vLLM</td><td>production, many users</td><td>~6× throughput; NVIDIA only</td></tr><tr><td>llama.cpp</td><td>the engine under the above</td><td>direct GGUF; optimize further</td></tr><tr><td>Hosted (Groq/Together/Fireworks/HF)</td><td>“no install”</td><td>OpenAI-shaped APIs; the big models</td></tr></tbody></table></div><div class="box"><div class="k">Quantization + rule of thumb</div><p>Compresses weights (e.g. fp16 → 4-bit “Q4”): ~4× smaller, barely dumber. GGUF quants: <code>Q4_K_M</code> (default), <code>Q5_K_M</code>, <code>Q8_0</code>. <b>7B at Q4 ≈ 4–5 GB RAM/VRAM.</b></p></div></section>
+<section><h2><span class="n">4</span>The two mini-labs (quick commands)</h2><div class="codewrap"><div class="codebar"><span class="t">Pull + run locally</span><button class="copy">Copy</button></div><pre><code>ollama pull qwen3:0.6b      # ~520 MB, any laptop
+ollama serve                # API on localhost:11434</code></pre></div><div class="codewrap"><div class="codebar"><span class="t">Drive it from Python (local, OpenAI dialect)</span><button class="copy">Copy</button></div><pre><code>import requests
+
+def ask(prompt, model="qwen3:0.6b", system=None):
+    msgs = ([{"role":"system","content":system}] if system else []) \
+         + [{"role":"user","content":prompt}]
+    r = requests.post("http://127.0.0.1:11434/v1/chat/completions",
+                      json={"model":model,"messages":msgs,"temperature":0,
+                            "reasoning_effort":"none"}, timeout=120)  # none = skip thinking
+    return r.json()["choices"][0]["message"]["content"]
+
+print(ask("Why consider open-source models?"))</code></pre></div><p>Lab 1 = run the <b>same prompt across three families</b> in the Groq playground (e.g. <code>openai/gpt-oss-120b</code>, <code>qwen/qwen3.8-27b</code>, <code>allam-2-7b</code>) and rank them. Lab 2 = the ladder above, then add a system message → force JSON → hosted provider → swap <code>model="mistral:7b"</code>. Four front doors: raw requests, OpenAI SDK, Ollama's own library (<code>think=False</code>, <code>format=schema</code>), LangChain.</p></section>
+<section><h2><span class="n">5</span>Reasoning models (open-source now too)</h2><div class="box"><div class="k">Rule</div><p>DeepSeek-R1 lineage, Qwen thinking, Llama 4 reasoning variants all think internally before answering. <b>Don’t</b> add “let’s think step by step” — you’ll just pay for duplicate tokens.</p></div></section>
+<section><h2><span class="n">6</span>Agent frameworks — the 2026 lineup</h2><div class="tw"><table><thead><tr><th>Framework</th><th>For</th><th>Status</th></tr></thead><tbody><tr><td>LangGraph</td><td>graphs of nodes + edges</td><td>most actively developed</td></tr><tr><td>CrewAI</td><td>multi-agent “crews” (roles)</td><td>easiest multi-agent start</td></tr><tr><td>OpenAI Agents SDK</td><td>official tool-using agents</td><td>new, well-documented</td></tr><tr><td>Pydantic AI</td><td>type-safe, structured-output first</td><td>growing fast</td></tr><tr><td>LangChain (classic)</td><td>chains</td><td>use LangGraph for new agents</td></tr><tr><td>MCP</td><td>the model↔tool wiring standard</td><td>not a framework; MCP day covers it</td></tr></tbody></table></div><div class="box"><div class="k">Decision shortcut</div><p>One agent, one job → <b>OpenAI Agents SDK</b> / <b>Pydantic AI</b>. One agent, a graph of steps → <b>LangGraph</b>. Multiple agents collaborating → <b>CrewAI</b>. Plug into IDEs → <b>MCP</b>. Dropped from old curricula: TaskWeaver, JARVIS.</p></div></section>
+<section><h2><span class="n">7</span>Where to go next</h2><p><b>Fine-tuning</b> (LoRA/QLoRA) · <b>MCP day</b> (agent–tool wiring) · <b>eval at scale</b> (Langfuse, Promptfoo, Braintrust) · <b>production inference</b> (vLLM, TGI, SGLang).</p><p><b>Bookmark:</b> Hugging Face Hub · LMArena · Open LLM Leaderboard · <code>ollama.com/library</code> · llm-stats.com.</p></section>
+</main>
+<footer><div class="wrap">Open-Source LLMs · Day 2 · Student cheat sheet · The table ages in weeks; the six questions don’t.</div></footer>
+<script>
+(function(){
+ var root=document.documentElement, tb=document.getElementById('theme');
+ try{var sv=localStorage.getItem('oss-day2-cheat-theme'); if(sv) root.setAttribute('data-theme',sv);}catch(e){}
+ tb.addEventListener('click',function(){
+   var cur=root.getAttribute('data-theme');
+   var dark=cur?cur==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;
+   var next=dark?'light':'dark'; root.setAttribute('data-theme',next);
+   try{localStorage.setItem('oss-day2-cheat-theme',next);}catch(e){}
+ });
+ document.querySelectorAll('.copy').forEach(function(b){
+   b.addEventListener('click',function(){
+     var pre=b.closest('.codewrap').querySelector('pre');
+     try{navigator.clipboard.writeText(pre.innerText).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy';},1400);});}catch(e){}
+   });
+ });
+})();
+</script>
+</body></html>
