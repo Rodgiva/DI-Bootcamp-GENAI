@@ -8,3 +8,9 @@ Secure MCP Filesystem Server running on stdio
 Client does not support MCP Roots, using allowed directories set from server args: [
   'C:\\Users\\avigd\\Desktop\\GENAI\\Week10\\Day4\\Exercices\\sandbox'
 ]
+[11/08/26 17:32:00] INFO     Processing request of type           server.py:733
+                             ListToolsRequest                                  
+Secure MCP Filesystem Server running on stdio
+Client does not support MCP Roots, using allowed directories set from server args: [
+  'C:\\Users\\avigd\\Desktop\\GENAI\\Week10\\Day4\\Exercices\\sandbox'
+]
