@@ -1,0 +1,10 @@
+ERROR:mcp_server_git.server:C:\Users\avigd\Desktop\GENAI\Week10\Day4\Exercices\sandbox is not a valid Git repository
+Secure MCP Filesystem Server running on stdio
+Secure MCP Filesystem Server running on stdio
+Client does not support MCP Roots, using allowed directories set from server args: [
+  'C:\\Users\\avigd\\Desktop\\GENAI\\Week10\\Day4\\Exercices\\sandbox'
+]
+Secure MCP Filesystem Server running on stdio
+Client does not support MCP Roots, using allowed directories set from server args: [
+  'C:\\Users\\avigd\\Desktop\\GENAI\\Week10\\Day4\\Exercices\\sandbox'
+]
